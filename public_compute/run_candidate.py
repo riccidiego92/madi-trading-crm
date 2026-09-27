@@ -30,6 +30,7 @@ def main() -> None:
     ap.add_argument("--reps", type=int, required=True)
     ap.add_argument("--data-dir", default="public_compute/data")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
 
     rows = registry_rows()
@@ -56,12 +57,13 @@ def main() -> None:
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({
-        "candidate_id": cid,
-        "reps": args.reps,
-        "p_max_stat": result["test"]["p_max_stat"],
-        "out": str(out),
-    }))
+    if not args.quiet:
+        print(json.dumps({
+            "candidate_id": cid,
+            "reps": args.reps,
+            "p_max_stat": result["test"]["p_max_stat"],
+            "out": str(out),
+        }))
 
 if __name__ == "__main__":
     main()
