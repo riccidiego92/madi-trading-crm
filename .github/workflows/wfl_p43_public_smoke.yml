@@ -1,0 +1,46 @@
+name: WFL P43 Public Smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/wfl_p43_public_smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - name: Install compute dependencies
+        run: python -m pip install -r public_compute/requirements.txt
+      - name: Import check
+        env:
+          PYTHONPATH: public_compute
+        run: |
+          python - <<'PY'
+          from wfl_public.p43_p42_train_screen import registry_rows
+          rows = registry_rows()
+          assert len(rows) == 384
+          print("P43_PUBLIC_REGISTRY_OK", len(rows), rows[0]["candidate_id"])
+          PY
+      - name: Run one candidate with four smoke replicates
+        env:
+          PYTHONPATH: public_compute
+        run: |
+          mkdir -p public_compute/out
+          time python public_compute/run_candidate.py             --candidate-index 0             --reps 4             --out public_compute/out/smoke_candidate_000.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wfl-p43-public-smoke
+          path: public_compute/out/smoke_candidate_000.json
+          retention-days: 1
