@@ -10,7 +10,8 @@ import pandas as pd
 from .p23_discriminator import stage_frame
 from .p28_discriminability_v2 import attach_public_schedule
 from .p29_metrics import complete_fingerprint, complete_fingerprint_vector
-from .p42_phased_draw_machine import PhasedMachineConfig, phase_grid, simulate_phased
+from .p42_phased_draw_machine import PhasedMachineConfig, phase_grid
+from .p42_fast import simulate_phased_fast as simulate_phased
 from .p46_calendar_alignment import calendar_alignment_offset
 
 TRAIN_SEED_ROOT = 202609264301
