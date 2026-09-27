@@ -1,0 +1,27 @@
+name: WFL P43 Public Profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/wfl_p43_public_profile.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Profile reference P43 replicate
+        env:
+          PYTHONPATH: public_compute
+        run: python public_compute/profile_one.py
