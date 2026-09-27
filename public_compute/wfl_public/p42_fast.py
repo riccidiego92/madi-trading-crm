@@ -21,8 +21,8 @@ def simulate_phased_fast(n_contests: int, config: PhasedMachineConfig) -> pd.Dat
     if n_contests < 0:
         raise ValueError("n_contests must be non-negative")
 
-    main_out = np.empty((n_contests, 10), dtype=np.int16)
-    num_out = np.empty(n_contests, dtype=np.int16)
+    main_out = np.empty((n_contests, 10), dtype=np.int64)
+    num_out = np.empty(n_contests, dtype=np.int64)
 
     pair = None
     active_scope = None
