@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/wfl_p43_public_smoke.yml"
+      - "public_compute/**"
   workflow_dispatch:
 
 permissions:
