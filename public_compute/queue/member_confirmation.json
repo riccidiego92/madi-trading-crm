@@ -1,6 +1,6 @@
 {
   "schema": "wfl-public-p43-member-confirmation-1",
-  "batch_index": 10,
+  "batch_index": 11,
   "batch_count": 24,
   "reps": 2000,
   "alpha": 0.01,
