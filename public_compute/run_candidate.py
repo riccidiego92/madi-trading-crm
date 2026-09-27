@@ -9,9 +9,9 @@ import pandas as pd
 from wfl_public.p43_p42_train_screen import (
     observed_complete_vector,
     registry_rows,
-    streaming_train_evaluation,
     train_frame_from_full_history,
 )
+from wfl_public.p43_parallel import parallel_train_evaluation
 
 def load_train_data(root: Path) -> pd.DataFrame:
     parts = [
@@ -47,7 +47,7 @@ def main() -> None:
 
     train = load_train_data(Path(args.data_dir))
     observed = observed_complete_vector(train)
-    result = streaming_train_evaluation(
+    result = parallel_train_evaluation(
         train,
         cid,
         args.reps,
