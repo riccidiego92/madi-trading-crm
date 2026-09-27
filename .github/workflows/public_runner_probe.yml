@@ -1,0 +1,24 @@
+name: Public Free Runner Probe
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/public_runner_probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify free public runner
+        run: |
+          set -eu
+          echo "PUBLIC_FREE_RUNNER_OK"
+          uname -a
+          python3 --version
