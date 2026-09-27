@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/wfl_p42_fast_equivalence.yml"
+      - "public_compute/wfl_public/p42_fast.py"
+      - "public_compute/wfl_public/p42_phased_draw_machine.py"
+      - "public_compute/test_fast_equivalence.py"
 
 permissions:
   contents: read
