@@ -1,11 +1,11 @@
 {
   "schema": "wfl-public-p43-member-confirmation-1",
-  "batch_index": 0,
+  "batch_index": 1,
   "batch_count": 24,
   "reps": 2000,
   "alpha": 0.01,
   "train_only": true,
   "source_of_truth": "riccidiego92/winforlife-classico-lab",
   "private_protocol_branch": "ops/github-only-p40-p48-control-plane",
-  "execution_note": "Public zero-cost compute only; no validation, holdout, prospective freeze, survivor, or prediction data."
+  "execution_note": "Public zero-cost TRAIN-only compute. Formal results carry provenance metadata and are transferred to the private source-of-truth repository."
 }
