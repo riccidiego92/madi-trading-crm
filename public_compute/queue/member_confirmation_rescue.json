@@ -1,0 +1,777 @@
+{
+  "schema": "wfl-public-p43-member-confirmation-rescue-1",
+  "created_for": "FREE_ONLY rescue of missing P43 member-confirmation candidates",
+  "candidate_count": 217,
+  "pair_count": 109,
+  "reps": 2000,
+  "alpha": 0.01,
+  "train_only": true,
+  "validation_accessed": false,
+  "holdout_accessed": false,
+  "source_of_truth": "riccidiego92/winforlife-classico-lab",
+  "private_protocol_branch": "ops/github-only-p40-p48-control-plane",
+  "pairs": [
+    {
+      "pair_id": "000",
+      "candidate_indices": [
+        14,
+        16
+      ]
+    },
+    {
+      "pair_id": "001",
+      "candidate_indices": [
+        19,
+        20
+      ]
+    },
+    {
+      "pair_id": "002",
+      "candidate_indices": [
+        21,
+        22
+      ]
+    },
+    {
+      "pair_id": "003",
+      "candidate_indices": [
+        38,
+        43
+      ]
+    },
+    {
+      "pair_id": "004",
+      "candidate_indices": [
+        44,
+        45
+      ]
+    },
+    {
+      "pair_id": "005",
+      "candidate_indices": [
+        46,
+        62
+      ]
+    },
+    {
+      "pair_id": "006",
+      "candidate_indices": [
+        64,
+        67
+      ]
+    },
+    {
+      "pair_id": "007",
+      "candidate_indices": [
+        68,
+        69
+      ]
+    },
+    {
+      "pair_id": "008",
+      "candidate_indices": [
+        70,
+        86
+      ]
+    },
+    {
+      "pair_id": "009",
+      "candidate_indices": [
+        88,
+        91
+      ]
+    },
+    {
+      "pair_id": "010",
+      "candidate_indices": [
+        92,
+        93
+      ]
+    },
+    {
+      "pair_id": "011",
+      "candidate_indices": [
+        94,
+        115
+      ]
+    },
+    {
+      "pair_id": "012",
+      "candidate_indices": [
+        116,
+        117
+      ]
+    },
+    {
+      "pair_id": "013",
+      "candidate_indices": [
+        118,
+        139
+      ]
+    },
+    {
+      "pair_id": "014",
+      "candidate_indices": [
+        140,
+        141
+      ]
+    },
+    {
+      "pair_id": "015",
+      "candidate_indices": [
+        142,
+        160
+      ]
+    },
+    {
+      "pair_id": "016",
+      "candidate_indices": [
+        163,
+        164
+      ]
+    },
+    {
+      "pair_id": "017",
+      "candidate_indices": [
+        165,
+        166
+      ]
+    },
+    {
+      "pair_id": "018",
+      "candidate_indices": [
+        182,
+        187
+      ]
+    },
+    {
+      "pair_id": "019",
+      "candidate_indices": [
+        188,
+        189
+      ]
+    },
+    {
+      "pair_id": "020",
+      "candidate_indices": [
+        190,
+        194
+      ]
+    },
+    {
+      "pair_id": "021",
+      "candidate_indices": [
+        195,
+        196
+      ]
+    },
+    {
+      "pair_id": "022",
+      "candidate_indices": [
+        197,
+        198
+      ]
+    },
+    {
+      "pair_id": "023",
+      "candidate_indices": [
+        199,
+        200
+      ]
+    },
+    {
+      "pair_id": "024",
+      "candidate_indices": [
+        201,
+        202
+      ]
+    },
+    {
+      "pair_id": "025",
+      "candidate_indices": [
+        203,
+        204
+      ]
+    },
+    {
+      "pair_id": "026",
+      "candidate_indices": [
+        205,
+        206
+      ]
+    },
+    {
+      "pair_id": "027",
+      "candidate_indices": [
+        207,
+        208
+      ]
+    },
+    {
+      "pair_id": "028",
+      "candidate_indices": [
+        209,
+        210
+      ]
+    },
+    {
+      "pair_id": "029",
+      "candidate_indices": [
+        211,
+        212
+      ]
+    },
+    {
+      "pair_id": "030",
+      "candidate_indices": [
+        213,
+        214
+      ]
+    },
+    {
+      "pair_id": "031",
+      "candidate_indices": [
+        215,
+        218
+      ]
+    },
+    {
+      "pair_id": "032",
+      "candidate_indices": [
+        219,
+        220
+      ]
+    },
+    {
+      "pair_id": "033",
+      "candidate_indices": [
+        221,
+        222
+      ]
+    },
+    {
+      "pair_id": "034",
+      "candidate_indices": [
+        223,
+        224
+      ]
+    },
+    {
+      "pair_id": "035",
+      "candidate_indices": [
+        225,
+        226
+      ]
+    },
+    {
+      "pair_id": "036",
+      "candidate_indices": [
+        227,
+        228
+      ]
+    },
+    {
+      "pair_id": "037",
+      "candidate_indices": [
+        229,
+        230
+      ]
+    },
+    {
+      "pair_id": "038",
+      "candidate_indices": [
+        231,
+        232
+      ]
+    },
+    {
+      "pair_id": "039",
+      "candidate_indices": [
+        233,
+        234
+      ]
+    },
+    {
+      "pair_id": "040",
+      "candidate_indices": [
+        235,
+        236
+      ]
+    },
+    {
+      "pair_id": "041",
+      "candidate_indices": [
+        237,
+        238
+      ]
+    },
+    {
+      "pair_id": "042",
+      "candidate_indices": [
+        239,
+        242
+      ]
+    },
+    {
+      "pair_id": "043",
+      "candidate_indices": [
+        243,
+        244
+      ]
+    },
+    {
+      "pair_id": "044",
+      "candidate_indices": [
+        245,
+        246
+      ]
+    },
+    {
+      "pair_id": "045",
+      "candidate_indices": [
+        247,
+        248
+      ]
+    },
+    {
+      "pair_id": "046",
+      "candidate_indices": [
+        249,
+        250
+      ]
+    },
+    {
+      "pair_id": "047",
+      "candidate_indices": [
+        251,
+        252
+      ]
+    },
+    {
+      "pair_id": "048",
+      "candidate_indices": [
+        253,
+        254
+      ]
+    },
+    {
+      "pair_id": "049",
+      "candidate_indices": [
+        255,
+        256
+      ]
+    },
+    {
+      "pair_id": "050",
+      "candidate_indices": [
+        257,
+        258
+      ]
+    },
+    {
+      "pair_id": "051",
+      "candidate_indices": [
+        259,
+        260
+      ]
+    },
+    {
+      "pair_id": "052",
+      "candidate_indices": [
+        261,
+        262
+      ]
+    },
+    {
+      "pair_id": "053",
+      "candidate_indices": [
+        263,
+        266
+      ]
+    },
+    {
+      "pair_id": "054",
+      "candidate_indices": [
+        267,
+        268
+      ]
+    },
+    {
+      "pair_id": "055",
+      "candidate_indices": [
+        269,
+        270
+      ]
+    },
+    {
+      "pair_id": "056",
+      "candidate_indices": [
+        271,
+        272
+      ]
+    },
+    {
+      "pair_id": "057",
+      "candidate_indices": [
+        273,
+        274
+      ]
+    },
+    {
+      "pair_id": "058",
+      "candidate_indices": [
+        275,
+        276
+      ]
+    },
+    {
+      "pair_id": "059",
+      "candidate_indices": [
+        277,
+        278
+      ]
+    },
+    {
+      "pair_id": "060",
+      "candidate_indices": [
+        279,
+        280
+      ]
+    },
+    {
+      "pair_id": "061",
+      "candidate_indices": [
+        281,
+        282
+      ]
+    },
+    {
+      "pair_id": "062",
+      "candidate_indices": [
+        283,
+        284
+      ]
+    },
+    {
+      "pair_id": "063",
+      "candidate_indices": [
+        285,
+        286
+      ]
+    },
+    {
+      "pair_id": "064",
+      "candidate_indices": [
+        287,
+        290
+      ]
+    },
+    {
+      "pair_id": "065",
+      "candidate_indices": [
+        291,
+        292
+      ]
+    },
+    {
+      "pair_id": "066",
+      "candidate_indices": [
+        293,
+        294
+      ]
+    },
+    {
+      "pair_id": "067",
+      "candidate_indices": [
+        295,
+        296
+      ]
+    },
+    {
+      "pair_id": "068",
+      "candidate_indices": [
+        297,
+        298
+      ]
+    },
+    {
+      "pair_id": "069",
+      "candidate_indices": [
+        299,
+        300
+      ]
+    },
+    {
+      "pair_id": "070",
+      "candidate_indices": [
+        301,
+        302
+      ]
+    },
+    {
+      "pair_id": "071",
+      "candidate_indices": [
+        303,
+        304
+      ]
+    },
+    {
+      "pair_id": "072",
+      "candidate_indices": [
+        305,
+        306
+      ]
+    },
+    {
+      "pair_id": "073",
+      "candidate_indices": [
+        307,
+        308
+      ]
+    },
+    {
+      "pair_id": "074",
+      "candidate_indices": [
+        309,
+        310
+      ]
+    },
+    {
+      "pair_id": "075",
+      "candidate_indices": [
+        311,
+        314
+      ]
+    },
+    {
+      "pair_id": "076",
+      "candidate_indices": [
+        315,
+        316
+      ]
+    },
+    {
+      "pair_id": "077",
+      "candidate_indices": [
+        317,
+        318
+      ]
+    },
+    {
+      "pair_id": "078",
+      "candidate_indices": [
+        319,
+        320
+      ]
+    },
+    {
+      "pair_id": "079",
+      "candidate_indices": [
+        321,
+        322
+      ]
+    },
+    {
+      "pair_id": "080",
+      "candidate_indices": [
+        323,
+        324
+      ]
+    },
+    {
+      "pair_id": "081",
+      "candidate_indices": [
+        325,
+        326
+      ]
+    },
+    {
+      "pair_id": "082",
+      "candidate_indices": [
+        327,
+        328
+      ]
+    },
+    {
+      "pair_id": "083",
+      "candidate_indices": [
+        329,
+        330
+      ]
+    },
+    {
+      "pair_id": "084",
+      "candidate_indices": [
+        331,
+        332
+      ]
+    },
+    {
+      "pair_id": "085",
+      "candidate_indices": [
+        333,
+        334
+      ]
+    },
+    {
+      "pair_id": "086",
+      "candidate_indices": [
+        335,
+        338
+      ]
+    },
+    {
+      "pair_id": "087",
+      "candidate_indices": [
+        339,
+        340
+      ]
+    },
+    {
+      "pair_id": "088",
+      "candidate_indices": [
+        341,
+        342
+      ]
+    },
+    {
+      "pair_id": "089",
+      "candidate_indices": [
+        343,
+        344
+      ]
+    },
+    {
+      "pair_id": "090",
+      "candidate_indices": [
+        345,
+        346
+      ]
+    },
+    {
+      "pair_id": "091",
+      "candidate_indices": [
+        347,
+        348
+      ]
+    },
+    {
+      "pair_id": "092",
+      "candidate_indices": [
+        349,
+        350
+      ]
+    },
+    {
+      "pair_id": "093",
+      "candidate_indices": [
+        351,
+        352
+      ]
+    },
+    {
+      "pair_id": "094",
+      "candidate_indices": [
+        353,
+        354
+      ]
+    },
+    {
+      "pair_id": "095",
+      "candidate_indices": [
+        355,
+        356
+      ]
+    },
+    {
+      "pair_id": "096",
+      "candidate_indices": [
+        357,
+        358
+      ]
+    },
+    {
+      "pair_id": "097",
+      "candidate_indices": [
+        359,
+        362
+      ]
+    },
+    {
+      "pair_id": "098",
+      "candidate_indices": [
+        363,
+        364
+      ]
+    },
+    {
+      "pair_id": "099",
+      "candidate_indices": [
+        365,
+        366
+      ]
+    },
+    {
+      "pair_id": "100",
+      "candidate_indices": [
+        367,
+        368
+      ]
+    },
+    {
+      "pair_id": "101",
+      "candidate_indices": [
+        369,
+        370
+      ]
+    },
+    {
+      "pair_id": "102",
+      "candidate_indices": [
+        371,
+        372
+      ]
+    },
+    {
+      "pair_id": "103",
+      "candidate_indices": [
+        373,
+        374
+      ]
+    },
+    {
+      "pair_id": "104",
+      "candidate_indices": [
+        375,
+        376
+      ]
+    },
+    {
+      "pair_id": "105",
+      "candidate_indices": [
+        377,
+        378
+      ]
+    },
+    {
+      "pair_id": "106",
+      "candidate_indices": [
+        379,
+        380
+      ]
+    },
+    {
+      "pair_id": "107",
+      "candidate_indices": [
+        381,
+        382
+      ]
+    },
+    {
+      "pair_id": "108",
+      "candidate_indices": [
+        383
+      ]
+    }
+  ]
+}
