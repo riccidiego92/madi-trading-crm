@@ -82,4 +82,4 @@ jobs:
           name: p43-rescue-pair-${{ matrix.pair_id }}
           path: public_compute/out/candidate_*.json
           if-no-files-found: error
-          retention-days: 2
+          retention-days: 14
