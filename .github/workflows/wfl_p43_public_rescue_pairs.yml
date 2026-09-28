@@ -1,0 +1,85 @@
+name: WFL P43 Public Rescue Pairs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/member_confirmation_rescue.json"
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: plan
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          q=json.loads(Path("public_compute/queue/member_confirmation_rescue.json").read_text())
+          if q.get("schema") != "wfl-public-p43-member-confirmation-rescue-1":
+              raise SystemExit("bad rescue queue schema")
+          if q.get("reps") != 2000 or q.get("alpha") != 0.01 or q.get("train_only") is not True:
+              raise SystemExit("rescue scientific policy mismatch")
+          pairs=q.get("pairs")
+          if not isinstance(pairs,list) or not pairs:
+              raise SystemExit("empty rescue pairs")
+          flat=[]
+          for p in pairs:
+              idx=p.get("candidate_indices")
+              if not isinstance(idx,list) or not 1 <= len(idx) <= 2:
+                  raise SystemExit("each rescue runner must contain 1 or 2 candidates")
+              flat.extend(int(x) for x in idx)
+          if len(flat) != len(set(flat)) or any(x < 0 or x >= 384 for x in flat):
+              raise SystemExit("duplicate/out-of-range rescue candidate")
+          print("matrix="+json.dumps({"include":pairs},separators=(",",":")))
+          PY
+
+  evaluate:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Evaluate one rescue pair sequentially
+        env:
+          PYTHONPATH: public_compute
+          INDICES_JSON: ${{ toJson(matrix.candidate_indices) }}
+        run: |
+          set -eu
+          mkdir -p public_compute/out
+          python - <<'PY'
+          import json, os, subprocess, sys
+          indices=json.loads(os.environ["INDICES_JSON"])
+          for idx in indices:
+              out=f"public_compute/out/candidate_{int(idx)}.json"
+              subprocess.run([sys.executable,"public_compute/run_candidate.py","--candidate-index",str(int(idx)),"--reps","2000","--out",out,"--quiet"],check=True)
+              row=json.load(open(out))
+              if row.get("schema") != "wfl-p43-p42-train-candidate-evaluation-1": raise SystemExit("bad result schema")
+              if row.get("stage") != "train" or int(row.get("simulation_reps",0)) != 2000: raise SystemExit("bad TRAIN/reps")
+              g=row.get("guardrails",{})
+              if g.get("validation_accessed") is not False or g.get("holdout_accessed") is not False: raise SystemExit("validation/holdout guardrail breach")
+              p=float(row["test"]["p_max_stat"])
+              if row["test"].get("rejected_at_triage_alpha") is not (p <= 0.01): raise SystemExit("alpha=0.01 decision mismatch")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p43-rescue-pair-${{ matrix.pair_id }}
+          path: public_compute/out/candidate_*.json
+          if-no-files-found: error
+          retention-days: 2
