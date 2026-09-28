@@ -773,5 +773,7 @@
         383
       ]
     }
-  ]
+  ],
+  "launch_generation": 2,
+  "launch_note": "Relaunch after raising rescue max-parallel to 20; scientific settings unchanged"
 }
