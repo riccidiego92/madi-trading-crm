@@ -61,7 +61,7 @@ jobs:
         with:
           name: candidate-${{ matrix.candidate_index }}
           path: public_compute/out/candidate_${{ matrix.candidate_index }}.json
-          retention-days: 1
+          retention-days: 14
 
   collect:
     needs: [plan, evaluate]
@@ -81,4 +81,4 @@ jobs:
         with:
           name: p43-member-confirmation-batch-${{ needs.plan.outputs.batch_index }}
           path: combined/*.json
-          retention-days: 1
+          retention-days: 14
