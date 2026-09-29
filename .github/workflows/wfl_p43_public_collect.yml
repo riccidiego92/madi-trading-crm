@@ -6,7 +6,7 @@ on:
     paths:
       - "public_compute/queue/collect_member_confirmation.json"
   workflow_run:
-    workflows: ["WFL P43 Public Rescue Pairs", "WFL P43 Public Member Confirmation Batch"]
+    workflows: ["WFL P43 Public Rescue Pairs", "WFL P43 Public Rescue Singles", "WFL P43 Public Member Confirmation Batch"]
     types: [completed]
 
 permissions:
@@ -87,6 +87,7 @@ jobs:
 
           accepted_prefixes = (
               "p43-rescue-pair-",
+              "p43-rescue-single-",
               "p43-member-confirmation-",
               "p43-candidate-",
               "candidate-",
