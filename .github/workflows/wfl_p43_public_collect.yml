@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "public_compute/queue/collect_member_confirmation.json"
+  workflow_run:
+    workflows: ["WFL P43 Public Rescue Pairs", "WFL P43 Public Member Confirmation Batch"]
+    types: [completed]
 
 permissions:
   actions: read
@@ -23,6 +26,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_RUN_ID: ${{ github.event.workflow_run.id || '' }}
         run: |
           set -eu
           python - <<'PY'
@@ -40,6 +45,10 @@ jobs:
           if q.get("schema") != "wfl-public-p43-artifact-collector-1":
               raise SystemExit("bad collector queue schema")
           run_ids = [int(x) for x in q.get("run_ids", [])]
+          event_run_id = str(os.environ.get("EVENT_RUN_ID", "")).strip()
+          if event_run_id:
+              run_ids.append(int(event_run_id))
+          run_ids = sorted(set(run_ids))
           if not run_ids:
               raise SystemExit("empty run_ids")
 
@@ -106,7 +115,8 @@ jobs:
                   and str(a.get("name", "")).startswith(accepted_prefixes)
               ]
               if not selected:
-                  raise SystemExit(f"no eligible artifacts for run {run_id}")
+                  print(f"no eligible artifacts for run {run_id}; skipping")
+                  continue
 
               manifest = {
                   "schema": "wfl-public-p43-collected-run-1",
