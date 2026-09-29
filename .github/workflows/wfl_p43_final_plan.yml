@@ -1,0 +1,56 @@
+name: WFL P43 Freeze FINAL_TRAIN Plan
+
+on:
+  workflow_run:
+    workflows: ["WFL P43 Public Artifact Collector"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/results/member_confirmation_index.json"
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-plan:
+    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Build fail-closed FINAL_TRAIN plan
+        env:
+          PYTHONPATH: public_compute
+        run: python public_compute/build_final_train_plan.py
+      - name: Commit frozen plan if complete
+        run: |
+          set -eu
+          if [ ! -f public_compute/results/final_train_plan.json ]; then
+            echo "384/384 not complete yet; no plan frozen"
+            exit 0
+          fi
+          git config user.name "wfl-p43-plan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/results/final_train_plan.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "P43: freeze retained-family FINAL_TRAIN plan"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 5
+          done
+          exit 1
