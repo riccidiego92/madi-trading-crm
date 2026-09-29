@@ -1,0 +1,9 @@
+{
+  "schema": "wfl-public-p43-artifact-collector-1",
+  "purpose": "Salvage and version verified P43 member-confirmation artifacts before expiry",
+  "run_ids": [
+    36386453236,
+    36489887258
+  ],
+  "scientific_settings_unchanged": true
+}
