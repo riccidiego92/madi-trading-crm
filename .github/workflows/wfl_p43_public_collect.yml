@@ -1,0 +1,226 @@
+name: WFL P43 Public Artifact Collector
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/collect_member_confirmation.json"
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect and verify P43 artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -eu
+          python - <<'PY'
+          import hashlib
+          import io
+          import json
+          import os
+          import re
+          import urllib.request
+          import zipfile
+          from pathlib import Path
+
+          queue_path = Path("public_compute/queue/collect_member_confirmation.json")
+          q = json.loads(queue_path.read_text())
+          if q.get("schema") != "wfl-public-p43-artifact-collector-1":
+              raise SystemExit("bad collector queue schema")
+          run_ids = [int(x) for x in q.get("run_ids", [])]
+          if not run_ids:
+              raise SystemExit("empty run_ids")
+
+          repo = os.environ["REPO"]
+          token = os.environ["GH_TOKEN"]
+          root = Path("public_compute/results/member_confirmation")
+          prov_root = Path("public_compute/results/provenance")
+          root.mkdir(parents=True, exist_ok=True)
+          prov_root.mkdir(parents=True, exist_ok=True)
+
+          def api_json(url: str):
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                      "User-Agent": "wfl-p43-collector",
+                  },
+              )
+              with urllib.request.urlopen(req, timeout=120) as r:
+                  return json.load(r)
+
+          def api_bytes(url: str):
+              req = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                      "User-Agent": "wfl-p43-collector",
+                  },
+              )
+              with urllib.request.urlopen(req, timeout=120) as r:
+                  return r.read()
+
+          accepted_prefixes = (
+              "p43-rescue-pair-",
+              "p43-member-confirmation-",
+              "p43-candidate-",
+          )
+
+          for run_id in run_ids:
+              run = api_json(f"https://api.github.com/repos/{repo}/actions/runs/{run_id}")
+              if run.get("repository", {}).get("full_name") != repo:
+                  raise SystemExit("run repository mismatch")
+
+              artifacts = []
+              page = 1
+              while True:
+                  payload = api_json(
+                      f"https://api.github.com/repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100&page={page}"
+                  )
+                  batch = payload.get("artifacts", [])
+                  artifacts.extend(batch)
+                  if len(batch) < 100:
+                      break
+                  page += 1
+
+              selected = [
+                  a for a in artifacts
+                  if not a.get("expired")
+                  and str(a.get("name", "")).startswith(accepted_prefixes)
+              ]
+              if not selected:
+                  raise SystemExit(f"no eligible artifacts for run {run_id}")
+
+              manifest = {
+                  "schema": "wfl-public-p43-collected-run-1",
+                  "source_repository": repo,
+                  "source_run_id": run_id,
+                  "source_run_attempt": int(run.get("run_attempt", 1)),
+                  "source_head_sha": run.get("head_sha"),
+                  "source_workflow_name": run.get("name"),
+                  "artifact_count": len(selected),
+                  "files": [],
+              }
+
+              for artifact in selected:
+                  aid = int(artifact["id"])
+                  blob = api_bytes(
+                      f"https://api.github.com/repos/{repo}/actions/artifacts/{aid}/zip"
+                  )
+                  with zipfile.ZipFile(io.BytesIO(blob)) as zf:
+                      names = [n for n in zf.namelist() if re.search(r"candidate_\d+\.json$", n)]
+                      if not names:
+                          raise SystemExit(f"artifact {aid} has no candidate JSON")
+                      for name in names:
+                          raw = zf.read(name)
+                          row = json.loads(raw.decode("utf-8"))
+                          if row.get("schema") != "wfl-p43-p42-train-candidate-evaluation-1":
+                              raise SystemExit(f"bad schema in artifact {aid}")
+                          if row.get("stage") != "train":
+                              raise SystemExit(f"non-TRAIN result in artifact {aid}")
+                          if int(row.get("simulation_reps", 0)) != 2000:
+                              raise SystemExit(f"wrong reps in artifact {aid}")
+                          guard = row.get("guardrails", {})
+                          if guard.get("validation_accessed") is not False:
+                              raise SystemExit(f"validation accessed in artifact {aid}")
+                          if guard.get("holdout_accessed") is not False:
+                              raise SystemExit(f"holdout accessed in artifact {aid}")
+                          p = float(row["test"]["p_max_stat"])
+                          if row["test"].get("rejected_at_triage_alpha") is not (p <= 0.01):
+                              raise SystemExit(f"alpha decision mismatch in artifact {aid}")
+
+                          m = re.search(r"candidate_(\d+)\.json$", name)
+                          if not m:
+                              raise SystemExit("cannot parse candidate index")
+                          idx = int(m.group(1))
+                          if not (0 <= idx < 384):
+                              raise SystemExit("candidate index out of range")
+
+                          canonical = (
+                              json.dumps(row, indent=2, sort_keys=True) + "\n"
+                          ).encode("utf-8")
+                          digest = hashlib.sha256(canonical).hexdigest()
+                          dest = root / f"candidate_{idx}.json"
+                          if dest.exists():
+                              old = dest.read_bytes()
+                              old_digest = hashlib.sha256(old).hexdigest()
+                              if old_digest != digest:
+                                  raise SystemExit(
+                                      f"conflicting deterministic result for candidate {idx}"
+                                  )
+                          else:
+                              dest.write_bytes(canonical)
+
+                          manifest["files"].append({
+                              "candidate_index": idx,
+                              "candidate_id": row.get("candidate_id"),
+                              "artifact_id": aid,
+                              "artifact_name": artifact.get("name"),
+                              "sha256": digest,
+                              "destination": dest.as_posix(),
+                          })
+
+              by_idx = {}
+              for rec in manifest["files"]:
+                  idx = rec["candidate_index"]
+                  if idx in by_idx and by_idx[idx]["sha256"] != rec["sha256"]:
+                      raise SystemExit(f"conflicting duplicates for candidate {idx}")
+                  by_idx[idx] = rec
+              manifest["files"] = [by_idx[k] for k in sorted(by_idx)]
+              manifest["candidate_count"] = len(manifest["files"])
+              manifest_blob = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
+              (prov_root / f"run_{run_id}.json").write_text(manifest_blob)
+
+          all_candidates = sorted(root.glob("candidate_*.json"))
+          summary = {
+              "schema": "wfl-public-p43-result-index-1",
+              "candidate_count": len(all_candidates),
+              "required_candidate_count": 384,
+              "complete": len(all_candidates) == 384,
+              "candidate_indices": [
+                  int(re.search(r"candidate_(\d+)\.json$", p.name).group(1))
+                  for p in all_candidates
+              ],
+          }
+          Path("public_compute/results/member_confirmation_index.json").write_text(
+              json.dumps(summary, indent=2, sort_keys=True) + "\n"
+          )
+          print(json.dumps(summary, indent=2, sort_keys=True))
+          PY
+
+      - name: Commit collected verified results
+        run: |
+          set -eu
+          git config user.name "wfl-p43-collector-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/results
+          if git diff --cached --quiet; then
+            echo "No new verified P43 result files"
+            exit 0
+          fi
+          git commit -m "P43: collect verified public member-confirmation artifacts"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 5
+          done
+          exit 1
