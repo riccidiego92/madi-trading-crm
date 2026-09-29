@@ -1,9 +1,22 @@
 {
   "schema": "wfl-public-p43-artifact-collector-1",
-  "purpose": "Salvage and version verified P43 member-confirmation artifacts before expiry",
+  "purpose": "Recover all currently available verified P43 artifacts from rescue and original batches before expiry",
   "run_ids": [
     36386453236,
-    36489887258
+    36489887258,
+    36309285229,
+    36309283777,
+    36309275891,
+    36309273771,
+    36309272058,
+    36309270193,
+    36309267796,
+    36309265557,
+    36309263979,
+    36309261582,
+    36309259519,
+    36309258761,
+    36309255462
   ],
   "scientific_settings_unchanged": true
 }
