@@ -1,8 +1,8 @@
 {
   "schema": "wfl-public-p43-member-confirmation-rescue-1",
-  "created_for": "FREE_ONLY repair of cancelled P43 rescue pair 002",
-  "candidate_count": 2,
-  "pair_count": 1,
+  "created_for": "FREE_ONLY completion of all currently missing P43 member-confirmation candidates except active repair 21/22",
+  "candidate_count": 248,
+  "pair_count": 124,
   "reps": 2000,
   "alpha": 0.01,
   "train_only": true,
@@ -10,14 +10,875 @@
   "holdout_accessed": false,
   "source_of_truth": "riccidiego92/winforlife-classico-lab",
   "private_protocol_branch": "ops/github-only-p40-p48-control-plane",
-  "launch_generation": 3,
-  "launch_note": "Repair cancelled candidates 21 and 22 only; scientific settings unchanged",
+  "launch_generation": 4,
+  "launch_note": "Queue only candidates not covered by imported results, successful rescue jobs, or recoverable original artifacts; candidates 21/22 remain in active repair run. Scientific settings unchanged.",
   "pairs": [
     {
-      "pair_id": "repair-002",
+      "pair_id": "bulk4-000",
       "candidate_indices": [
-        21,
-        22
+        2,
+        3
+      ]
+    },
+    {
+      "pair_id": "bulk4-001",
+      "candidate_indices": [
+        4,
+        5
+      ]
+    },
+    {
+      "pair_id": "bulk4-002",
+      "candidate_indices": [
+        6,
+        7
+      ]
+    },
+    {
+      "pair_id": "bulk4-003",
+      "candidate_indices": [
+        8,
+        9
+      ]
+    },
+    {
+      "pair_id": "bulk4-004",
+      "candidate_indices": [
+        10,
+        11
+      ]
+    },
+    {
+      "pair_id": "bulk4-005",
+      "candidate_indices": [
+        12,
+        13
+      ]
+    },
+    {
+      "pair_id": "bulk4-006",
+      "candidate_indices": [
+        15,
+        17
+      ]
+    },
+    {
+      "pair_id": "bulk4-007",
+      "candidate_indices": [
+        18,
+        23
+      ]
+    },
+    {
+      "pair_id": "bulk4-008",
+      "candidate_indices": [
+        26,
+        27
+      ]
+    },
+    {
+      "pair_id": "bulk4-009",
+      "candidate_indices": [
+        28,
+        29
+      ]
+    },
+    {
+      "pair_id": "bulk4-010",
+      "candidate_indices": [
+        30,
+        31
+      ]
+    },
+    {
+      "pair_id": "bulk4-011",
+      "candidate_indices": [
+        32,
+        33
+      ]
+    },
+    {
+      "pair_id": "bulk4-012",
+      "candidate_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "pair_id": "bulk4-013",
+      "candidate_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "pair_id": "bulk4-014",
+      "candidate_indices": [
+        39,
+        40
+      ]
+    },
+    {
+      "pair_id": "bulk4-015",
+      "candidate_indices": [
+        41,
+        42
+      ]
+    },
+    {
+      "pair_id": "bulk4-016",
+      "candidate_indices": [
+        47,
+        50
+      ]
+    },
+    {
+      "pair_id": "bulk4-017",
+      "candidate_indices": [
+        51,
+        52
+      ]
+    },
+    {
+      "pair_id": "bulk4-018",
+      "candidate_indices": [
+        53,
+        54
+      ]
+    },
+    {
+      "pair_id": "bulk4-019",
+      "candidate_indices": [
+        55,
+        56
+      ]
+    },
+    {
+      "pair_id": "bulk4-020",
+      "candidate_indices": [
+        57,
+        58
+      ]
+    },
+    {
+      "pair_id": "bulk4-021",
+      "candidate_indices": [
+        59,
+        60
+      ]
+    },
+    {
+      "pair_id": "bulk4-022",
+      "candidate_indices": [
+        61,
+        63
+      ]
+    },
+    {
+      "pair_id": "bulk4-023",
+      "candidate_indices": [
+        65,
+        66
+      ]
+    },
+    {
+      "pair_id": "bulk4-024",
+      "candidate_indices": [
+        70,
+        71
+      ]
+    },
+    {
+      "pair_id": "bulk4-025",
+      "candidate_indices": [
+        73,
+        74
+      ]
+    },
+    {
+      "pair_id": "bulk4-026",
+      "candidate_indices": [
+        75,
+        76
+      ]
+    },
+    {
+      "pair_id": "bulk4-027",
+      "candidate_indices": [
+        77,
+        78
+      ]
+    },
+    {
+      "pair_id": "bulk4-028",
+      "candidate_indices": [
+        79,
+        80
+      ]
+    },
+    {
+      "pair_id": "bulk4-029",
+      "candidate_indices": [
+        81,
+        82
+      ]
+    },
+    {
+      "pair_id": "bulk4-030",
+      "candidate_indices": [
+        83,
+        84
+      ]
+    },
+    {
+      "pair_id": "bulk4-031",
+      "candidate_indices": [
+        85,
+        86
+      ]
+    },
+    {
+      "pair_id": "bulk4-032",
+      "candidate_indices": [
+        87,
+        89
+      ]
+    },
+    {
+      "pair_id": "bulk4-033",
+      "candidate_indices": [
+        90,
+        95
+      ]
+    },
+    {
+      "pair_id": "bulk4-034",
+      "candidate_indices": [
+        98,
+        99
+      ]
+    },
+    {
+      "pair_id": "bulk4-035",
+      "candidate_indices": [
+        100,
+        101
+      ]
+    },
+    {
+      "pair_id": "bulk4-036",
+      "candidate_indices": [
+        102,
+        103
+      ]
+    },
+    {
+      "pair_id": "bulk4-037",
+      "candidate_indices": [
+        104,
+        105
+      ]
+    },
+    {
+      "pair_id": "bulk4-038",
+      "candidate_indices": [
+        106,
+        107
+      ]
+    },
+    {
+      "pair_id": "bulk4-039",
+      "candidate_indices": [
+        108,
+        109
+      ]
+    },
+    {
+      "pair_id": "bulk4-040",
+      "candidate_indices": [
+        110,
+        111
+      ]
+    },
+    {
+      "pair_id": "bulk4-041",
+      "candidate_indices": [
+        112,
+        113
+      ]
+    },
+    {
+      "pair_id": "bulk4-042",
+      "candidate_indices": [
+        114,
+        119
+      ]
+    },
+    {
+      "pair_id": "bulk4-043",
+      "candidate_indices": [
+        122,
+        123
+      ]
+    },
+    {
+      "pair_id": "bulk4-044",
+      "candidate_indices": [
+        124,
+        125
+      ]
+    },
+    {
+      "pair_id": "bulk4-045",
+      "candidate_indices": [
+        126,
+        127
+      ]
+    },
+    {
+      "pair_id": "bulk4-046",
+      "candidate_indices": [
+        128,
+        129
+      ]
+    },
+    {
+      "pair_id": "bulk4-047",
+      "candidate_indices": [
+        130,
+        131
+      ]
+    },
+    {
+      "pair_id": "bulk4-048",
+      "candidate_indices": [
+        132,
+        133
+      ]
+    },
+    {
+      "pair_id": "bulk4-049",
+      "candidate_indices": [
+        134,
+        135
+      ]
+    },
+    {
+      "pair_id": "bulk4-050",
+      "candidate_indices": [
+        136,
+        137
+      ]
+    },
+    {
+      "pair_id": "bulk4-051",
+      "candidate_indices": [
+        138,
+        143
+      ]
+    },
+    {
+      "pair_id": "bulk4-052",
+      "candidate_indices": [
+        146,
+        147
+      ]
+    },
+    {
+      "pair_id": "bulk4-053",
+      "candidate_indices": [
+        148,
+        149
+      ]
+    },
+    {
+      "pair_id": "bulk4-054",
+      "candidate_indices": [
+        150,
+        151
+      ]
+    },
+    {
+      "pair_id": "bulk4-055",
+      "candidate_indices": [
+        152,
+        153
+      ]
+    },
+    {
+      "pair_id": "bulk4-056",
+      "candidate_indices": [
+        154,
+        155
+      ]
+    },
+    {
+      "pair_id": "bulk4-057",
+      "candidate_indices": [
+        156,
+        157
+      ]
+    },
+    {
+      "pair_id": "bulk4-058",
+      "candidate_indices": [
+        158,
+        159
+      ]
+    },
+    {
+      "pair_id": "bulk4-059",
+      "candidate_indices": [
+        161,
+        162
+      ]
+    },
+    {
+      "pair_id": "bulk4-060",
+      "candidate_indices": [
+        167,
+        170
+      ]
+    },
+    {
+      "pair_id": "bulk4-061",
+      "candidate_indices": [
+        171,
+        172
+      ]
+    },
+    {
+      "pair_id": "bulk4-062",
+      "candidate_indices": [
+        173,
+        174
+      ]
+    },
+    {
+      "pair_id": "bulk4-063",
+      "candidate_indices": [
+        175,
+        176
+      ]
+    },
+    {
+      "pair_id": "bulk4-064",
+      "candidate_indices": [
+        177,
+        178
+      ]
+    },
+    {
+      "pair_id": "bulk4-065",
+      "candidate_indices": [
+        179,
+        180
+      ]
+    },
+    {
+      "pair_id": "bulk4-066",
+      "candidate_indices": [
+        181,
+        183
+      ]
+    },
+    {
+      "pair_id": "bulk4-067",
+      "candidate_indices": [
+        184,
+        185
+      ]
+    },
+    {
+      "pair_id": "bulk4-068",
+      "candidate_indices": [
+        186,
+        191
+      ]
+    },
+    {
+      "pair_id": "bulk4-069",
+      "candidate_indices": [
+        213,
+        217
+      ]
+    },
+    {
+      "pair_id": "bulk4-070",
+      "candidate_indices": [
+        218,
+        219
+      ]
+    },
+    {
+      "pair_id": "bulk4-071",
+      "candidate_indices": [
+        220,
+        221
+      ]
+    },
+    {
+      "pair_id": "bulk4-072",
+      "candidate_indices": [
+        222,
+        223
+      ]
+    },
+    {
+      "pair_id": "bulk4-073",
+      "candidate_indices": [
+        224,
+        225
+      ]
+    },
+    {
+      "pair_id": "bulk4-074",
+      "candidate_indices": [
+        226,
+        227
+      ]
+    },
+    {
+      "pair_id": "bulk4-075",
+      "candidate_indices": [
+        228,
+        238
+      ]
+    },
+    {
+      "pair_id": "bulk4-076",
+      "candidate_indices": [
+        240,
+        241
+      ]
+    },
+    {
+      "pair_id": "bulk4-077",
+      "candidate_indices": [
+        242,
+        243
+      ]
+    },
+    {
+      "pair_id": "bulk4-078",
+      "candidate_indices": [
+        244,
+        245
+      ]
+    },
+    {
+      "pair_id": "bulk4-079",
+      "candidate_indices": [
+        246,
+        247
+      ]
+    },
+    {
+      "pair_id": "bulk4-080",
+      "candidate_indices": [
+        248,
+        249
+      ]
+    },
+    {
+      "pair_id": "bulk4-081",
+      "candidate_indices": [
+        250,
+        251
+      ]
+    },
+    {
+      "pair_id": "bulk4-082",
+      "candidate_indices": [
+        252,
+        253
+      ]
+    },
+    {
+      "pair_id": "bulk4-083",
+      "candidate_indices": [
+        255,
+        259
+      ]
+    },
+    {
+      "pair_id": "bulk4-084",
+      "candidate_indices": [
+        260,
+        261
+      ]
+    },
+    {
+      "pair_id": "bulk4-085",
+      "candidate_indices": [
+        262,
+        265
+      ]
+    },
+    {
+      "pair_id": "bulk4-086",
+      "candidate_indices": [
+        266,
+        267
+      ]
+    },
+    {
+      "pair_id": "bulk4-087",
+      "candidate_indices": [
+        268,
+        269
+      ]
+    },
+    {
+      "pair_id": "bulk4-088",
+      "candidate_indices": [
+        270,
+        271
+      ]
+    },
+    {
+      "pair_id": "bulk4-089",
+      "candidate_indices": [
+        272,
+        273
+      ]
+    },
+    {
+      "pair_id": "bulk4-090",
+      "candidate_indices": [
+        274,
+        275
+      ]
+    },
+    {
+      "pair_id": "bulk4-091",
+      "candidate_indices": [
+        279,
+        280
+      ]
+    },
+    {
+      "pair_id": "bulk4-092",
+      "candidate_indices": [
+        283,
+        284
+      ]
+    },
+    {
+      "pair_id": "bulk4-093",
+      "candidate_indices": [
+        286,
+        288
+      ]
+    },
+    {
+      "pair_id": "bulk4-094",
+      "candidate_indices": [
+        289,
+        290
+      ]
+    },
+    {
+      "pair_id": "bulk4-095",
+      "candidate_indices": [
+        291,
+        292
+      ]
+    },
+    {
+      "pair_id": "bulk4-096",
+      "candidate_indices": [
+        293,
+        294
+      ]
+    },
+    {
+      "pair_id": "bulk4-097",
+      "candidate_indices": [
+        295,
+        296
+      ]
+    },
+    {
+      "pair_id": "bulk4-098",
+      "candidate_indices": [
+        297,
+        298
+      ]
+    },
+    {
+      "pair_id": "bulk4-099",
+      "candidate_indices": [
+        299,
+        300
+      ]
+    },
+    {
+      "pair_id": "bulk4-100",
+      "candidate_indices": [
+        304,
+        307
+      ]
+    },
+    {
+      "pair_id": "bulk4-101",
+      "candidate_indices": [
+        308,
+        309
+      ]
+    },
+    {
+      "pair_id": "bulk4-102",
+      "candidate_indices": [
+        310,
+        312
+      ]
+    },
+    {
+      "pair_id": "bulk4-103",
+      "candidate_indices": [
+        313,
+        314
+      ]
+    },
+    {
+      "pair_id": "bulk4-104",
+      "candidate_indices": [
+        315,
+        316
+      ]
+    },
+    {
+      "pair_id": "bulk4-105",
+      "candidate_indices": [
+        317,
+        318
+      ]
+    },
+    {
+      "pair_id": "bulk4-106",
+      "candidate_indices": [
+        319,
+        320
+      ]
+    },
+    {
+      "pair_id": "bulk4-107",
+      "candidate_indices": [
+        321,
+        322
+      ]
+    },
+    {
+      "pair_id": "bulk4-108",
+      "candidate_indices": [
+        324,
+        325
+      ]
+    },
+    {
+      "pair_id": "bulk4-109",
+      "candidate_indices": [
+        333,
+        334
+      ]
+    },
+    {
+      "pair_id": "bulk4-110",
+      "candidate_indices": [
+        336,
+        337
+      ]
+    },
+    {
+      "pair_id": "bulk4-111",
+      "candidate_indices": [
+        338,
+        339
+      ]
+    },
+    {
+      "pair_id": "bulk4-112",
+      "candidate_indices": [
+        340,
+        341
+      ]
+    },
+    {
+      "pair_id": "bulk4-113",
+      "candidate_indices": [
+        342,
+        343
+      ]
+    },
+    {
+      "pair_id": "bulk4-114",
+      "candidate_indices": [
+        344,
+        345
+      ]
+    },
+    {
+      "pair_id": "bulk4-115",
+      "candidate_indices": [
+        346,
+        347
+      ]
+    },
+    {
+      "pair_id": "bulk4-116",
+      "candidate_indices": [
+        358,
+        360
+      ]
+    },
+    {
+      "pair_id": "bulk4-117",
+      "candidate_indices": [
+        361,
+        362
+      ]
+    },
+    {
+      "pair_id": "bulk4-118",
+      "candidate_indices": [
+        363,
+        364
+      ]
+    },
+    {
+      "pair_id": "bulk4-119",
+      "candidate_indices": [
+        365,
+        366
+      ]
+    },
+    {
+      "pair_id": "bulk4-120",
+      "candidate_indices": [
+        367,
+        368
+      ]
+    },
+    {
+      "pair_id": "bulk4-121",
+      "candidate_indices": [
+        369,
+        370
+      ]
+    },
+    {
+      "pair_id": "bulk4-122",
+      "candidate_indices": [
+        374,
+        377
+      ]
+    },
+    {
+      "pair_id": "bulk4-123",
+      "candidate_indices": [
+        380,
+        382
       ]
     }
   ]
