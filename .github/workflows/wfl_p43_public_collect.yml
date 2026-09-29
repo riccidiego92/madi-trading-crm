@@ -80,6 +80,7 @@ jobs:
               "p43-rescue-pair-",
               "p43-member-confirmation-",
               "p43-candidate-",
+              "candidate-",
           )
 
           for run_id in run_ids:
