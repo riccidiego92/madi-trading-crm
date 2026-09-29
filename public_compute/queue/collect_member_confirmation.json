@@ -18,5 +18,7 @@
     36309258761,
     36309255462
   ],
-  "scientific_settings_unchanged": true
+  "scientific_settings_unchanged": true,
+  "collector_revision": 1,
+  "retry_reason": "Use GitHub CLI for artifact ZIP redirect handling"
 }
