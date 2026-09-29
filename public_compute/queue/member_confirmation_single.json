@@ -1,0 +1,11 @@
+{
+  "schema": "wfl-public-p43-member-confirmation-single-1",
+  "created_for": "Independent FREE_ONLY repair for repeatedly cancelled candidates 21 and 22",
+  "candidate_indices": [21, 22],
+  "reps": 2000,
+  "alpha": 0.01,
+  "train_only": true,
+  "validation_accessed": false,
+  "holdout_accessed": false,
+  "scientific_settings_unchanged": true
+}
