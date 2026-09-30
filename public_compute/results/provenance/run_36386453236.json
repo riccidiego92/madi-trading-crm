@@ -1,9 +1,7 @@
 {
   "artifact_count": 33,
-  "candidate_count": 65,
-  "conflicted_candidate_indices": [
-    214
-  ],
+  "candidate_count": 66,
+  "conflicted_candidate_indices": [],
   "files": [
     {
       "artifact_id": 11008081357,
@@ -445,6 +443,15 @@
       "destination": "public_compute/results/member_confirmation/candidate_213.json",
       "quarantined_conflict": false,
       "sha256": "95d2a1d09b44b8678707183f1a6834e0fc2cf4fbb911bb0917dd9519c07e63e2"
+    },
+    {
+      "artifact_id": 11067146875,
+      "artifact_name": "p43-rescue-pair-030",
+      "candidate_id": "P42_PHASED:836dbfa6e7e95fd9",
+      "candidate_index": 214,
+      "destination": "public_compute/results/member_confirmation/candidate_214.json",
+      "quarantined_conflict": false,
+      "sha256": "265031c94fe542cdada7c15fa805f8172f116dc36561e935b6f10af215d9d486"
     },
     {
       "artifact_id": 11074092666,
