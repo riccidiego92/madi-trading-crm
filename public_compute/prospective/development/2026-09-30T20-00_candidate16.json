@@ -1,0 +1,54 @@
+{
+  "schema": "wfl-development-prospective-freeze-1",
+  "evidence_grade": "DEVELOPMENT_UNVALIDATED_NOT_FOR_LIVE_INFERENCE",
+  "frozen_at": "2026-09-30T19:17:19+02:00",
+  "target": {
+    "datetime": "2026-09-30T20:00:00+02:00",
+    "timezone": "Europe/Rome",
+    "public_ordinal": 85008
+  },
+  "selection": {
+    "rule": "fixed_candidate_index_16_no_outcome_selection",
+    "candidate_index": 16,
+    "reason": "prospective demo chosen before target; no seed/state search; no selection based on generated numbers"
+  },
+  "machine": {
+    "candidate_id": "P42_PHASED:1ae8bdf827360633",
+    "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+    "candidate_signature_sha256": "a3e813232163f8040a6bb2277c681b17aaa48a6ded282a4e4a896ce0bba74498",
+    "config": {
+      "background_cycles_main": 0,
+      "background_cycles_numerone": 0,
+      "contests_per_day": 17,
+      "experiment_seed": 2026092642,
+      "mapper": "fisher_yates",
+      "reseed_mode": "per_contest",
+      "stream_mode": "single"
+    },
+    "research_phase_offset": 0,
+    "calendar_alignment_offset": 0,
+    "machine_ordinal": 85008,
+    "member_confirmation": {
+      "simulation_reps": 2000,
+      "p_max_stat": 0.1958041958041958,
+      "rejected_at_triage_alpha_0_01": false,
+      "final_train_complete": false
+    }
+  },
+  "prediction": {
+    "main": [3,4,6,8,10,11,14,15,17,19],
+    "complement": [1,2,5,7,9,12,13,16,18,20],
+    "numerone": 12,
+    "public_output_sha256": "d71b4fa5ecae0a7c8d7f6275b73e3f966968cca9eba6c264c018d7f3009ec6d6"
+  },
+  "guardrails": {
+    "generated_before_target": true,
+    "future_result_used_for_generation": false,
+    "operational_seed_or_state_search": false,
+    "post_result_retuning_allowed": false,
+    "counts_as_validated_prediction": false,
+    "must_be_scored_after_target": true,
+    "failures_retained": true
+  },
+  "freeze_sha256": "3a76f5f20d1eda112ab2da6341d6a23fec1d4f271ccda2439aff55db3b0fcd77"
+}
