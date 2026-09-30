@@ -1,0 +1,47 @@
+name: WFL P43 FINAL_TRAIN Controller Smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/final_train_controller_smoke.json"
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Compile controller and sharded engine
+        run: |
+          python -m py_compile             public_compute/final_train_controller.py             public_compute/wfl_public/p43_final_train_sharded.py
+      - name: Validate frozen queue geometry
+        env:
+          PYTHONPATH: public_compute
+        run: |
+          python - <<'PY'
+          from final_train_controller import _queue
+          cal=_queue("calibration",[0],1)
+          null=_queue("null",[0],2)
+          assert len(cal["tasks"]) == 25
+          assert len(null["tasks"]) == 25
+          assert cal["tasks"][0]["rep_start"] == 0
+          assert cal["tasks"][-1]["rep_start"] == 48000
+          assert null["tasks"][0]["rep_start"] == 50000
+          assert null["tasks"][-1]["rep_start"] == 98000
+          assert all(x["rep_count"] == 2000 for x in cal["tasks"]+null["tasks"])
+          assert cal["scientific_settings"]["total_reps_per_candidate"] == 100000
+          assert cal["scientific_settings"]["alpha_final"] == 0.05
+          assert cal["scientific_settings"]["validation_accessed"] is False
+          assert cal["scientific_settings"]["holdout_accessed"] is False
+          print("FINAL_TRAIN_CONTROLLER_SMOKE_OK")
+          PY
