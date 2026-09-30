@@ -1,9 +1,19 @@
 {
   "schema": "wfl-public-p43-member-confirmation-single-1",
-  "created_for": "Independent FREE_ONLY repair for cancelled bulk candidates 4 and 5",
+  "created_for": "Idempotent pre-repair for cancelled pair 4/5 and active pairs approaching 6-hour timeout",
   "candidate_indices": [
+    2,
+    3,
     4,
-    5
+    5,
+    18,
+    23,
+    34,
+    35,
+    39,
+    40,
+    53,
+    54
   ],
   "reps": 2000,
   "alpha": 0.01,
@@ -11,6 +21,6 @@
   "validation_accessed": false,
   "holdout_accessed": false,
   "scientific_settings_unchanged": true,
-  "repair_generation": 2,
-  "note": "Bulk pair bulk4-001 exceeded job window; rerun candidates independently with unchanged scientific settings."
+  "repair_generation": 3,
+  "note": "Each job reuses an already consolidated result if present; otherwise computes the same frozen 2000-rep TRAIN candidate."
 }
