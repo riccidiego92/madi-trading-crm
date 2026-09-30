@@ -1,0 +1,36 @@
+{
+  "schema": "wfl-public-p43-private-sync-1",
+  "source_repository": "riccidiego92/winforlife-classico-lab",
+  "source_ref": "ops/github-only-p40-p48-control-plane",
+  "candidate_indices": [
+    0,
+    1,
+    24,
+    25,
+    48,
+    49,
+    72,
+    96,
+    97,
+    120
+  ],
+  "source_blob_sha_by_index": {
+    "0": "3ca50daa71055c1011324248b5c20d97ef8d6fb9",
+    "1": "542bfac8aa9c513f88389fe3912cbc2baaa9c172",
+    "24": "cc326cb54887db5109f2deb3d80ccfdfd6bf44e3",
+    "25": "b0f71ccc7eeaa91365153f46cc77b8cfe8416fc5",
+    "48": "737d6e65546eb0e48b0510a5e8bfcf72688e4839",
+    "49": "065ad3390b5a788e0c64588202164c558968b6e3",
+    "72": "41d5254f983db7fc572272ab7b136ab14d1f2615",
+    "96": "93447db05046503cd4293d946e7c270e62259cf7",
+    "97": "d88be428528fd108e51adf53822179635fc72eb9",
+    "120": "73e2a54d6ddf300021551b478398273635729114"
+  },
+  "guardrails": {
+    "train_only": true,
+    "reps": 2000,
+    "alpha": 0.01,
+    "validation_accessed": false,
+    "holdout_accessed": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "candidate_id": "P42_PHASED:76d590b552e78fe6",
+  "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|continuous|bgm0|bgn1",
+  "candidate_signature_sha256": "ff8cbc9d5066bfe3443cc5aeca617a752eec754719f7210459aee52e55369ff1",
+  "config": {
+    "background_cycles_main": 0,
+    "background_cycles_numerone": 1,
+    "contests_per_day": 17,
+    "experiment_seed": 2026092642,
+    "mapper": "rank_unrank",
+    "reseed_mode": "continuous",
+    "stream_mode": "single"
+  },
+  "core_family_key": "rank_unrank|single|continuous",
+  "evidence_grade": "DEVELOPMENT_OR_CONFIRMATION_ONLY",
+  "execution": {
+    "replicate_order_preserved_for_aggregation": true,
+    "workers": 4
+  },
+  "guardrails": {
+    "holdout_accessed": false,
+    "internal_synthetic_state_compared_to_real": false,
+    "non_rejection_is_compatibility_only": true,
+    "operational_seed_search": false,
+    "parallel_execution_only": true,
+    "validation_accessed": false
+  },
+  "n_real_contests": 36902,
+  "schema": "wfl-p43-p42-train-candidate-evaluation-1",
+  "simulation_reps": 2000,
+  "stage": "train",
+  "test": {
+    "alpha_final": 0.05,
+    "excluded_zero_sd_features": 0,
+    "normalization_reps": 1000,
+    "null_evaluation_reps": 1000,
+    "observed_max_abs_z": 4.059144005257301,
+    "p_max_stat": 0.14685314685314685,
+    "rejected_at_final_alpha": false,
+    "rejected_at_triage_alpha": false,
+    "retained_features": 936,
+    "simulated_max_abs_z_q95": 4.474978613579567,
+    "simulated_max_abs_z_q99": 6.066791093496896,
+    "simulation_reps_total": 2000
+  }
+}
