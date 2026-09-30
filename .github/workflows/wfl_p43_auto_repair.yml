@@ -1,0 +1,118 @@
+name: WFL P43 Auto Repair Planner
+
+on:
+  workflow_run:
+    workflows: ["WFL P43 Public Rescue Pairs"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  plan-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Find failed/cancelled candidate indices
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -eu
+          python - <<'PY'
+          import json, os, re, subprocess
+          from pathlib import Path
+
+          repo=os.environ["REPO"]
+          run_id=int(os.environ["RUN_ID"])
+          jobs=[]
+          for page in (1,2,3):
+              raw=subprocess.check_output(
+                  ["gh","api",f"repos/{repo}/actions/runs/{run_id}/jobs?per_page=100&page={page}"],
+                  text=True,
+              )
+              batch=json.loads(raw).get("jobs",[])
+              jobs.extend(batch)
+              if len(batch)<100:
+                  break
+
+          bad=set()
+          for job in jobs:
+              name=str(job.get("name",""))
+              if not name.startswith("evaluate"):
+                  continue
+              conclusion=job.get("conclusion")
+              if conclusion not in {"failure","cancelled","timed_out","action_required","startup_failure"}:
+                  continue
+              nums=[int(x) for x in re.findall(r"\b\d+\b",name)]
+              # first number belongs to pair id; remaining one/two are candidate indices
+              for idx in nums[1:]:
+                  if 0 <= idx < 384:
+                      bad.add(idx)
+
+          # Do not requeue candidates already consolidated successfully.
+          result_root=Path("public_compute/results/member_confirmation")
+          missing=[
+              idx for idx in sorted(bad)
+              if not (result_root/f"candidate_{idx}.json").exists()
+          ]
+
+          Path("public_compute/repair_plan_status.json").write_text(
+              json.dumps({
+                  "schema":"wfl-public-p43-auto-repair-status-1",
+                  "source_run_id":run_id,
+                  "bad_candidate_indices":sorted(bad),
+                  "already_consolidated_count":len(bad)-len(missing),
+                  "repair_candidate_indices":missing,
+              },indent=2,sort_keys=True)+"\n"
+          )
+
+          if not missing:
+              print("No repair candidates remain")
+              Path("/tmp/no_repair").write_text("1")
+          else:
+              queue={
+                  "schema":"wfl-public-p43-member-confirmation-single-1",
+                  "created_for":f"Automatic repair of failed/cancelled jobs from rescue run {run_id}",
+                  "candidate_indices":missing,
+                  "reps":2000,
+                  "alpha":0.01,
+                  "train_only":True,
+                  "validation_accessed":False,
+                  "holdout_accessed":False,
+                  "scientific_settings_unchanged":True,
+                  "source_run_id":run_id,
+              }
+              Path("public_compute/queue/member_confirmation_single.json").write_text(
+                  json.dumps(queue,indent=2,sort_keys=True)+"\n"
+              )
+              print(json.dumps(queue,indent=2,sort_keys=True))
+          PY
+
+      - name: Commit repair queue when needed
+        run: |
+          set -eu
+          git config user.name "wfl-p43-repair-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/repair_plan_status.json
+          if [ ! -f /tmp/no_repair ]; then
+            git add public_compute/queue/member_confirmation_single.json
+          fi
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "P43: auto-plan repair for failed rescue jobs"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 5
+          done
+          exit 1
