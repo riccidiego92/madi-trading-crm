@@ -281,7 +281,68 @@ jobs:
           Path("public_compute/results/member_confirmation_index.json").write_text(
               json.dumps(summary, indent=2, sort_keys=True) + "\n"
           )
-          print(json.dumps(summary, indent=2, sort_keys=True))
+
+          families = {}
+          for p in all_candidates:
+              row = json.loads(p.read_text())
+              key = row["core_family_key"]
+              rec = families.setdefault(key, {
+                  "core_family_key": key,
+                  "completed_members": 0,
+                  "rejected_members_at_0_01": 0,
+                  "non_rejected_members_at_0_01": 0,
+                  "guaranteed_retained_for_final_train": False,
+              })
+              rec["completed_members"] += 1
+              rejected = bool(row["test"]["rejected_at_triage_alpha"])
+              if rejected:
+                  rec["rejected_members_at_0_01"] += 1
+              else:
+                  rec["non_rejected_members_at_0_01"] += 1
+                  rec["guaranteed_retained_for_final_train"] = True
+
+          family_rows = []
+          for key in sorted(families):
+              rec = families[key]
+              rec["missing_members"] = 16 - rec["completed_members"]
+              rec["family_complete"] = rec["completed_members"] == 16
+              rec["can_still_be_fully_rejected"] = (
+                  rec["non_rejected_members_at_0_01"] == 0
+                  and rec["missing_members"] > 0
+              )
+              rec["fully_rejected_at_p43"] = (
+                  rec["family_complete"]
+                  and rec["rejected_members_at_0_01"] == 16
+              )
+              family_rows.append(rec)
+
+          family_summary = {
+              "schema": "wfl-public-p43-family-progress-1",
+              "candidate_count": len(all_candidates),
+              "family_count_seen": len(family_rows),
+              "required_family_count": 24,
+              "guaranteed_retained_family_count": sum(
+                  1 for x in family_rows
+                  if x["guaranteed_retained_for_final_train"]
+              ),
+              "fully_rejected_family_count": sum(
+                  1 for x in family_rows
+                  if x["fully_rejected_at_p43"]
+              ),
+              "families": family_rows,
+              "guardrails": {
+                  "provisional_progress_only": True,
+                  "final_plan_requires_complete_384": True,
+                  "family_rejection_requires_all_16_rejected_at_0_01": True,
+              },
+          }
+          Path("public_compute/results/member_confirmation_family_progress.json").write_text(
+              json.dumps(family_summary, indent=2, sort_keys=True) + "\n"
+          )
+          print(json.dumps({
+              "index": summary,
+              "family_progress": family_summary,
+          }, indent=2, sort_keys=True))
           PY
 
       - name: Commit collected verified results
