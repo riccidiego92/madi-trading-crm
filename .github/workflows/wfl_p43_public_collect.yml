@@ -57,8 +57,10 @@ jobs:
           token = os.environ["GH_TOKEN"]
           root = Path("public_compute/results/member_confirmation")
           prov_root = Path("public_compute/results/provenance")
+          conflict_root = Path("public_compute/results/conflicts")
           root.mkdir(parents=True, exist_ok=True)
           prov_root.mkdir(parents=True, exist_ok=True)
+          conflict_root.mkdir(parents=True, exist_ok=True)
 
           def api_json(url: str):
               req = urllib.request.Request(
@@ -170,13 +172,28 @@ jobs:
                           ).encode("utf-8")
                           digest = hashlib.sha256(canonical).hexdigest()
                           dest = root / f"candidate_{idx}.json"
+                          conflict = False
                           if dest.exists():
                               old = dest.read_bytes()
                               old_digest = hashlib.sha256(old).hexdigest()
                               if old_digest != digest:
-                                  raise SystemExit(
-                                      f"conflicting deterministic result for candidate {idx}"
+                                  conflict = True
+                                  report_path = conflict_root / f"candidate_{idx}.json"
+                                  report = {
+                                      "schema": "wfl-public-p43-conflict-1",
+                                      "candidate_index": idx,
+                                      "candidate_id": row.get("candidate_id"),
+                                      "existing_sha256": old_digest,
+                                      "new_sha256": digest,
+                                      "new_source_run_id": run_id,
+                                      "new_artifact_id": aid,
+                                      "new_artifact_name": artifact.get("name"),
+                                      "resolution": "QUARANTINED_FAIL_CLOSED",
+                                  }
+                                  report_path.write_text(
+                                      json.dumps(report, indent=2, sort_keys=True) + "\n"
                                   )
+                                  dest.unlink()
                           else:
                               dest.write_bytes(canonical)
 
@@ -187,14 +204,23 @@ jobs:
                               "artifact_name": artifact.get("name"),
                               "sha256": digest,
                               "destination": dest.as_posix(),
+                              "quarantined_conflict": conflict,
                           })
 
               by_idx = {}
+              conflicted = set()
               for rec in manifest["files"]:
                   idx = rec["candidate_index"]
+                  if rec.get("quarantined_conflict"):
+                      conflicted.add(idx)
+                      continue
                   if idx in by_idx and by_idx[idx]["sha256"] != rec["sha256"]:
-                      raise SystemExit(f"conflicting duplicates for candidate {idx}")
-                  by_idx[idx] = rec
+                      conflicted.add(idx)
+                      by_idx.pop(idx, None)
+                      continue
+                  if idx not in conflicted:
+                      by_idx[idx] = rec
+              manifest["conflicted_candidate_indices"] = sorted(conflicted)
               manifest["files"] = [by_idx[k] for k in sorted(by_idx)]
               manifest["candidate_count"] = len(manifest["files"])
               manifest_blob = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
@@ -206,6 +232,7 @@ jobs:
               "candidate_count": len(all_candidates),
               "required_candidate_count": 384,
               "complete": len(all_candidates) == 384,
+              "quarantined_conflict_count": len(list(conflict_root.glob("candidate_*.json"))),
               "candidate_indices": [
                   int(re.search(r"candidate_(\d+)\.json$", p.name).group(1))
                   for p in all_candidates
