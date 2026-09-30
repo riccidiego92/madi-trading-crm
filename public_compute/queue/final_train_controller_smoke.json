@@ -1,0 +1,8 @@
+{
+  "schema": "wfl-p43-final-train-controller-smoke-1",
+  "purpose": "Validate controller syntax and frozen sharding geometry only; no scientific evidence",
+  "expected_calibration_shards_per_candidate": 25,
+  "expected_null_shards_per_candidate": 25,
+  "shard_reps": 2000,
+  "total_reps": 100000
+}
