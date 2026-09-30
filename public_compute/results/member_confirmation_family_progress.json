@@ -1,5 +1,5 @@
 {
-  "candidate_count": 244,
+  "candidate_count": 248,
   "families": [
     {
       "can_still_be_fully_rejected": false,
@@ -36,13 +36,13 @@
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 8,
+      "completed_members": 10,
       "core_family_key": "fisher_yates|split_main_numerone|continuous",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 8,
-      "non_rejected_members_at_0_01": 8,
+      "missing_members": 6,
+      "non_rejected_members_at_0_01": 10,
       "rejected_members_at_0_01": 0
     },
     {
@@ -168,13 +168,13 @@
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 12,
+      "completed_members": 14,
       "core_family_key": "rejection|split_main_numerone|continuous",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 4,
-      "non_rejected_members_at_0_01": 12,
+      "missing_members": 2,
+      "non_rejected_members_at_0_01": 14,
       "rejected_members_at_0_01": 0
     },
     {
