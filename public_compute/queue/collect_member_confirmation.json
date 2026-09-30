@@ -22,6 +22,6 @@
     36701946417
   ],
   "scientific_settings_unchanged": true,
-  "collector_revision": 4,
-  "retry_reason": "Refresh index after private-to-public sync and collect latest partial bulk artifacts"
+  "collector_revision": 5,
+  "retry_reason": "Refresh after adding provisional family progress monitor"
 }
