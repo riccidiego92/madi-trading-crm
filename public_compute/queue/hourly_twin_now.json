@@ -1,0 +1,7 @@
+{
+  "schema": "wfl-hourly-twin-now-1",
+  "purpose": "Trigger first scheduled-style hourly twin freeze immediately",
+  "candidate_index": 16,
+  "scientific_status": "DEVELOPMENT_UNVALIDATED",
+  "no_post_result_retuning": true
+}
