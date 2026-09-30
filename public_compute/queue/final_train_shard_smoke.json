@@ -1,0 +1,7 @@
+{
+  "schema": "wfl-p43-final-train-shard-smoke-1",
+  "candidate_index": 0,
+  "rep_start": 0,
+  "rep_count": 4,
+  "purpose": "Compile and smoke-test the sharded 100000-rep FINAL_TRAIN engine only; not scientific evidence"
+}
