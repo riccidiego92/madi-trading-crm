@@ -1,0 +1,77 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "b55ddfbb96282e22a2549ca42a9afef8c93a6575df6d1bfbba976ca404d6e088",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 4639,
+    "date": "2026-09-30",
+    "main": [
+      2,
+      3,
+      4,
+      6,
+      9,
+      12,
+      13,
+      14,
+      15,
+      17
+    ],
+    "numerone": 6,
+    "source_sha256": "4b2c075bcda20bc8ca24aa706ae810c06f8cd021bba6695223a52447167a2ff8",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-4639/30-settembre-2026",
+    "time": "21:00"
+  },
+  "prediction": {
+    "complement": [
+      2,
+      3,
+      5,
+      6,
+      8,
+      12,
+      13,
+      16,
+      18,
+      19
+    ],
+    "main": [
+      1,
+      4,
+      7,
+      9,
+      10,
+      11,
+      14,
+      15,
+      17,
+      20
+    ],
+    "numerone": 20,
+    "prediction_sha256": "6dfe14a5b4249dc0cdbc734c10998be09e3aa3672f2d3e1754577ec3b3405e3b"
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 5,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 5
+  },
+  "score_sha256": "96190af31c8ed8dc9e20662676930359702c569691bfd9170efaee285f92c6c5",
+  "scored_at": "2026-10-01T01:02:23.314694+02:00",
+  "target": {
+    "datetime": "2026-09-30T21:00:00+02:00",
+    "public_ordinal": 85009,
+    "timezone": "Europe/Rome"
+  }
+}
