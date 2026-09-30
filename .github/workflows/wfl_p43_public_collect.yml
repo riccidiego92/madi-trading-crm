@@ -8,6 +8,13 @@ on:
   workflow_run:
     workflows: ["WFL P43 Public Rescue Pairs", "WFL P43 Public Rescue Singles", "WFL P43 Public Member Confirmation Batch"]
     types: [completed]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: wfl-p43-public-collector
+  cancel-in-progress: false
 
 permissions:
   actions: read
