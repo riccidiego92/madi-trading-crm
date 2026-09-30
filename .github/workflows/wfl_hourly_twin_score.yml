@@ -1,0 +1,52 @@
+name: WFL Hourly Twin Score
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wfl-hourly-twin-score
+  cancel-in-progress: false
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Score published official contests
+        env:
+          PYTHONPATH: public_compute
+        run: python public_compute/score_hourly_twin.py
+      - name: Commit immutable scores
+        run: |
+          set -eu
+          git config user.name "wfl-hourly-twin-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/prospective/hourly_scores
+          if git diff --cached --quiet; then
+            echo "No new official scores available"
+            exit 0
+          fi
+          git commit -m "WFL: score hourly development predictions"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 5
+          done
+          exit 1
