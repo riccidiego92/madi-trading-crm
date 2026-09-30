@@ -2,7 +2,7 @@ name: WFL Hourly Twin Score
 
 on:
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 5-22 * * *"
   workflow_dispatch:
 
 permissions:
