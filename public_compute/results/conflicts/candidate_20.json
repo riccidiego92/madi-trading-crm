@@ -1,0 +1,11 @@
+{
+  "candidate_id": "P42_PHASED:c8a44d36a8bf00fc",
+  "candidate_index": 20,
+  "existing_sha256": "7a0b6af487053fad4caf07c7b6e7310c67b2f69cce9a951f04b6f86f1c840f74",
+  "new_artifact_id": 11012675745,
+  "new_artifact_name": "p43-rescue-pair-001",
+  "new_sha256": "f6738db742ea8619acc904ded72444b91abe6e697844b31dd7ed21d0acea94d5",
+  "new_source_run_id": 36489887258,
+  "resolution": "QUARANTINED_FAIL_CLOSED",
+  "schema": "wfl-public-p43-conflict-1"
+}

@@ -1,0 +1,58 @@
+{
+  "artifact_count": 5,
+  "candidate_count": 5,
+  "conflicted_candidate_indices": [],
+  "files": [
+    {
+      "artifact_id": 11028657304,
+      "artifact_name": "candidate-211",
+      "candidate_id": "P42_PHASED:a6e01d28de6e2cd1",
+      "candidate_index": 211,
+      "destination": "public_compute/results/member_confirmation/candidate_211.json",
+      "quarantined_conflict": false,
+      "sha256": "26f514ba9300301b1dadb977eb768744a8a80a366fe691e03d94913fbb19c9cf"
+    },
+    {
+      "artifact_id": 11029349820,
+      "artifact_name": "candidate-235",
+      "candidate_id": "P42_PHASED:82b00b467c6d33dd",
+      "candidate_index": 235,
+      "destination": "public_compute/results/member_confirmation/candidate_235.json",
+      "quarantined_conflict": false,
+      "sha256": "fce63dcbb6cb3f4102479811200a11dc45f739a2dcad67b5bec531bcb0cbf9a6"
+    },
+    {
+      "artifact_id": 11033270739,
+      "artifact_name": "candidate-331",
+      "candidate_id": "P42_PHASED:5743ff8a1cc6c24f",
+      "candidate_index": 331,
+      "destination": "public_compute/results/member_confirmation/candidate_331.json",
+      "quarantined_conflict": false,
+      "sha256": "fa86198d9c5e720efc5e5cd74a97580c4e97fc86475e1736a4bc68077dc7c27f"
+    },
+    {
+      "artifact_id": 11036647490,
+      "artifact_name": "candidate-355",
+      "candidate_id": "P42_PHASED:d5cde4f60ed4413b",
+      "candidate_index": 355,
+      "destination": "public_compute/results/member_confirmation/candidate_355.json",
+      "quarantined_conflict": false,
+      "sha256": "e745222000445edaf94ffecc36a8ba203874e9b4db0de66110c9ea2a5d8166b5"
+    },
+    {
+      "artifact_id": 11035201680,
+      "artifact_name": "candidate-379",
+      "candidate_id": "P42_PHASED:555c4bdadad254f6",
+      "candidate_index": 379,
+      "destination": "public_compute/results/member_confirmation/candidate_379.json",
+      "quarantined_conflict": false,
+      "sha256": "64f2c119948c4ab6f9fa80b7be3de733a481cf1a51f7f5032dfcb832dbb0d233"
+    }
+  ],
+  "schema": "wfl-public-p43-collected-run-1",
+  "source_head_sha": "a32dce15b5811e9817317a550ef07b89dfb59dd4",
+  "source_repository": "riccidiego92/madi-trading-crm",
+  "source_run_attempt": 1,
+  "source_run_id": 36309272058,
+  "source_workflow_name": "WFL P43 Public Member Confirmation Batch"
+}

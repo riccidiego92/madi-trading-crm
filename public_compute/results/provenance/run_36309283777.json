@@ -1,0 +1,22 @@
+{
+  "artifact_count": 1,
+  "candidate_count": 1,
+  "conflicted_candidate_indices": [],
+  "files": [
+    {
+      "artifact_id": 11028600893,
+      "artifact_name": "candidate-214",
+      "candidate_id": "P42_PHASED:836dbfa6e7e95fd9",
+      "candidate_index": 214,
+      "destination": "public_compute/results/member_confirmation/candidate_214.json",
+      "quarantined_conflict": false,
+      "sha256": "c767307fd97943ff9cf6cd7a31bf307e3f1eb23697b9cbbcf99d42caa8753135"
+    }
+  ],
+  "schema": "wfl-public-p43-collected-run-1",
+  "source_head_sha": "bae646e96a9618183ac66e37c9a12aa359edc81e",
+  "source_repository": "riccidiego92/madi-trading-crm",
+  "source_run_attempt": 1,
+  "source_run_id": 36309283777,
+  "source_workflow_name": "WFL P43 Public Member Confirmation Batch"
+}

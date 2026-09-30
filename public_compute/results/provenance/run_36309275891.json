@@ -1,0 +1,40 @@
+{
+  "artifact_count": 3,
+  "candidate_count": 3,
+  "conflicted_candidate_indices": [],
+  "files": [
+    {
+      "artifact_id": 11029315545,
+      "artifact_name": "candidate-285",
+      "candidate_id": "P42_PHASED:50fc0f4f02cf4a6c",
+      "candidate_index": 285,
+      "destination": "public_compute/results/member_confirmation/candidate_285.json",
+      "quarantined_conflict": false,
+      "sha256": "d793aae4e333ed804d082f49ac2764d796280822dae6b0f696ab82a5e42e45b0"
+    },
+    {
+      "artifact_id": 11038583807,
+      "artifact_name": "candidate-357",
+      "candidate_id": "P42_PHASED:709329fe48a3be90",
+      "candidate_index": 357,
+      "destination": "public_compute/results/member_confirmation/candidate_357.json",
+      "quarantined_conflict": false,
+      "sha256": "d7fb59f5282391755da7e4e9ffdaf05ab52cdfefe53c311ae32b7df7c9a8d531"
+    },
+    {
+      "artifact_id": 11036669380,
+      "artifact_name": "candidate-381",
+      "candidate_id": "P42_PHASED:3ee2cb60595427fe",
+      "candidate_index": 381,
+      "destination": "public_compute/results/member_confirmation/candidate_381.json",
+      "quarantined_conflict": false,
+      "sha256": "df2e1817d9118b67d8ee98379dda133979d3178e1803ea00b62a60e42874f98d"
+    }
+  ],
+  "schema": "wfl-public-p43-collected-run-1",
+  "source_head_sha": "5fe826ada474b22df02eba6c6ce503cf28126c4b",
+  "source_repository": "riccidiego92/madi-trading-crm",
+  "source_run_attempt": 1,
+  "source_run_id": 36309275891,
+  "source_workflow_name": "WFL P43 Public Member Confirmation Batch"
+}
