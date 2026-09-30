@@ -34,6 +34,7 @@ jobs:
           import hashlib
           import io
           import json
+          import math
           import os
           import re
           import subprocess
@@ -87,6 +88,27 @@ jobs:
                   env=env,
                   timeout=180,
               )
+
+          def scientifically_equivalent(a, b, *, atol=1e-12):
+              if isinstance(a, bool) or isinstance(b, bool):
+                  return a is b
+              if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+                  return math.isclose(float(a), float(b), rel_tol=0.0, abs_tol=atol)
+              if type(a) is not type(b):
+                  return False
+              if isinstance(a, dict):
+                  if set(a) != set(b):
+                      return False
+                  return all(
+                      scientifically_equivalent(a[k], b[k], atol=atol)
+                      for k in a
+                  )
+              if isinstance(a, list):
+                  return len(a) == len(b) and all(
+                      scientifically_equivalent(x, y, atol=atol)
+                      for x, y in zip(a, b)
+                  )
+              return a == b
 
           accepted_prefixes = (
               "p43-rescue-pair-",
@@ -173,27 +195,33 @@ jobs:
                           digest = hashlib.sha256(canonical).hexdigest()
                           dest = root / f"candidate_{idx}.json"
                           conflict = False
+                          report_path = conflict_root / f"candidate_{idx}.json"
                           if dest.exists():
                               old = dest.read_bytes()
                               old_digest = hashlib.sha256(old).hexdigest()
                               if old_digest != digest:
-                                  conflict = True
-                                  report_path = conflict_root / f"candidate_{idx}.json"
-                                  report = {
-                                      "schema": "wfl-public-p43-conflict-1",
-                                      "candidate_index": idx,
-                                      "candidate_id": row.get("candidate_id"),
-                                      "existing_sha256": old_digest,
-                                      "new_sha256": digest,
-                                      "new_source_run_id": run_id,
-                                      "new_artifact_id": aid,
-                                      "new_artifact_name": artifact.get("name"),
-                                      "resolution": "QUARANTINED_FAIL_CLOSED",
-                                  }
-                                  report_path.write_text(
-                                      json.dumps(report, indent=2, sort_keys=True) + "\n"
-                                  )
-                                  dest.unlink()
+                                  old_row = json.loads(old.decode("utf-8"))
+                                  if scientifically_equivalent(old_row, row, atol=1e-12):
+                                      if report_path.exists():
+                                          report_path.unlink()
+                                  else:
+                                      conflict = True
+                                      report = {
+                                          "schema": "wfl-public-p43-conflict-2",
+                                          "candidate_index": idx,
+                                          "candidate_id": row.get("candidate_id"),
+                                          "existing_sha256": old_digest,
+                                          "new_sha256": digest,
+                                          "new_source_run_id": run_id,
+                                          "new_artifact_id": aid,
+                                          "new_artifact_name": artifact.get("name"),
+                                          "numeric_equivalence_atol": 1e-12,
+                                          "resolution": "QUARANTINED_FAIL_CLOSED",
+                                      }
+                                      report_path.write_text(
+                                          json.dumps(report, indent=2, sort_keys=True) + "\n"
+                                      )
+                                      dest.unlink()
                           else:
                               dest.write_bytes(canonical)
 
@@ -213,12 +241,9 @@ jobs:
                   idx = rec["candidate_index"]
                   if rec.get("quarantined_conflict"):
                       conflicted.add(idx)
-                      continue
-                  if idx in by_idx and by_idx[idx]["sha256"] != rec["sha256"]:
-                      conflicted.add(idx)
                       by_idx.pop(idx, None)
                       continue
-                  if idx not in conflicted:
+                  if idx not in conflicted and idx not in by_idx:
                       by_idx[idx] = rec
               manifest["conflicted_candidate_indices"] = sorted(conflicted)
               manifest["files"] = [by_idx[k] for k in sorted(by_idx)]
@@ -226,6 +251,14 @@ jobs:
               manifest_blob = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
               (prov_root / f"run_{run_id}.json").write_text(manifest_blob)
 
+          conflict_indices = {
+              int(re.search(r"candidate_(\\d+)\\.json$", p.name).group(1))
+              for p in conflict_root.glob("candidate_*.json")
+          }
+          for idx in sorted(conflict_indices):
+              p = root / f"candidate_{idx}.json"
+              if p.exists():
+                  p.unlink()
           all_candidates = sorted(root.glob("candidate_*.json"))
           summary = {
               "schema": "wfl-public-p43-result-index-1",
