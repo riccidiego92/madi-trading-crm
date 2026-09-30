@@ -57,7 +57,12 @@ jobs:
         run: |
           set -eu
           mkdir -p public_compute/out
-          python public_compute/run_candidate.py             --candidate-index "$IDX"             --reps 2000             --out "public_compute/out/candidate_${IDX}.json"             --quiet
+          if [ -f "public_compute/results/member_confirmation/candidate_${IDX}.json" ]; then
+            cp "public_compute/results/member_confirmation/candidate_${IDX}.json"                "public_compute/out/candidate_${IDX}.json"
+            echo "candidate ${IDX} already consolidated; reusing verified result"
+          else
+            python public_compute/run_candidate.py               --candidate-index "$IDX"               --reps 2000               --out "public_compute/out/candidate_${IDX}.json"               --quiet
+          fi
           python - <<'PY'
           import json, os
           idx=int(os.environ["IDX"])
