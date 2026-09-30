@@ -19,6 +19,6 @@
     36309255462
   ],
   "scientific_settings_unchanged": true,
-  "collector_revision": 1,
-  "retry_reason": "Use GitHub CLI for artifact ZIP redirect handling"
+  "collector_revision": 2,
+  "retry_reason": "Quarantine conflicting candidate payloads and continue collecting unambiguous results"
 }
