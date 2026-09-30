@@ -1,0 +1,31 @@
+{
+  "artifact_count": 2,
+  "candidate_count": 2,
+  "conflicted_candidate_indices": [],
+  "files": [
+    {
+      "artifact_id": 11103542576,
+      "artifact_name": "p43-rescue-single-4",
+      "candidate_id": "P42_PHASED:9bf980ff0b1d8859",
+      "candidate_index": 4,
+      "destination": "public_compute/results/member_confirmation/candidate_4.json",
+      "quarantined_conflict": false,
+      "sha256": "805df9a1042db2ec9dbef33679ca3f404e095c689e97a1ff9e01bc5d2fcfc037"
+    },
+    {
+      "artifact_id": 11104951707,
+      "artifact_name": "p43-rescue-single-5",
+      "candidate_id": "P42_PHASED:a5dc14b5fc0dbb4b",
+      "candidate_index": 5,
+      "destination": "public_compute/results/member_confirmation/candidate_5.json",
+      "quarantined_conflict": false,
+      "sha256": "bc94145e09a30fba704540871c263da9ba176f92869ccca7bada2f77c0f8d2f3"
+    }
+  ],
+  "schema": "wfl-public-p43-collected-run-1",
+  "source_head_sha": "3c4d3b69d9304e215c4ccea18decf895f2c4828d",
+  "source_repository": "riccidiego92/madi-trading-crm",
+  "source_run_attempt": 1,
+  "source_run_id": 36701946417,
+  "source_workflow_name": "WFL P43 Public Rescue Singles"
+}
