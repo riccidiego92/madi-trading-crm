@@ -1,0 +1,16 @@
+{
+  "schema": "wfl-public-p43-direct-artifact-import-1",
+  "source_run_id": 36634223684,
+  "source_artifact_id": 11092101859,
+  "candidate_indices": [
+    6,
+    7
+  ],
+  "guardrails": {
+    "train_only": true,
+    "reps": 2000,
+    "alpha": 0.01,
+    "validation_accessed": false,
+    "holdout_accessed": false
+  }
+}
