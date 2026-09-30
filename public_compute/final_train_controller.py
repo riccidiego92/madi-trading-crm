@@ -154,12 +154,30 @@ def advance() -> None:
             cal = aggregate_calibration(idx, shards)
             _write(_cal_path(idx), cal)
         if incomplete:
+            tasks = []
+            for idx in incomplete:
+                have = {
+                    int(p.stem.split("_")[-1])
+                    for p in _cal_dir(idx).glob("shard_*.json")
+                }
+                for start in _starts(0, CALIBRATION_REPS):
+                    if start not in have:
+                        tasks.append({
+                            "candidate_index": idx,
+                            "rep_start": start,
+                            "rep_count": SHARD_REPS,
+                        })
+            retry = _queue("calibration", incomplete, generation + 1)
+            retry["tasks"] = tasks
+            retry["retry_only_missing_shards"] = True
+            _write(QUEUE_PATH, retry)
             _write(STATE_PATH, {
                 "schema": "wfl-p43-final-train-state-1",
-                "status": "CALIBRATION_INCOMPLETE_FAIL_CLOSED",
-                "generation": generation,
+                "status": "CALIBRATION_RETRY_QUEUED",
+                "generation": generation + 1,
                 "candidate_indices": candidates,
                 "incomplete_candidates": incomplete,
+                "missing_shard_count": len(tasks),
             })
             return
         _write(QUEUE_PATH, _queue("null", candidates, generation + 1))
@@ -184,12 +202,30 @@ def advance() -> None:
             final = aggregate_final(idx, cal, shards)
             _write(_final_path(idx), final)
         if incomplete:
+            tasks = []
+            for idx in incomplete:
+                have = {
+                    int(p.stem.split("_")[-1])
+                    for p in _null_dir(idx).glob("shard_*.json")
+                }
+                for start in _starts(CALIBRATION_REPS, FINAL_REPS):
+                    if start not in have:
+                        tasks.append({
+                            "candidate_index": idx,
+                            "rep_start": start,
+                            "rep_count": SHARD_REPS,
+                        })
+            retry = _queue("null", incomplete, generation + 1)
+            retry["tasks"] = tasks
+            retry["retry_only_missing_shards"] = True
+            _write(QUEUE_PATH, retry)
             _write(STATE_PATH, {
                 "schema": "wfl-p43-final-train-state-1",
-                "status": "NULL_INCOMPLETE_FAIL_CLOSED",
-                "generation": generation,
+                "status": "NULL_RETRY_QUEUED",
+                "generation": generation + 1,
                 "candidate_indices": candidates,
                 "incomplete_candidates": incomplete,
+                "missing_shard_count": len(tasks),
             })
             return
 
