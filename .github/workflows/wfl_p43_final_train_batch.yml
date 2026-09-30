@@ -1,0 +1,171 @@
+name: WFL P43 FINAL_TRAIN Sharded Batch
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/final_train_active_batch.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wfl-p43-final-train-batch
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      phase: ${{ steps.plan.outputs.phase }}
+      generation: ${{ steps.plan.outputs.generation }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: plan
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          q=json.loads(Path("public_compute/queue/final_train_active_batch.json").read_text())
+          if q.get("schema")!="wfl-p43-final-train-active-batch-1":
+              raise SystemExit("bad active batch schema")
+          tasks=q["tasks"]
+          if not tasks or len(tasks)>256:
+              raise SystemExit("invalid matrix size")
+          if q["scientific_settings"] != {
+              "alpha_final": 0.05,
+              "calibration_reps": 50000,
+              "holdout_accessed": False,
+              "null_reps": 50000,
+              "total_reps_per_candidate": 100000,
+              "train_only": True,
+              "validation_accessed": False,
+          }:
+              raise SystemExit("scientific settings changed")
+          print("phase="+q["phase"])
+          print("generation="+str(q["generation"]))
+          print("matrix="+json.dumps({"task":tasks},separators=(",",":")))
+          PY
+
+  evaluate:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Run frozen shard
+        env:
+          PYTHONPATH: public_compute
+          PHASE: ${{ needs.plan.outputs.phase }}
+          IDX: ${{ matrix.task.candidate_index }}
+          START: ${{ matrix.task.rep_start }}
+          COUNT: ${{ matrix.task.rep_count }}
+        run: |
+          set -eu
+          mkdir -p public_compute/out
+          if [ "$PHASE" = "calibration" ]; then
+            python public_compute/run_final_train_calibration_shard.py               --candidate-index "$IDX"               --rep-start "$START"               --rep-count "$COUNT"               --out "public_compute/out/candidate_${IDX}_cal_${START}.json"
+          elif [ "$PHASE" = "null" ]; then
+            python public_compute/run_final_train_null_shard.py               --candidate-index "$IDX"               --rep-start "$START"               --rep-count "$COUNT"               --calibration "public_compute/results/final_train/calibration/candidate_${IDX}.json"               --out "public_compute/out/candidate_${IDX}_null_${START}.json"
+          else
+            exit 2
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final-train-${{ needs.plan.outputs.phase }}-${{ matrix.task.candidate_index }}-${{ matrix.task.rep_start }}
+          path: public_compute/out/*.json
+          if-no-files-found: error
+          retention-days: 5
+
+  collect:
+    needs: [plan, evaluate]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: final-train-*
+          path: public_compute/incoming_final_train
+          merge-multiple: true
+      - name: Validate and install completed shards
+        env:
+          PHASE: ${{ needs.plan.outputs.phase }}
+        run: |
+          set -eu
+          python - <<'PY'
+          import json, os, re, shutil
+          from pathlib import Path
+          phase=os.environ["PHASE"]
+          incoming=Path("public_compute/incoming_final_train")
+          if phase=="calibration":
+              pat=re.compile(r"candidate_(\d+)_cal_(\d+)\.json$")
+              schema="wfl-p43-final-train-calibration-shard-1"
+              root=Path("public_compute/results/final_train/calibration_shards")
+          elif phase=="null":
+              pat=re.compile(r"candidate_(\d+)_null_(\d+)\.json$")
+              schema="wfl-p43-final-train-null-shard-1"
+              root=Path("public_compute/results/final_train/null_shards")
+          else:
+              raise SystemExit("bad phase")
+          installed=0
+          for src in sorted(incoming.glob("*.json")):
+              m=pat.fullmatch(src.name)
+              if not m:
+                  continue
+              idx,start=map(int,m.groups())
+              row=json.loads(src.read_text())
+              if row.get("schema")!=schema:
+                  raise SystemExit(f"bad shard schema: {src}")
+              if int(row["candidate_index"])!=idx or int(row["rep_start"])!=start or int(row["rep_count"])!=2000:
+                  raise SystemExit(f"shard identity mismatch: {src}")
+              g=row.get("guardrails",{})
+              if g.get("validation_accessed") is not False or g.get("holdout_accessed") is not False:
+                  raise SystemExit(f"guardrail breach: {src}")
+              dest=root/f"candidate_{idx}"/f"shard_{start:05d}.json"
+              dest.parent.mkdir(parents=True,exist_ok=True)
+              if dest.exists() and json.loads(dest.read_text()) != row:
+                  raise SystemExit(f"conflicting shard: {dest}")
+              dest.write_text(json.dumps(row,indent=2,sort_keys=True)+"\n")
+              installed+=1
+          print(f"installed_shards={installed}")
+          PY
+      - name: Aggregate and advance fail-closed controller
+        env:
+          PYTHONPATH: public_compute
+        run: python public_compute/final_train_controller.py advance
+      - name: Commit results and next queue
+        run: |
+          set -eu
+          git config user.name "wfl-final-train-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/results/final_train public_compute/queue/final_train_active_batch.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "P43: collect FINAL_TRAIN shards and advance queue"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          exit 1
