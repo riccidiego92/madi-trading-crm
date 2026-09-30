@@ -37,7 +37,14 @@ jobs:
               flat.extend(int(x) for x in idx)
           if len(flat) != len(set(flat)) or any(x < 0 or x >= 384 for x in flat):
               raise SystemExit("duplicate/out-of-range rescue candidate")
-          print("matrix="+json.dumps({"include":pairs},separators=(",",":")))
+          single_tasks=[]
+          for p in pairs:
+              for idx in p["candidate_indices"]:
+                  single_tasks.append({
+                      "pair_id": p["pair_id"],
+                      "candidate_index": int(idx),
+                  })
+          print("matrix="+json.dumps({"include":single_tasks},separators=(",",":")))
           PY
 
   evaluate:
@@ -56,30 +63,28 @@ jobs:
           cache: pip
           cache-dependency-path: public_compute/requirements.txt
       - run: python -m pip install -r public_compute/requirements.txt
-      - name: Evaluate one rescue pair sequentially
+      - name: Evaluate one rescue candidate
         env:
           PYTHONPATH: public_compute
-          INDICES_JSON: ${{ toJson(matrix.candidate_indices) }}
+          IDX: ${{ matrix.candidate_index }}
         run: |
           set -eu
           mkdir -p public_compute/out
+          python public_compute/run_candidate.py             --candidate-index "$IDX"             --reps 2000             --out "public_compute/out/candidate_${IDX}.json"             --quiet
           python - <<'PY'
-          import json, os, subprocess, sys
-          indices=json.loads(os.environ["INDICES_JSON"])
-          for idx in indices:
-              out=f"public_compute/out/candidate_{int(idx)}.json"
-              subprocess.run([sys.executable,"public_compute/run_candidate.py","--candidate-index",str(int(idx)),"--reps","2000","--out",out,"--quiet"],check=True)
-              row=json.load(open(out))
-              if row.get("schema") != "wfl-p43-p42-train-candidate-evaluation-1": raise SystemExit("bad result schema")
-              if row.get("stage") != "train" or int(row.get("simulation_reps",0)) != 2000: raise SystemExit("bad TRAIN/reps")
-              g=row.get("guardrails",{})
-              if g.get("validation_accessed") is not False or g.get("holdout_accessed") is not False: raise SystemExit("validation/holdout guardrail breach")
-              p=float(row["test"]["p_max_stat"])
-              if row["test"].get("rejected_at_triage_alpha") is not (p <= 0.01): raise SystemExit("alpha=0.01 decision mismatch")
+          import json, os
+          idx=int(os.environ["IDX"])
+          row=json.load(open(f"public_compute/out/candidate_{idx}.json"))
+          if row.get("schema") != "wfl-p43-p42-train-candidate-evaluation-1": raise SystemExit("bad result schema")
+          if row.get("stage") != "train" or int(row.get("simulation_reps",0)) != 2000: raise SystemExit("bad TRAIN/reps")
+          g=row.get("guardrails",{})
+          if g.get("validation_accessed") is not False or g.get("holdout_accessed") is not False: raise SystemExit("validation/holdout guardrail breach")
+          p=float(row["test"]["p_max_stat"])
+          if row["test"].get("rejected_at_triage_alpha") is not (p <= 0.01): raise SystemExit("alpha=0.01 decision mismatch")
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: p43-rescue-pair-${{ matrix.pair_id }}
-          path: public_compute/out/candidate_*.json
+          name: p43-rescue-candidate-${{ matrix.candidate_index }}
+          path: public_compute/out/candidate_${{ matrix.candidate_index }}.json
           if-no-files-found: error
           retention-days: 14
