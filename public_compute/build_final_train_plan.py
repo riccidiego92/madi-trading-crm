@@ -46,6 +46,15 @@ def main() -> None:
         by_index[idx] = row
         file_hashes[idx] = hashlib.sha256(raw).hexdigest()
 
+    index_path = Path("public_compute/results/member_confirmation_index.json")
+    if index_path.exists():
+        index = json.loads(index_path.read_text())
+        indexed = set(int(x) for x in index.get("candidate_indices", []))
+        if int(index.get("candidate_count", -1)) != len(indexed):
+            raise SystemExit("member-confirmation index count mismatch")
+        if indexed != set(by_index):
+            raise SystemExit("member-confirmation index/files mismatch")
+
     expected_indices = set(range(384))
     got = set(by_index)
     if got != expected_indices:
@@ -125,6 +134,7 @@ def main() -> None:
         },
         "guardrails": {
             "complete_384_required": True,
+            "index_consistency_verified": True,
             "family_rejection_requires_all_16_rejected_at_0_01": True,
             "no_validation_access": True,
             "no_holdout_access": True,
