@@ -1,5 +1,5 @@
 {
-  "candidate_count": 370,
+  "candidate_count": 375,
   "families": [
     {
       "can_still_be_fully_rejected": false,
@@ -201,46 +201,46 @@
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 15,
+      "completed_members": 16,
       "core_family_key": "sequential|single|continuous",
-      "family_complete": false,
+      "family_complete": true,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 1,
-      "non_rejected_members_at_0_01": 15,
+      "missing_members": 0,
+      "non_rejected_members_at_0_01": 16,
       "rejected_members_at_0_01": 0
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 12,
+      "completed_members": 13,
       "core_family_key": "sequential|single|per_contest",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 4,
-      "non_rejected_members_at_0_01": 12,
+      "missing_members": 3,
+      "non_rejected_members_at_0_01": 13,
       "rejected_members_at_0_01": 0
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 15,
+      "completed_members": 16,
       "core_family_key": "sequential|single|per_day",
-      "family_complete": false,
+      "family_complete": true,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 1,
-      "non_rejected_members_at_0_01": 15,
+      "missing_members": 0,
+      "non_rejected_members_at_0_01": 16,
       "rejected_members_at_0_01": 0
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 14,
+      "completed_members": 16,
       "core_family_key": "sequential|split_main_numerone|continuous",
-      "family_complete": false,
+      "family_complete": true,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 2,
-      "non_rejected_members_at_0_01": 14,
+      "missing_members": 0,
+      "non_rejected_members_at_0_01": 16,
       "rejected_members_at_0_01": 0
     },
     {
