@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "15 5-22 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/hourly_twin_score_now.json"
 
 permissions:
   contents: write
