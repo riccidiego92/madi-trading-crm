@@ -25,18 +25,32 @@ jobs:
         run: |
           set -eu
           python - <<'PY'
-          import json, os, re, subprocess
+          import json, os, re, subprocess, time
           from pathlib import Path
 
           repo=os.environ["REPO"]
           run_id=int(os.environ["RUN_ID"])
+          def gh_json(endpoint: str) -> dict:
+              last=None
+              for attempt in range(5):
+                  proc=subprocess.run(
+                      ["gh","api",endpoint],
+                      text=True,
+                      stdout=subprocess.PIPE,
+                      stderr=subprocess.PIPE,
+                  )
+                  if proc.returncode == 0:
+                      return json.loads(proc.stdout)
+                  last=proc.stderr.strip() or f"gh api exit {proc.returncode}"
+                  time.sleep(2 ** attempt)
+              raise RuntimeError(f"GitHub API failed after retries: {last}")
+
           jobs=[]
           for page in (1,2,3):
-              raw=subprocess.check_output(
-                  ["gh","api",f"repos/{repo}/actions/runs/{run_id}/jobs?per_page=100&page={page}"],
-                  text=True,
+              payload=gh_json(
+                  f"repos/{repo}/actions/runs/{run_id}/jobs?per_page=100&page={page}"
               )
-              batch=json.loads(raw).get("jobs",[])
+              batch=payload.get("jobs",[])
               jobs.extend(batch)
               if len(batch)<100:
                   break
@@ -49,9 +63,16 @@ jobs:
               conclusion=job.get("conclusion")
               if conclusion not in {"failure","cancelled","timed_out","action_required","startup_failure"}:
                   continue
-              nums=[int(x) for x in re.findall(r"\b\d+\b",name)]
-              # first number belongs to pair id; remaining one/two are candidate indices
-              for idx in nums[1:]:
+              match=re.match(
+                  r"^evaluate \([^,]+,\s*(\d+)(?:,\s*(\d+))?\)$",
+                  name,
+              )
+              if not match:
+                  raise RuntimeError(f"cannot parse rescue evaluate job name: {name}")
+              for value in match.groups():
+                  if value is None:
+                      continue
+                  idx=int(value)
                   if 0 <= idx < 384:
                       bad.add(idx)
 
