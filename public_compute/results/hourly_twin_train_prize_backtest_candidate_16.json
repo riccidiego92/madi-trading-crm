@@ -1,0 +1,181 @@
+{
+  "candidate_config": {
+    "background_cycles_main": 0,
+    "background_cycles_numerone": 0,
+    "contests_per_day": 17,
+    "experiment_seed": 2026092642,
+    "mapper": "fisher_yates",
+    "reseed_mode": "per_contest",
+    "stream_mode": "single"
+  },
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+  "candidate_index": 16,
+  "classification_policy": {
+    "10_or_0_equal_weight": true,
+    "10_or_0_plus_numerone_equal_weight": true,
+    "7_or_3_equal_weight": true,
+    "8_or_2_equal_weight": true,
+    "9_or_1_equal_weight": true
+  },
+  "evidence_grade": "RETRODICTIVE_TRAIN_IN_SAMPLE_NOT_PROSPECTIVE",
+  "guardrails": {
+    "historical_results_not_used_to_change_candidate": true,
+    "historical_results_used_for_scoring": true,
+    "holdout_accessed": false,
+    "no_edge_claim_from_backtest_alone": true,
+    "retrodiction_is_not_prediction": true,
+    "train_only": true,
+    "validation_accessed": false
+  },
+  "observed": {
+    "category_counts": {
+      "CAT_3": 36,
+      "CAT_4": 41,
+      "CAT_5": 309,
+      "CAT_6": 783,
+      "CAT_7": 5408,
+      "NO_PRIZE": 30325
+    },
+    "max_prize_rank": 5,
+    "mean_prize_rank": 0.22342962441060105,
+    "numerone_hit_rate": 0.05132513142919083,
+    "numerone_hits": 1894,
+    "symmetric_overlap_counts": {
+      "10": 0,
+      "5": 12708,
+      "6": 17617,
+      "7": 5717,
+      "8": 824,
+      "9": 36
+    },
+    "winning_contests": 6577,
+    "winning_rate": 0.17822882228605497,
+    "yearly": {
+      "2013": {
+        "category_counts": {
+          "CAT_3": 6,
+          "CAT_4": 4,
+          "CAT_5": 43,
+          "CAT_6": 130,
+          "CAT_7": 853,
+          "NO_PRIZE": 4824
+        },
+        "contests": 5860,
+        "numerone_hits": 290,
+        "win_rate": 0.17679180887372015,
+        "wins": 1036
+      },
+      "2014": {
+        "category_counts": {
+          "CAT_3": 5,
+          "CAT_4": 8,
+          "CAT_5": 57,
+          "CAT_6": 126,
+          "CAT_7": 928,
+          "NO_PRIZE": 5081
+        },
+        "contests": 6205,
+        "numerone_hits": 355,
+        "win_rate": 0.18114423851732475,
+        "wins": 1124
+      },
+      "2015": {
+        "category_counts": {
+          "CAT_3": 4,
+          "CAT_4": 6,
+          "CAT_5": 48,
+          "CAT_6": 140,
+          "CAT_7": 886,
+          "NO_PRIZE": 5121
+        },
+        "contests": 6205,
+        "numerone_hits": 277,
+        "win_rate": 0.17469782433521353,
+        "wins": 1084
+      },
+      "2016": {
+        "category_counts": {
+          "CAT_3": 7,
+          "CAT_4": 8,
+          "CAT_5": 61,
+          "CAT_6": 114,
+          "CAT_7": 921,
+          "NO_PRIZE": 5111
+        },
+        "contests": 6222,
+        "numerone_hits": 339,
+        "win_rate": 0.17855994856959176,
+        "wins": 1111
+      },
+      "2017": {
+        "category_counts": {
+          "CAT_3": 8,
+          "CAT_4": 6,
+          "CAT_5": 56,
+          "CAT_6": 152,
+          "CAT_7": 908,
+          "NO_PRIZE": 5075
+        },
+        "contests": 6205,
+        "numerone_hits": 309,
+        "win_rate": 0.18211120064464142,
+        "wins": 1130
+      },
+      "2018": {
+        "category_counts": {
+          "CAT_3": 6,
+          "CAT_4": 9,
+          "CAT_5": 44,
+          "CAT_6": 121,
+          "CAT_7": 912,
+          "NO_PRIZE": 5113
+        },
+        "contests": 6205,
+        "numerone_hits": 324,
+        "win_rate": 0.17598710717163576,
+        "wins": 1092
+      }
+    }
+  },
+  "random_reference": {
+    "any_prize_probability": 0.17889540799757517,
+    "category_probability": {
+      "CAT_1": 1.0283833813245577e-05,
+      "CAT_2": 5.412544112234515e-05,
+      "CAT_3": 0.0010283833813245578,
+      "CAT_4": 0.0010960401827274893,
+      "CAT_5": 0.007794063521617702,
+      "CAT_6": 0.020824763471822296,
+      "CAT_7": 0.14808720691073632,
+      "WFL_RENDITA": 5.412544112234515e-07
+    },
+    "expected_category_counts": {
+      "CAT_1": 0.37949403537638826,
+      "CAT_2": 1.9973370282967806,
+      "CAT_3": 37.94940353763883,
+      "CAT_4": 40.44607482300981,
+      "CAT_5": 287.6165320747364,
+      "CAT_6": 768.4754216371864,
+      "CAT_7": 5464.7141094199915,
+      "WFL_RENDITA": 0.01997337028296781
+    },
+    "expected_numerone_hits": 1845.1,
+    "expected_winning_contests": 6601.598345926519,
+    "symmetric_overlap_probability": {
+      "10": 1.082508822446903e-05,
+      "5": 0.34371820130334063,
+      "6": 0.4773863906990842,
+      "7": 0.15588127043235403,
+      "8": 0.021920803654549785,
+      "9": 0.001082508822446903
+    }
+  },
+  "schema": "wfl-hourly-twin-train-prize-backtest-1",
+  "status": "RETRODICTIVE_BACKTEST_ONLY",
+  "train_period": {
+    "contests": 36902,
+    "end": "2018-12-31",
+    "start": "2013-01-21"
+  }
+}
