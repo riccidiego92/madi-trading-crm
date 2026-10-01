@@ -1,0 +1,35 @@
+{
+  "schema": "wfl-hourly-twin-development-evidence-1",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_ONLY",
+  "scored_prediction_count": 6,
+  "observed": {
+    "mean_direct_overlap": 4.166666666666667,
+    "mean_symmetric_overlap": 6.166666666666667,
+    "symmetric_overlap_histogram": {
+      "5": 1,
+      "6": 3,
+      "7": 2,
+      "8": 0,
+      "9": 0,
+      "10": 0
+    },
+    "exact_main_or_complement_hits": 0,
+    "numerone_hits": 0,
+    "exact_pair_plus_numerone_hits": 0
+  },
+  "random_reference": {
+    "exact_main_or_complement_probability_per_prediction": 0.00001082508822446903,
+    "numerone_probability_per_prediction": 0.05,
+    "exact_pair_plus_numerone_probability_per_prediction": 5.412544112234514e-7,
+    "expected_exact_main_or_complement_hits": 0.00006495052934681418,
+    "expected_numerone_hits": 0.3,
+    "expected_exact_pair_plus_numerone_hits": 0.0000032475264673407086
+  },
+  "guardrails": {
+    "no_edge_claim_from_small_n": true,
+    "failures_retained": true,
+    "all_scores_require_pre_target_freeze": true,
+    "post_result_retuning": false
+  },
+  "status": "PROSPECTIVE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
+}
