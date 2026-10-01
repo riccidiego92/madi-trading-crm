@@ -1,0 +1,8 @@
+{
+  "schema": "wfl-hourly-twin-train-prize-backtest-request-1",
+  "candidate_index": 16,
+  "stage": "train",
+  "validation_accessed": false,
+  "holdout_accessed": false,
+  "purpose": "Retroactively score the fixed twin using official WFL prize categories without retuning"
+}
