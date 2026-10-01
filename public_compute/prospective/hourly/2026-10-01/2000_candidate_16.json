@@ -1,0 +1,78 @@
+{
+  "schema": "wfl-hourly-twin-development-freeze-1",
+  "evidence_grade": "DEVELOPMENT_UNVALIDATED_NOT_FOR_LIVE_INFERENCE",
+  "frozen_at": "2026-10-01T18:23:52+02:00",
+  "lead_seconds": 5768,
+  "target": {
+    "datetime": "2026-10-01T20:00:00+02:00",
+    "timezone": "Europe/Rome",
+    "public_ordinal": 85025
+  },
+  "selection": {
+    "rule": "FIXED_DEVELOPMENT_CANDIDATE_INDEX",
+    "candidate_index": 16,
+    "selection_frozen_before_output": true,
+    "generated_numbers_used_for_selection": false
+  },
+  "machine": {
+    "candidate_id": "P42_PHASED:1ae8bdf827360633",
+    "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+    "candidate_signature_sha256": "a3e813232163f8040a6bb2277c681b17aaa48a6ded282a4e4a896ce0bba74498",
+    "config": {
+      "background_cycles_main": 0,
+      "background_cycles_numerone": 0,
+      "contests_per_day": 17,
+      "experiment_seed": 2026092642,
+      "mapper": "fisher_yates",
+      "reseed_mode": "per_contest",
+      "stream_mode": "single"
+    },
+    "calendar_alignment_offset": 0,
+    "research_phase_offset": 0,
+    "machine_ordinal": 85025,
+    "member_confirmation": {
+      "simulation_reps": 2000,
+      "p_max_stat": 0.1958041958041958,
+      "rejected_at_triage_alpha_0_01": false,
+      "final_train_complete": false
+    }
+  },
+  "prediction": {
+    "main": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      9,
+      10,
+      11,
+      13,
+      18
+    ],
+    "complement": [
+      5,
+      6,
+      7,
+      12,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20
+    ],
+    "numerone": 6,
+    "prediction_sha256": "67d821bc49dcc82b9ae74b60f235b07535de2d158115dd08aca443b844535215"
+  },
+  "guardrails": {
+    "generated_before_target": true,
+    "future_result_used_for_generation": false,
+    "operational_seed_or_state_search": false,
+    "post_result_retuning_allowed": false,
+    "counts_as_validated_prediction": false,
+    "failures_retained": true,
+    "immutable_once_written": true
+  },
+  "freeze_sha256": "60da178fec84f9f4eec8765168028038afca88d3cff6ad15179b73c200933b9b"
+}
