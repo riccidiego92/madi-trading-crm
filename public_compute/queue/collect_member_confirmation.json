@@ -19,9 +19,10 @@
     36489887258,
     36634223684,
     36634523743,
-    36701946417
+    36701946417,
+    36824300734
   ],
   "scientific_settings_unchanged": true,
-  "collector_revision": 5,
-  "retry_reason": "Refresh after adding provisional family progress monitor"
+  "collector_revision": 6,
+  "retry_reason": "Collect partial successful artifacts from latest single-candidate completion run"
 }
