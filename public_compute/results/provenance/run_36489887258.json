@@ -1,6 +1,6 @@
 {
-  "artifact_count": 95,
-  "candidate_count": 190,
+  "artifact_count": 98,
+  "candidate_count": 195,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -1712,6 +1712,51 @@
       "destination": "public_compute/results/member_confirmation/candidate_376.json",
       "quarantined_conflict": false,
       "sha256": "1b092da01f9149a49b923d79365d2c3220ab0fe48303c5c54b943be4807ff9ad"
+    },
+    {
+      "artifact_id": 11130359831,
+      "artifact_name": "p43-rescue-pair-105",
+      "candidate_id": "P42_PHASED:0964f873ffc8f162",
+      "candidate_index": 377,
+      "destination": "public_compute/results/member_confirmation/candidate_377.json",
+      "quarantined_conflict": false,
+      "sha256": "fa46d67c4efd06c98fac0c36fa36891e05dd959d46859583b79ff1074373d2f1"
+    },
+    {
+      "artifact_id": 11130359831,
+      "artifact_name": "p43-rescue-pair-105",
+      "candidate_id": "P42_PHASED:c3db4756d9c294b1",
+      "candidate_index": 378,
+      "destination": "public_compute/results/member_confirmation/candidate_378.json",
+      "quarantined_conflict": false,
+      "sha256": "aa64f8eb07f46baf3b76445a4f5f9c8ef7bb03d76fdef6a11c7231453ac7c56c"
+    },
+    {
+      "artifact_id": 11129521884,
+      "artifact_name": "p43-rescue-pair-106",
+      "candidate_id": "P42_PHASED:555c4bdadad254f6",
+      "candidate_index": 379,
+      "destination": "public_compute/results/member_confirmation/candidate_379.json",
+      "quarantined_conflict": false,
+      "sha256": "7d6989a44acdfc09bbba589e44cf3da90a848328fc409d7a2832f3bce9bd18d0"
+    },
+    {
+      "artifact_id": 11129521884,
+      "artifact_name": "p43-rescue-pair-106",
+      "candidate_id": "P42_PHASED:e03725bda0b5e1f3",
+      "candidate_index": 380,
+      "destination": "public_compute/results/member_confirmation/candidate_380.json",
+      "quarantined_conflict": false,
+      "sha256": "912e7630baec4713bcbdad2866bc96fa14e8c539fcc680f960664ef1c21199dc"
+    },
+    {
+      "artifact_id": 11131212365,
+      "artifact_name": "p43-rescue-pair-108",
+      "candidate_id": "P42_PHASED:5f358c1471f3db64",
+      "candidate_index": 383,
+      "destination": "public_compute/results/member_confirmation/candidate_383.json",
+      "quarantined_conflict": false,
+      "sha256": "cd1e2ea958ee046e3d609e889bdad878421fd751fc25459b5a56e509e04f503d"
     }
   ],
   "schema": "wfl-public-p43-collected-run-1",

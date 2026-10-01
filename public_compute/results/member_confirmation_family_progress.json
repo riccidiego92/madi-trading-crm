@@ -1,5 +1,5 @@
 {
-  "candidate_count": 276,
+  "candidate_count": 310,
   "families": [
     {
       "can_still_be_fully_rejected": false,
@@ -47,57 +47,57 @@
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 11,
+      "completed_members": 14,
       "core_family_key": "fisher_yates|split_main_numerone|per_contest",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 5,
-      "non_rejected_members_at_0_01": 11,
+      "missing_members": 2,
+      "non_rejected_members_at_0_01": 14,
       "rejected_members_at_0_01": 0
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 5,
+      "completed_members": 14,
       "core_family_key": "fisher_yates|split_main_numerone|per_day",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 11,
-      "non_rejected_members_at_0_01": 5,
+      "missing_members": 2,
+      "non_rejected_members_at_0_01": 14,
+      "rejected_members_at_0_01": 0
+    },
+    {
+      "can_still_be_fully_rejected": false,
+      "completed_members": 16,
+      "core_family_key": "rank_unrank|single|continuous",
+      "family_complete": true,
+      "fully_rejected_at_p43": false,
+      "guaranteed_retained_for_final_train": true,
+      "missing_members": 0,
+      "non_rejected_members_at_0_01": 16,
+      "rejected_members_at_0_01": 0
+    },
+    {
+      "can_still_be_fully_rejected": false,
+      "completed_members": 12,
+      "core_family_key": "rank_unrank|single|per_contest",
+      "family_complete": false,
+      "fully_rejected_at_p43": false,
+      "guaranteed_retained_for_final_train": true,
+      "missing_members": 4,
+      "non_rejected_members_at_0_01": 12,
       "rejected_members_at_0_01": 0
     },
     {
       "can_still_be_fully_rejected": false,
       "completed_members": 8,
-      "core_family_key": "rank_unrank|single|continuous",
+      "core_family_key": "rank_unrank|single|per_day",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
       "missing_members": 8,
       "non_rejected_members_at_0_01": 8,
-      "rejected_members_at_0_01": 0
-    },
-    {
-      "can_still_be_fully_rejected": false,
-      "completed_members": 6,
-      "core_family_key": "rank_unrank|single|per_contest",
-      "family_complete": false,
-      "fully_rejected_at_p43": false,
-      "guaranteed_retained_for_final_train": true,
-      "missing_members": 10,
-      "non_rejected_members_at_0_01": 6,
-      "rejected_members_at_0_01": 0
-    },
-    {
-      "can_still_be_fully_rejected": false,
-      "completed_members": 4,
-      "core_family_key": "rank_unrank|single|per_day",
-      "family_complete": false,
-      "fully_rejected_at_p43": false,
-      "guaranteed_retained_for_final_train": true,
-      "missing_members": 12,
-      "non_rejected_members_at_0_01": 4,
       "rejected_members_at_0_01": 0
     },
     {
@@ -256,13 +256,13 @@
     },
     {
       "can_still_be_fully_rejected": false,
-      "completed_members": 9,
+      "completed_members": 13,
       "core_family_key": "sequential|split_main_numerone|per_day",
       "family_complete": false,
       "fully_rejected_at_p43": false,
       "guaranteed_retained_for_final_train": true,
-      "missing_members": 7,
-      "non_rejected_members_at_0_01": 9,
+      "missing_members": 3,
+      "non_rejected_members_at_0_01": 13,
       "rejected_members_at_0_01": 0
     }
   ],

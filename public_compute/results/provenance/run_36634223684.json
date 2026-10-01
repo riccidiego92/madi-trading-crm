@@ -1,6 +1,6 @@
 {
-  "artifact_count": 26,
-  "candidate_count": 52,
+  "artifact_count": 41,
+  "candidate_count": 82,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -418,6 +418,114 @@
       "sha256": "9be54a6b4ac55b9d59e10cf861248c882a758dab8693229746bf843157863800"
     },
     {
+      "artifact_id": 11131763613,
+      "artifact_name": "p43-rescue-pair-bulk4-027",
+      "candidate_id": "P42_PHASED:52e6330f533ad8a5",
+      "candidate_index": 77,
+      "destination": "public_compute/results/member_confirmation/candidate_77.json",
+      "quarantined_conflict": false,
+      "sha256": "8bfafa1aa31925f1abc2b59dc3ad649103b13fc89bd0375f32bd4948354cd4e1"
+    },
+    {
+      "artifact_id": 11131763613,
+      "artifact_name": "p43-rescue-pair-bulk4-027",
+      "candidate_id": "P42_PHASED:54b0ce01c6b5a6dd",
+      "candidate_index": 78,
+      "destination": "public_compute/results/member_confirmation/candidate_78.json",
+      "quarantined_conflict": false,
+      "sha256": "a0dda2109650bce21a47e3d093d2dc790f0efd77b48f361177a7279ed9062071"
+    },
+    {
+      "artifact_id": 11128822341,
+      "artifact_name": "p43-rescue-pair-bulk4-028",
+      "candidate_id": "P42_PHASED:993475d3fae1a848",
+      "candidate_index": 79,
+      "destination": "public_compute/results/member_confirmation/candidate_79.json",
+      "quarantined_conflict": false,
+      "sha256": "d6e578f8fcf4b673259ec132bcb5fd2c272c1d6fb7d37cb1cd777e6e46983a1c"
+    },
+    {
+      "artifact_id": 11128822341,
+      "artifact_name": "p43-rescue-pair-bulk4-028",
+      "candidate_id": "P42_PHASED:55aaed30dd7c39a9",
+      "candidate_index": 80,
+      "destination": "public_compute/results/member_confirmation/candidate_80.json",
+      "quarantined_conflict": false,
+      "sha256": "8b4a03e1b683393090c4337d68bc59d4fa09c528433f5359680ee3489721fd2f"
+    },
+    {
+      "artifact_id": 11129149262,
+      "artifact_name": "p43-rescue-pair-bulk4-029",
+      "candidate_id": "P42_PHASED:331114d717dba4f9",
+      "candidate_index": 81,
+      "destination": "public_compute/results/member_confirmation/candidate_81.json",
+      "quarantined_conflict": false,
+      "sha256": "34aee7b055459ecd7f13ab42f30140aec13764240bcf36889f29c56d84edca29"
+    },
+    {
+      "artifact_id": 11129149262,
+      "artifact_name": "p43-rescue-pair-bulk4-029",
+      "candidate_id": "P42_PHASED:e9280200bfc6ec97",
+      "candidate_index": 82,
+      "destination": "public_compute/results/member_confirmation/candidate_82.json",
+      "quarantined_conflict": false,
+      "sha256": "40b0febc19779471c5d9efcff6e78294498462272bd36a1eb9399de714d1900d"
+    },
+    {
+      "artifact_id": 11128522841,
+      "artifact_name": "p43-rescue-pair-bulk4-030",
+      "candidate_id": "P42_PHASED:9abcbf44b6d9b6b9",
+      "candidate_index": 83,
+      "destination": "public_compute/results/member_confirmation/candidate_83.json",
+      "quarantined_conflict": false,
+      "sha256": "540b522358df65d10abaedf37b4e466ffdcf5a8d1e75cb821ba547740a5f6e57"
+    },
+    {
+      "artifact_id": 11128522841,
+      "artifact_name": "p43-rescue-pair-bulk4-030",
+      "candidate_id": "P42_PHASED:911fc70859b46cdc",
+      "candidate_index": 84,
+      "destination": "public_compute/results/member_confirmation/candidate_84.json",
+      "quarantined_conflict": false,
+      "sha256": "b7b7090f9dfe277b69d11a1534391139412ac4e37aefb050fba0b10d94f31583"
+    },
+    {
+      "artifact_id": 11131638136,
+      "artifact_name": "p43-rescue-pair-bulk4-032",
+      "candidate_id": "P42_PHASED:0f8103dda9543f3d",
+      "candidate_index": 87,
+      "destination": "public_compute/results/member_confirmation/candidate_87.json",
+      "quarantined_conflict": false,
+      "sha256": "61a430f6aa859b7eb6dfeb5273fa8715f81b6560f4dc9ae222e778e163fd118d"
+    },
+    {
+      "artifact_id": 11131638136,
+      "artifact_name": "p43-rescue-pair-bulk4-032",
+      "candidate_id": "P42_PHASED:208e1d3d7dff0a87",
+      "candidate_index": 89,
+      "destination": "public_compute/results/member_confirmation/candidate_89.json",
+      "quarantined_conflict": false,
+      "sha256": "6db6f41c87fabc633252ba0473450918c699ad8c1cf39add6e3ec623a7be5b9e"
+    },
+    {
+      "artifact_id": 11130744397,
+      "artifact_name": "p43-rescue-pair-bulk4-033",
+      "candidate_id": "P42_PHASED:a48a025201ad7425",
+      "candidate_index": 90,
+      "destination": "public_compute/results/member_confirmation/candidate_90.json",
+      "quarantined_conflict": false,
+      "sha256": "de7f3277685fa0e539bc543441d9f865e8c35429001b3c9fa7d0ca3bd833625b"
+    },
+    {
+      "artifact_id": 11130744397,
+      "artifact_name": "p43-rescue-pair-bulk4-033",
+      "candidate_id": "P42_PHASED:e6e0646ec9756edd",
+      "candidate_index": 95,
+      "destination": "public_compute/results/member_confirmation/candidate_95.json",
+      "quarantined_conflict": false,
+      "sha256": "c16f34d58c570110513ab08928594cf4d0de6a29627029d35680e1c1656d71f8"
+    },
+    {
       "artifact_id": 11124344908,
       "artifact_name": "p43-rescue-pair-bulk4-034",
       "candidate_id": "P42_PHASED:9624fd71fc9cf806",
@@ -434,6 +542,24 @@
       "destination": "public_compute/results/member_confirmation/candidate_99.json",
       "quarantined_conflict": false,
       "sha256": "957509d205cd981946e13a2b2b9038a2677904bfc461e90881b0e0fad6fd6a2b"
+    },
+    {
+      "artifact_id": 11129071436,
+      "artifact_name": "p43-rescue-pair-bulk4-035",
+      "candidate_id": "P42_PHASED:1602ee67da057be0",
+      "candidate_index": 100,
+      "destination": "public_compute/results/member_confirmation/candidate_100.json",
+      "quarantined_conflict": false,
+      "sha256": "baea2a432e759f9f9d7e08e312755fc22e89109428ded992069dfd347f073b4d"
+    },
+    {
+      "artifact_id": 11129071436,
+      "artifact_name": "p43-rescue-pair-bulk4-035",
+      "candidate_id": "P42_PHASED:3a3c151f22c96c8b",
+      "candidate_index": 101,
+      "destination": "public_compute/results/member_confirmation/candidate_101.json",
+      "quarantined_conflict": false,
+      "sha256": "ef764902d392c6ef70eacaa6f4437e52d84efed85f4e8a590059e8fa0632d3ea"
     },
     {
       "artifact_id": 11126917049,
@@ -470,6 +596,150 @@
       "destination": "public_compute/results/member_confirmation/candidate_105.json",
       "quarantined_conflict": false,
       "sha256": "6ee70bbb0d06102a62387dcac0fa1b3afab3902c6212d8782d4bcde1b800fc48"
+    },
+    {
+      "artifact_id": 11128670638,
+      "artifact_name": "p43-rescue-pair-bulk4-038",
+      "candidate_id": "P42_PHASED:4320e1042c4e68d4",
+      "candidate_index": 106,
+      "destination": "public_compute/results/member_confirmation/candidate_106.json",
+      "quarantined_conflict": false,
+      "sha256": "942160c5f1dc7ac9325ce78df60fd7a33b0a81b35d6b92a7952987c870c1752d"
+    },
+    {
+      "artifact_id": 11128670638,
+      "artifact_name": "p43-rescue-pair-bulk4-038",
+      "candidate_id": "P42_PHASED:9602cac8e3bd4090",
+      "candidate_index": 107,
+      "destination": "public_compute/results/member_confirmation/candidate_107.json",
+      "quarantined_conflict": false,
+      "sha256": "a70bc962d2ca4710ba5eb49adba70eece1b83849f854f47d18b16b4923b07196"
+    },
+    {
+      "artifact_id": 11126963289,
+      "artifact_name": "p43-rescue-pair-bulk4-039",
+      "candidate_id": "P42_PHASED:e4544c18cb5e707f",
+      "candidate_index": 108,
+      "destination": "public_compute/results/member_confirmation/candidate_108.json",
+      "quarantined_conflict": false,
+      "sha256": "61369e45975e94323158f060512f611a987b42872f44ba48f7cd0c67361bfabb"
+    },
+    {
+      "artifact_id": 11126963289,
+      "artifact_name": "p43-rescue-pair-bulk4-039",
+      "candidate_id": "P42_PHASED:de31364d4b4c0581",
+      "candidate_index": 109,
+      "destination": "public_compute/results/member_confirmation/candidate_109.json",
+      "quarantined_conflict": false,
+      "sha256": "80635da30636f8097462f362d1b422d13a9ff6ab1eecc9101c46eb62f1dd1411"
+    },
+    {
+      "artifact_id": 11131868992,
+      "artifact_name": "p43-rescue-pair-bulk4-040",
+      "candidate_id": "P42_PHASED:7e94e64dd6ca63f9",
+      "candidate_index": 110,
+      "destination": "public_compute/results/member_confirmation/candidate_110.json",
+      "quarantined_conflict": false,
+      "sha256": "4475dc288d54a12abb7cd5520859ab8c5284d91847aa413fc66485a83de44dd8"
+    },
+    {
+      "artifact_id": 11131868992,
+      "artifact_name": "p43-rescue-pair-bulk4-040",
+      "candidate_id": "P42_PHASED:a5bc9cef2c53a6a2",
+      "candidate_index": 111,
+      "destination": "public_compute/results/member_confirmation/candidate_111.json",
+      "quarantined_conflict": false,
+      "sha256": "1abc27c6b4459fbf3c63197bb5f85389780ac814e6adf9e43b934ef8b657247a"
+    },
+    {
+      "artifact_id": 11131166219,
+      "artifact_name": "p43-rescue-pair-bulk4-041",
+      "candidate_id": "P42_PHASED:bbbfb410e771083b",
+      "candidate_index": 112,
+      "destination": "public_compute/results/member_confirmation/candidate_112.json",
+      "quarantined_conflict": false,
+      "sha256": "7e3a90d05759fc65b32e8b8b379a187c9ffeced2375bb3d9dbbe65c968676548"
+    },
+    {
+      "artifact_id": 11131166219,
+      "artifact_name": "p43-rescue-pair-bulk4-041",
+      "candidate_id": "P42_PHASED:220c4e6b1d852770",
+      "candidate_index": 113,
+      "destination": "public_compute/results/member_confirmation/candidate_113.json",
+      "quarantined_conflict": false,
+      "sha256": "2995af018eecb1d4396cc2b630c838c9fa39ec897f70bbf21e459a65658967f2"
+    },
+    {
+      "artifact_id": 11134202864,
+      "artifact_name": "p43-rescue-pair-bulk4-043",
+      "candidate_id": "P42_PHASED:934c8662e8ea00ce",
+      "candidate_index": 122,
+      "destination": "public_compute/results/member_confirmation/candidate_122.json",
+      "quarantined_conflict": false,
+      "sha256": "1008430037d93b8cd6a47f8ad8a3bc24cc396c429448481273301a35b7a3ea9d"
+    },
+    {
+      "artifact_id": 11134202864,
+      "artifact_name": "p43-rescue-pair-bulk4-043",
+      "candidate_id": "P42_PHASED:521fc7614fd387d4",
+      "candidate_index": 123,
+      "destination": "public_compute/results/member_confirmation/candidate_123.json",
+      "quarantined_conflict": false,
+      "sha256": "48e70f9ce1515278dbad594c9c0e503504e819d1aa78526124b156898499d60b"
+    },
+    {
+      "artifact_id": 11132631440,
+      "artifact_name": "p43-rescue-pair-bulk4-044",
+      "candidate_id": "P42_PHASED:bff169c470739d01",
+      "candidate_index": 124,
+      "destination": "public_compute/results/member_confirmation/candidate_124.json",
+      "quarantined_conflict": false,
+      "sha256": "a7e2d2a96b49a6e5e673d7948012fcd055081cfad3f1f874fec2a56660ffaf31"
+    },
+    {
+      "artifact_id": 11132631440,
+      "artifact_name": "p43-rescue-pair-bulk4-044",
+      "candidate_id": "P42_PHASED:c72babda25cb861e",
+      "candidate_index": 125,
+      "destination": "public_compute/results/member_confirmation/candidate_125.json",
+      "quarantined_conflict": false,
+      "sha256": "6db6b3294aa4637a97b6e34ee35a8191426e8f1e7de54038167a8f0cf3fd7843"
+    },
+    {
+      "artifact_id": 11132265621,
+      "artifact_name": "p43-rescue-pair-bulk4-046",
+      "candidate_id": "P42_PHASED:1b8ae6e95841746a",
+      "candidate_index": 128,
+      "destination": "public_compute/results/member_confirmation/candidate_128.json",
+      "quarantined_conflict": false,
+      "sha256": "be3a05c207dc49467837c936f14a73d3a8bb9da3e9092e78c63a672d87fb8c61"
+    },
+    {
+      "artifact_id": 11132265621,
+      "artifact_name": "p43-rescue-pair-bulk4-046",
+      "candidate_id": "P42_PHASED:930fc79ea32bac37",
+      "candidate_index": 129,
+      "destination": "public_compute/results/member_confirmation/candidate_129.json",
+      "quarantined_conflict": false,
+      "sha256": "f4655482fde6caabebd7690ed8d1a2649f0064a20af73cf62180c247c9dca0f7"
+    },
+    {
+      "artifact_id": 11134456243,
+      "artifact_name": "p43-rescue-pair-bulk4-050",
+      "candidate_id": "P42_PHASED:3950ee0551a2ffae",
+      "candidate_index": 136,
+      "destination": "public_compute/results/member_confirmation/candidate_136.json",
+      "quarantined_conflict": false,
+      "sha256": "d9ef4bd7844a0e09428be9e7bc671e3783e32ab6f8ec8084bf1371e949490aa8"
+    },
+    {
+      "artifact_id": 11134456243,
+      "artifact_name": "p43-rescue-pair-bulk4-050",
+      "candidate_id": "P42_PHASED:e7ef4201c54cf781",
+      "candidate_index": 137,
+      "destination": "public_compute/results/member_confirmation/candidate_137.json",
+      "quarantined_conflict": false,
+      "sha256": "1698c647ebb1b3becffc45a0c097f93f00d0d948bfb926c1e1af40c2d5b276ad"
     }
   ],
   "schema": "wfl-public-p43-collected-run-1",
