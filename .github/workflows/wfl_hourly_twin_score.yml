@@ -34,12 +34,14 @@ jobs:
         env:
           PYTHONPATH: public_compute
         run: python public_compute/score_hourly_twin.py
+      - name: Rebuild prospective evidence ledger
+        run: python public_compute/summarize_hourly_twin.py
       - name: Commit immutable scores
         run: |
           set -eu
           git config user.name "wfl-hourly-twin-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public_compute/prospective/hourly_scores
+          git add public_compute/prospective/hourly_scores public_compute/prospective/hourly_evidence.json
           if git diff --cached --quiet; then
             echo "No new official scores available"
             exit 0
