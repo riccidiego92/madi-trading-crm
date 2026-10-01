@@ -88,6 +88,39 @@ def fetch_official(target: datetime) -> dict | None:
     }
 
 
+def classify_prize(direct_overlap: int, numerone_exact: bool) -> dict:
+    k = int(direct_overlap)
+    sym = max(k, 10 - k)
+    num = bool(numerone_exact)
+    code, rank, label = "NO_PRIZE", 0, "Nessun premio"
+    if sym == 10 and num:
+        code, rank, label = "WFL_RENDITA", 8, "Rendita / Win for Life"
+    elif sym == 10:
+        code, rank, label = "CAT_1", 7, "1a categoria"
+    elif sym == 9 and num:
+        code, rank, label = "CAT_2", 6, "2a categoria"
+    elif sym == 9:
+        code, rank, label = "CAT_3", 5, "3a categoria"
+    elif sym == 8 and num:
+        code, rank, label = "CAT_4", 4, "4a categoria"
+    elif sym == 7 and num:
+        code, rank, label = "CAT_5", 3, "5a categoria"
+    elif sym == 8:
+        code, rank, label = "CAT_6", 2, "6a categoria"
+    elif sym == 7:
+        code, rank, label = "CAT_7", 1, "7a categoria"
+    return {
+        "direct_overlap": k,
+        "complement_overlap": 10 - k,
+        "symmetric_overlap": sym,
+        "numerone_exact": num,
+        "prize_code": code,
+        "prize_rank": rank,
+        "prize_label": label,
+        "winning_category": rank > 0,
+    }
+
+
 def verify_freeze(freeze: dict) -> datetime:
     if freeze.get("schema") != "wfl-hourly-twin-development-freeze-1":
         raise ValueError("unexpected freeze schema")
@@ -142,6 +175,7 @@ def score_one(path: Path, score_root: Path, now: datetime) -> dict | None:
             "exact_main_plus_numerone": bool(pred == actual and num_hit),
             "exact_complement_plus_numerone": bool(comp == actual and num_hit),
         },
+        "prize_category": classify_prize(int(k), bool(num_hit)),
         "guardrails": {
             "freeze_hash_verified": True,
             "freeze_precedes_target": True,
