@@ -30,29 +30,35 @@ jobs:
           cache: pip
           cache-dependency-path: public_compute/requirements.txt
       - run: python -m pip install -r public_compute/requirements.txt
-      - name: Score published official contests
+      - name: Score, rebuild prize ledger, and publish atomically
         env:
           PYTHONPATH: public_compute
-        run: python public_compute/score_hourly_twin.py
-      - name: Rebuild prospective evidence ledger
-        run: python public_compute/summarize_hourly_twin.py
-      - name: Commit immutable scores
         run: |
           set -eu
           git config user.name "wfl-hourly-twin-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public_compute/prospective/hourly_scores public_compute/prospective/hourly_evidence.json
-          if git diff --cached --quiet; then
-            echo "No new official scores available"
-            exit 0
-          fi
-          git commit -m "WFL: score hourly development predictions"
+
           for attempt in 1 2 3 4; do
             git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
+            git checkout -B score-work origin/main
+
+            python public_compute/score_hourly_twin.py
+            python public_compute/summarize_hourly_twin.py
+
+            git add public_compute/prospective/hourly_scores                     public_compute/prospective/hourly_evidence.json
+
+            if git diff --cached --quiet; then
+              echo "No new official scores or ledger changes"
               exit 0
             fi
-            git rebase --abort || true
+
+            git commit -m "WFL: score hourly predictions and update prize ledger"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Concurrent main update; regenerating from latest main"
             sleep 5
           done
+
           exit 1
