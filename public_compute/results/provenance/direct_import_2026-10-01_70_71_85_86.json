@@ -1,0 +1,34 @@
+{
+  "schema": "wfl-p43-direct-artifact-import-1",
+  "source_run_id": 36824300734,
+  "imports": [
+    {
+      "candidate_index": 70,
+      "artifact_id": 11170156854,
+      "source_sha256": "5c5764716e698587798172362836afcf3fd04389f2c01919a93c27cbda1b8021"
+    },
+    {
+      "candidate_index": 71,
+      "artifact_id": 11158233544,
+      "source_sha256": "e75f3ba12ab07c847670c068e845646a8cefe69f79ad256d50bd93ab2a8b268e"
+    },
+    {
+      "candidate_index": 85,
+      "artifact_id": 11163066024,
+      "source_sha256": "e15a8fe63bff42db674831cbcb5fccf30074cb77ab4b895a6e6b18428b601716"
+    },
+    {
+      "candidate_index": 86,
+      "artifact_id": 11162987311,
+      "source_sha256": "53724b9e574c30a3efb8d66dba1549e7b56e020a1ad8bb98b6de61c6656c2f14"
+    }
+  ],
+  "scientific_settings": {
+    "reps": 2000,
+    "alpha": 0.01,
+    "stage": "train",
+    "validation_accessed": false,
+    "holdout_accessed": false
+  },
+  "note": "Directly consolidated from completed GitHub Actions artifacts while collector queue was saturated."
+}
