@@ -1,0 +1,54 @@
+name: WFL Twin Pre-Freeze Day
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "public_compute/queue/hourly_twin_prefreeze_now.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wfl-twin-prefreeze-day
+  cancel-in-progress: false
+
+jobs:
+  prefreeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: public_compute/requirements.txt
+      - run: python -m pip install -r public_compute/requirements.txt
+      - name: Freeze every remaining Classico target for today
+        env:
+          PYTHONPATH: public_compute
+        run: python public_compute/prefreeze_hourly_day.py --candidate-index 16 --min-lead-seconds 300
+      - name: Commit immutable daily freeze set
+        run: |
+          set -eu
+          git config user.name "wfl-hourly-twin-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_compute/prospective/hourly
+          if git diff --cached --quiet; then
+            echo "No new daily freezes"
+            exit 0
+          fi
+          git commit -m "WFL: pre-freeze remaining hourly development predictions"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort || true
+            sleep 5
+          done
+          exit 1
