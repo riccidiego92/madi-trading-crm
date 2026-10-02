@@ -5,9 +5,12 @@ on:
     branches: [main]
     paths:
       - "public_compute/queue/final_train_active_batch.json"
+      - "public_compute/queue/final_train_batch_now.json"
+  workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: wfl-p43-final-train-batch
@@ -154,18 +157,49 @@ jobs:
         env:
           PYTHONPATH: public_compute
         run: python public_compute/final_train_controller.py advance
-      - name: Commit results and next queue
+      - name: Commit results, advance queue, and dispatch next batch
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -eu
           git config user.name "wfl-final-train-bot"
           git config user.email "actions@users.noreply.github.com"
           git add public_compute/results/final_train public_compute/queue/final_train_active_batch.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "P43: collect FINAL_TRAIN shards and advance queue"
-          for attempt in 1 2 3 4; do
-            git fetch origin main
-            git rebase origin/main
-            if git push origin HEAD:main; then exit 0; fi
-            sleep 5
-          done
-          exit 1
+
+          pushed=0
+          if git diff --cached --quiet; then
+            pushed=1
+          else
+            git commit -m "P43: collect FINAL_TRAIN shards and advance queue"
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              if git rebase origin/main && git push origin HEAD:main; then
+                pushed=1
+                break
+              fi
+              git rebase --abort || true
+              sleep 5
+            done
+          fi
+
+          if [ "$pushed" -ne 1 ]; then
+            exit 1
+          fi
+
+          status="$(python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("public_compute/results/final_train/state.json")
+          print(json.loads(p.read_text()).get("status","") if p.exists() else "")
+          PY
+          )"
+
+          case "$status" in
+            FINAL_TRAIN_COMPLETE|TERMINAL_NO_FINAL_TRAIN_CANDIDATES)
+              echo "FINAL_TRAIN terminal state: $status"
+              ;;
+            *)
+              sleep 3
+              gh workflow run wfl_p43_final_train_batch.yml --ref main
+              ;;
+          esac
