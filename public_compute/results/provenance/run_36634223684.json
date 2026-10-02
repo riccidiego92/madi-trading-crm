@@ -1,6 +1,6 @@
 {
-  "artifact_count": 108,
-  "candidate_count": 216,
+  "artifact_count": 109,
+  "candidate_count": 218,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -1946,6 +1946,24 @@
       "destination": "public_compute/results/member_confirmation/candidate_364.json",
       "quarantined_conflict": false,
       "sha256": "6e72b805e98f87f8401ad7e46ac6093e3ccd41d351dbc8c9878abe8ac027cddc"
+    },
+    {
+      "artifact_id": 11206443595,
+      "artifact_name": "p43-rescue-pair-bulk4-120",
+      "candidate_id": "P42_PHASED:b6f256e2ee95c13c",
+      "candidate_index": 367,
+      "destination": "public_compute/results/member_confirmation/candidate_367.json",
+      "quarantined_conflict": false,
+      "sha256": "9bdc9b5a7cebb1062cb8f090a194cb8a05b6d6bd75ba2913aaaf3a46dfecfe3d"
+    },
+    {
+      "artifact_id": 11206443595,
+      "artifact_name": "p43-rescue-pair-bulk4-120",
+      "candidate_id": "P42_PHASED:b002e05c749300ce",
+      "candidate_index": 368,
+      "destination": "public_compute/results/member_confirmation/candidate_368.json",
+      "quarantined_conflict": false,
+      "sha256": "4e6e6abae32e954dfb9b1b43205ae0b35bca40dad0a96edf50045856ab83d217"
     }
   ],
   "schema": "wfl-public-p43-collected-run-1",
