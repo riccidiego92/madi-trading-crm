@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "public_compute/results/final_train_plan.json"
+      - "public_compute/queue/final_train_bootstrap_now.json"
   workflow_dispatch:
 
 permissions:
