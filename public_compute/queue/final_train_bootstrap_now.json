@@ -1,0 +1,7 @@
+{
+  "schema": "wfl-p43-final-train-bootstrap-now-1",
+  "plan_sha256": "c1eca541ebcd9ecf3e7a7e59ed70ef0231df6771e53dc09483df3b5370950d28",
+  "candidate_count": 384,
+  "purpose": "Explicitly start FINAL_TRAIN from the already frozen immutable plan",
+  "no_plan_mutation": true
+}
