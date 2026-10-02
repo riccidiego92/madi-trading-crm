@@ -1,5 +1,6 @@
 {
   "schema": "wfl-hourly-twin-prefreeze-now-1",
-  "requested_at": "2026-10-01T18:23:52+02:00",
-  "purpose": "Freeze every remaining future Classico contest for today using the unchanged development twin"
+  "requested_for": "2026-10-02",
+  "purpose": "Freeze every remaining future Classico contest today using unchanged candidate 16",
+  "no_post_result_retuning": true
 }
