@@ -1,5 +1,5 @@
 {
-  "candidate_count": 381,
+  "candidate_count": 384,
   "candidate_indices": [
     0,
     1,
@@ -290,6 +290,7 @@
     356,
     357,
     358,
+    359,
     36,
     360,
     361,
@@ -305,6 +306,8 @@
     370,
     371,
     372,
+    373,
+    374,
     375,
     376,
     377,
@@ -383,7 +386,7 @@
     98,
     99
   ],
-  "complete": false,
+  "complete": true,
   "quarantined_conflict_count": 0,
   "required_candidate_count": 384,
   "schema": "wfl-public-p43-result-index-1"

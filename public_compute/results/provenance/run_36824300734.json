@@ -1,6 +1,6 @@
 {
-  "artifact_count": 49,
-  "candidate_count": 49,
+  "artifact_count": 53,
+  "candidate_count": 53,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -427,6 +427,15 @@
       "sha256": "44375b0530e018763af4dc7a4df086869c6848e9d2a3136315f2e3047cf2c57b"
     },
     {
+      "artifact_id": 11204875297,
+      "artifact_name": "p43-rescue-single-359",
+      "candidate_id": "P42_PHASED:120658f01267e28f",
+      "candidate_index": 359,
+      "destination": "public_compute/results/member_confirmation/candidate_359.json",
+      "quarantined_conflict": false,
+      "sha256": "97cab08ed00e6ce6d01368efc739aaef78f25d3a24b55c84d18d88e5c79b86ea"
+    },
+    {
       "artifact_id": 11201432518,
       "artifact_name": "p43-rescue-single-360",
       "candidate_id": "P42_PHASED:d1281fb9a3bc3138",
@@ -443,6 +452,33 @@
       "destination": "public_compute/results/member_confirmation/candidate_361.json",
       "quarantined_conflict": false,
       "sha256": "e19a6f8cb86e9f95fdee8a398fd209660b2334056e7abce01413200225153b11"
+    },
+    {
+      "artifact_id": 11204584370,
+      "artifact_name": "p43-rescue-single-362",
+      "candidate_id": "P42_PHASED:6767867069fc962a",
+      "candidate_index": 362,
+      "destination": "public_compute/results/member_confirmation/candidate_362.json",
+      "quarantined_conflict": false,
+      "sha256": "46d84435d2560534515ebcf0dd15d912ea4c1294fbe9ac495eaff909f8bb1e9e"
+    },
+    {
+      "artifact_id": 11205280277,
+      "artifact_name": "p43-rescue-single-373",
+      "candidate_id": "P42_PHASED:20a3dfc691424fda",
+      "candidate_index": 373,
+      "destination": "public_compute/results/member_confirmation/candidate_373.json",
+      "quarantined_conflict": false,
+      "sha256": "bbdd12bb4cb15f29dd99a5a3fca4ef7b598ebc91209e452e79489eb317c2bfc0"
+    },
+    {
+      "artifact_id": 11205705904,
+      "artifact_name": "p43-rescue-single-374",
+      "candidate_id": "P42_PHASED:990132a6ba65cd37",
+      "candidate_index": 374,
+      "destination": "public_compute/results/member_confirmation/candidate_374.json",
+      "quarantined_conflict": false,
+      "sha256": "9e98bef5f2d04c084d62d6ff876d06171c845a1e57c2c652cf64f3fc05ad31ef"
     }
   ],
   "schema": "wfl-public-p43-collected-run-1",

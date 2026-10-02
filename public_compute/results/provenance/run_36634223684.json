@@ -1,6 +1,6 @@
 {
-  "artifact_count": 106,
-  "candidate_count": 212,
+  "artifact_count": 108,
+  "candidate_count": 216,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -1894,6 +1894,24 @@
       "sha256": "8d6a246d3470d86319c1af8262ba1eb8e8a548a4e8a5f0d036f2e3c963275fdd"
     },
     {
+      "artifact_id": 11201935674,
+      "artifact_name": "p43-rescue-pair-bulk4-115",
+      "candidate_id": "P42_PHASED:2fd19de090954c02",
+      "candidate_index": 346,
+      "destination": "public_compute/results/member_confirmation/candidate_346.json",
+      "quarantined_conflict": false,
+      "sha256": "247b5db9524a9ba2560b3324ca32e96ab47706a00cd84f5e23bbb648e6ebe342"
+    },
+    {
+      "artifact_id": 11201935674,
+      "artifact_name": "p43-rescue-pair-bulk4-115",
+      "candidate_id": "P42_PHASED:bcb7ee247f032220",
+      "candidate_index": 347,
+      "destination": "public_compute/results/member_confirmation/candidate_347.json",
+      "quarantined_conflict": false,
+      "sha256": "b74dd53448bbaee35b1e76e2257c09f52895a29671f82b1a7d7223e816524852"
+    },
+    {
       "artifact_id": 11201495821,
       "artifact_name": "p43-rescue-pair-bulk4-117",
       "candidate_id": "P42_PHASED:26b0410df47bbaf9",
@@ -1910,6 +1928,24 @@
       "destination": "public_compute/results/member_confirmation/candidate_362.json",
       "quarantined_conflict": false,
       "sha256": "46f96b0400651d5f3519c6d9716441e1269f0ffa254398b536bedc5c0f6606e4"
+    },
+    {
+      "artifact_id": 11204526994,
+      "artifact_name": "p43-rescue-pair-bulk4-118",
+      "candidate_id": "P42_PHASED:a72392c809c71695",
+      "candidate_index": 363,
+      "destination": "public_compute/results/member_confirmation/candidate_363.json",
+      "quarantined_conflict": false,
+      "sha256": "b6a650b34023470b02e22a41c4148c69b87541d1e2853ed805bf61041aeb2d24"
+    },
+    {
+      "artifact_id": 11204526994,
+      "artifact_name": "p43-rescue-pair-bulk4-118",
+      "candidate_id": "P42_PHASED:4613ac56643b17f0",
+      "candidate_index": 364,
+      "destination": "public_compute/results/member_confirmation/candidate_364.json",
+      "quarantined_conflict": false,
+      "sha256": "6e72b805e98f87f8401ad7e46ac6093e3ccd41d351dbc8c9878abe8ac027cddc"
     }
   ],
   "schema": "wfl-public-p43-collected-run-1",
