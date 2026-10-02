@@ -1,0 +1,32 @@
+{
+  "already_consolidated_count": 24,
+  "bad_candidate_indices": [
+    4,
+    5,
+    18,
+    23,
+    53,
+    54,
+    70,
+    71,
+    85,
+    86,
+    246,
+    247,
+    293,
+    294,
+    308,
+    309,
+    310,
+    312,
+    340,
+    341,
+    358,
+    360,
+    365,
+    366
+  ],
+  "repair_candidate_indices": [],
+  "schema": "wfl-public-p43-auto-repair-status-1",
+  "source_run_id": 36634223684
+}
