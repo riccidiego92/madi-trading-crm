@@ -1,0 +1,13 @@
+{
+  "schema": "wfl-p43-final-train-batch-now-1",
+  "generation": 1,
+  "phase": "calibration",
+  "candidate_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "purpose": "Explicitly start first sharded FINAL_TRAIN batch from frozen active queue"
+}
