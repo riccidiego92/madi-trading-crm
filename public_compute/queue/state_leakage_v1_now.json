@@ -1,0 +1,7 @@
+{
+  "schema": "wfl-state-leakage-v1-trigger",
+  "requested": true,
+  "scientific_scope": "TRAIN_ONLY_2013_2018",
+  "validation_accessed": false,
+  "holdout_accessed": false
+}
