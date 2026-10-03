@@ -43,8 +43,9 @@ jobs:
             git checkout -B prefreeze-work origin/main
 
             python public_compute/prefreeze_hourly_day.py               --candidate-index 16               --min-lead-seconds 300
+            python public_compute/hourly_twin_ensemble.py prefreeze-day               --min-lead-seconds 300
 
-            git add public_compute/prospective/hourly
+            git add public_compute/prospective/hourly                    public_compute/prospective/hourly_ensemble
             if git diff --cached --quiet; then
               echo "No new daily freezes"
               exit 0
