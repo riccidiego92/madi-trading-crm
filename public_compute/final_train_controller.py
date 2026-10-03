@@ -100,6 +100,47 @@ def _null_dir(idx: int) -> Path:
     return RESULT_ROOT / "null_shards" / f"candidate_{idx}"
 
 
+def _schedule_next(plan_candidates: list[int], generation: int) -> None:
+    remaining = [x for x in plan_candidates if not _final_path(x).exists()]
+    if not remaining:
+        _write(STATE_PATH, {
+            "schema": "wfl-p43-final-train-state-1",
+            "status": "FINAL_TRAIN_COMPLETE",
+            "candidate_count": len(plan_candidates),
+            "last_generation": int(generation) - 1,
+        })
+        return
+
+    # Never recompute a completed 50k calibration. This is especially
+    # important after a retry queue, whose candidate_indices contain only the
+    # previously incomplete candidates.
+    ready_for_null = [x for x in remaining if _cal_path(x).exists()]
+    if ready_for_null:
+        batch = ready_for_null[:CANDIDATES_PER_BATCH]
+        _write(QUEUE_PATH, _queue("null", batch, generation))
+        _write(STATE_PATH, {
+            "schema": "wfl-p43-final-train-state-1",
+            "status": "NULL_BATCH_QUEUED",
+            "generation": int(generation),
+            "candidate_indices": batch,
+            "completed_final_count": len(plan_candidates) - len(remaining),
+            "planned_final_count": len(plan_candidates),
+            "resumed_from_existing_calibration": True,
+        })
+        return
+
+    batch = remaining[:CANDIDATES_PER_BATCH]
+    _write(QUEUE_PATH, _queue("calibration", batch, generation))
+    _write(STATE_PATH, {
+        "schema": "wfl-p43-final-train-state-1",
+        "status": "CALIBRATION_BATCH_QUEUED",
+        "generation": int(generation),
+        "candidate_indices": batch,
+        "completed_final_count": len(plan_candidates) - len(remaining),
+        "planned_final_count": len(plan_candidates),
+    })
+
+
 def bootstrap() -> None:
     candidates = _plan_candidates()
     if not candidates:
@@ -109,25 +150,7 @@ def bootstrap() -> None:
         })
         return
 
-    remaining = [x for x in candidates if not _final_path(x).exists()]
-    if not remaining:
-        _write(STATE_PATH, {
-            "schema": "wfl-p43-final-train-state-1",
-            "status": "FINAL_TRAIN_COMPLETE",
-            "candidate_count": len(candidates),
-        })
-        return
-
-    batch = remaining[:CANDIDATES_PER_BATCH]
-    _write(QUEUE_PATH, _queue("calibration", batch, 1))
-    _write(STATE_PATH, {
-        "schema": "wfl-p43-final-train-state-1",
-        "status": "CALIBRATION_BATCH_QUEUED",
-        "generation": 1,
-        "candidate_indices": batch,
-        "completed_final_count": len(candidates) - len(remaining),
-        "planned_final_count": len(candidates),
-    })
+    _schedule_next(candidates, 1)
 
 
 def advance() -> None:
@@ -180,13 +203,7 @@ def advance() -> None:
                 "missing_shard_count": len(tasks),
             })
             return
-        _write(QUEUE_PATH, _queue("null", candidates, generation + 1))
-        _write(STATE_PATH, {
-            "schema": "wfl-p43-final-train-state-1",
-            "status": "NULL_BATCH_QUEUED",
-            "generation": generation + 1,
-            "candidate_indices": candidates,
-        })
+        _schedule_next(plan_candidates, generation + 1)
         return
 
     if phase == "null":
@@ -229,25 +246,7 @@ def advance() -> None:
             })
             return
 
-        remaining = [x for x in plan_candidates if not _final_path(x).exists()]
-        if not remaining:
-            _write(STATE_PATH, {
-                "schema": "wfl-p43-final-train-state-1",
-                "status": "FINAL_TRAIN_COMPLETE",
-                "candidate_count": len(plan_candidates),
-                "last_generation": generation,
-            })
-            return
-        nxt = remaining[:CANDIDATES_PER_BATCH]
-        _write(QUEUE_PATH, _queue("calibration", nxt, generation + 1))
-        _write(STATE_PATH, {
-            "schema": "wfl-p43-final-train-state-1",
-            "status": "CALIBRATION_BATCH_QUEUED",
-            "generation": generation + 1,
-            "candidate_indices": nxt,
-            "completed_final_count": len(plan_candidates) - len(remaining),
-            "planned_final_count": len(plan_candidates),
-        })
+        _schedule_next(plan_candidates, generation + 1)
         return
 
     raise SystemExit(f"unknown phase {phase}")
