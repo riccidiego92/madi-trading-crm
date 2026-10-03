@@ -1,0 +1,95 @@
+{
+  "schema": "wfl-hourly-twin-ensemble-manifest-1",
+  "status": "DEVELOPMENT_ENSEMBLE_FROZEN",
+  "evidence_grade": "TRAIN_SELECTED_DEVELOPMENT_ONLY_NOT_P48_VALIDATED",
+  "selection_policy": {
+    "purpose": "architecture-diverse digital-twin ensemble for prospective falsification",
+    "axes": {
+      "mapper": [
+        "fisher_yates",
+        "rank_unrank",
+        "rejection",
+        "sequential"
+      ],
+      "stream_mode": [
+        "single",
+        "split_main_numerone"
+      ],
+      "reseed_mode": "per_contest",
+      "background_cycles_main": 0,
+      "background_cycles_numerone": 0
+    },
+    "member_rule": "fixed bgm0/bgn0 representative from each mapper x stream_mode per_contest family",
+    "generated_numbers_used_for_selection": false,
+    "prospective_scores_used_for_selection": false,
+    "train_only": true
+  },
+  "candidate_indices": [
+    16,
+    64,
+    112,
+    160,
+    208,
+    256,
+    304,
+    352
+  ],
+  "candidates": [
+    {
+      "candidate_index": 16,
+      "candidate_blob_sha": "b0485743e4881fa5963c6cdf8df6ec5fc939dcc0",
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 64,
+      "candidate_blob_sha": "e97aea6d46e52df9f42b829b9ebe97bdcab076ce",
+      "candidate_id": "P42_PHASED:d3e2dacc3d569bef",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|split_main_numerone|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 112,
+      "candidate_blob_sha": "f3f57f9a48ea1f52da3b44b72d65fa7f1ae4aea4",
+      "candidate_id": "P42_PHASED:bbbfb410e771083b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 160,
+      "candidate_blob_sha": "b10295d1022f97e9b55733f45b96c86cbc19156a",
+      "candidate_id": "P42_PHASED:3d52499d50ec52f2",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|split_main_numerone|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 208,
+      "candidate_blob_sha": "6568948eb54cdafb9258355dbfb49f9994ef0f82",
+      "candidate_id": "P42_PHASED:ffb67c283fba029e",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|single|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 256,
+      "candidate_blob_sha": "dfce3ddf55d5d8b34a6db3c88fbba9f0c5c7ff04",
+      "candidate_id": "P42_PHASED:7a0e73eff05b1968",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|split_main_numerone|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 304,
+      "candidate_blob_sha": "822ec4435a6d0e7c4d5d496d4d18cb56a4b2d26d",
+      "candidate_id": "P42_PHASED:3529eef19dcfc5d3",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|single|per_contest|bgm0|bgn0"
+    },
+    {
+      "candidate_index": 352,
+      "candidate_blob_sha": "426f695fdceeb1b04e9d917f4a7ad0c189130b13",
+      "candidate_id": "P42_PHASED:9c5e870689e3743b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|split_main_numerone|per_contest|bgm0|bgn0"
+    }
+  ],
+  "guardrails": {
+    "immutable_selection_before_ensemble_outputs": true,
+    "validation_accessed": false,
+    "holdout_accessed": false,
+    "prospective_result_feedback_into_selection": false,
+    "p48_validated": false,
+    "no_edge_claim": true
+  }
+}
