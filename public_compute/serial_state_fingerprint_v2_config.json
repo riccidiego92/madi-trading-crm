@@ -1,0 +1,30 @@
+{
+  "schema": "wfl-serial-state-fingerprint-v2-config",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "scope": "TRAIN_ONLY_2013_2018",
+  "complete_day_required": true,
+  "contest_lags": [1,2,3,4,5,6,7,8,9,10,16,17,18,24,31,34,51,68,85,102,119,136,153,170,238,357,476],
+  "partition_rank_moduli": [2,3,5,7,11,16,31],
+  "families": [
+    "partition_rank_residue_serial_dependence",
+    "numerone_serial_dependence",
+    "main_overlap_serial_dependence",
+    "exact_complement_invariant_partition_collision"
+  ],
+  "permutation": {
+    "method": "within each calendar month and draw-hour, jointly permute Main+Numerone across days",
+    "reps": 199,
+    "seed": 2026100302,
+    "familywise_max_stat": true
+  },
+  "promotion_threshold": 0.01,
+  "guardrails": {
+    "validation_accessed": false,
+    "holdout_accessed": false,
+    "no_operational_seed_search": true,
+    "no_post_result_parameter_changes": true,
+    "no_candidate_promotion_from_this_diagnostic": true,
+    "no_predictive_edge_claim_from_train": true,
+    "p43_p48_unchanged": true
+  }
+}
