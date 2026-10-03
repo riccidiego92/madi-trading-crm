@@ -1,0 +1,48 @@
+{
+  "schema": "wfl-hourly-twin-ensemble-signal-policy-1",
+  "status": "FROZEN_BEFORE_PROSPECTIVE_SIGNAL_SCORING",
+  "baseline_schema": "wfl-hourly-twin-ensemble-structural-baseline-1",
+  "main_partition_convergence": {
+    "rule": "ALL",
+    "conditions": [
+      {
+        "metric": "pairwise_symmetric_overlap_mean",
+        "threshold_quantile": "q99",
+        "operator": ">="
+      },
+      {
+        "metric": "support_margin",
+        "threshold_quantile": "q95",
+        "operator": ">="
+      },
+      {
+        "metric": "tenth_number_support",
+        "threshold_quantile": "q90",
+        "operator": ">="
+      }
+    ]
+  },
+  "numerone_convergence": {
+    "rule": "ALL",
+    "conditions": [
+      {
+        "metric": "numerone_mode_support",
+        "threshold_quantile": "q99",
+        "operator": ">="
+      }
+    ]
+  },
+  "interpretation": {
+    "label_when_main_passes": "RARE_STRUCTURAL_MAIN_CONVERGENCE",
+    "label_when_numerone_passes": "RARE_STRUCTURAL_NUMERONE_CONVERGENCE",
+    "structural_convergence_is_not_predictive_edge": true,
+    "prospective_outcomes_may_test_but_not_retune_policy": true
+  },
+  "guardrails": {
+    "official_results_used_to_define_policy": false,
+    "validation_accessed": false,
+    "holdout_accessed": false,
+    "post_result_threshold_changes_allowed": false,
+    "p48_validated": false
+  }
+}
