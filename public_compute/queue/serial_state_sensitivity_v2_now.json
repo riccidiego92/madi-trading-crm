@@ -1,0 +1,7 @@
+{
+  "schema":"wfl-serial-state-sensitivity-v2-trigger",
+  "requested":true,
+  "synthetic_only":true,
+  "validation_accessed":false,
+  "holdout_accessed":false
+}
