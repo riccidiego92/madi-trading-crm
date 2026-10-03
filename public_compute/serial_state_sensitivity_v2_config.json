@@ -1,0 +1,20 @@
+{
+  "schema": "wfl-serial-state-sensitivity-v2-config",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "sample_contests": 36890,
+  "engines": ["LCG32", "HMAC_DRBG_SHA256"],
+  "mapper": "fisher_yates",
+  "stream_mode": "single",
+  "lifecycles": ["continuous", "per_day", "per_contest"],
+  "replicate_seeds": [2026100311,2026100312,2026100313,2026100314,2026100315],
+  "decision_threshold_source": "public_compute/results/serial_state_fingerprint_v2.json:null_quantiles.q99",
+  "purpose": "Sensitivity calibration only; no real-outcome tuning or candidate promotion.",
+  "guardrails": {
+    "synthetic_only": true,
+    "validation_accessed": false,
+    "holdout_accessed": false,
+    "operational_seed_search": false,
+    "no_predictive_edge_claim": true,
+    "p43_p48_unchanged": true
+  }
+}
