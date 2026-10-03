@@ -2,5 +2,8 @@
   "schema": "wfl-hourly-twin-prefreeze-now-1",
   "requested_for": "2026-10-02",
   "purpose": "Freeze every remaining future Classico contest today using unchanged candidate 16",
-  "no_post_result_retuning": true
+  "no_post_result_retuning": true,
+  "trigger": "ensemble-v1-bootstrap",
+  "sequence": 1,
+  "note": "Trigger combined single+architecture-diverse ensemble pre-freeze"
 }
