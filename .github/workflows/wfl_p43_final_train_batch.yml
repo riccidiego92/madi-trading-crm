@@ -34,8 +34,17 @@ jobs:
           if q.get("schema")!="wfl-p43-final-train-active-batch-1":
               raise SystemExit("bad active batch schema")
           tasks=q["tasks"]
+          if q.get("phase") == "calibration":
+              completed_cal = {
+                  int(p.stem.split("_")[-1])
+                  for p in Path("public_compute/results/final_train/calibration").glob("candidate_*.json")
+              }
+              tasks = [
+                  t for t in tasks
+                  if int(t["candidate_index"]) not in completed_cal
+              ]
           if not tasks or len(tasks)>256:
-              raise SystemExit("invalid matrix size")
+              raise SystemExit("invalid matrix size after completed-calibration filtering")
           if q["scientific_settings"] != {
               "alpha_final": 0.05,
               "calibration_reps": 50000,
