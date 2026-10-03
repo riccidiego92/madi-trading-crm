@@ -17,6 +17,8 @@ from hourly_twin import (
 DEFAULT_MANIFEST = Path("public_compute/prospective/hourly_ensemble_manifest.json")
 DEFAULT_CANDIDATE_ROOT = Path("public_compute/results/member_confirmation")
 DEFAULT_OUT_ROOT = Path("public_compute/prospective/hourly_ensemble")
+DEFAULT_BASELINE = Path("public_compute/results/hourly_twin_ensemble_structural_baseline.json")
+DEFAULT_SIGNAL_POLICY = Path("public_compute/prospective/hourly_ensemble_signal_policy.json")
 HOURS = tuple(range(7, 24))
 
 
@@ -130,6 +132,112 @@ def _load_manifest(path: Path) -> dict:
     return m
 
 
+def _structural_metrics(consensus: dict) -> dict[str, float]:
+    support = {int(k): int(v) for k, v in consensus["number_support"].items()}
+    return {
+        "pairwise_symmetric_overlap_mean": float(
+            consensus["agreement"]["pairwise_symmetric_overlap_mean"]
+        ),
+        "pairwise_symmetric_overlap_min": float(
+            consensus["agreement"]["pairwise_symmetric_overlap_min"]
+        ),
+        "pairwise_symmetric_overlap_max": float(
+            consensus["agreement"]["pairwise_symmetric_overlap_max"]
+        ),
+        "exact_partition_member_count": float(
+            consensus["agreement"]["exact_partition_member_count"]
+        ),
+        "numerone_mode_support": float(
+            consensus["agreement"]["numerone_mode_support"]
+        ),
+        "support_margin": float(consensus["consensus_boundary"]["support_margin"]),
+        "tenth_number_support": float(
+            consensus["consensus_boundary"]["tenth_number_support"]
+        ),
+        "max_number_support": float(max(support.values())),
+    }
+
+
+def _evaluate_structural_policy(
+    consensus: dict,
+    baseline_path: Path = DEFAULT_BASELINE,
+    policy_path: Path = DEFAULT_SIGNAL_POLICY,
+) -> dict:
+    if not baseline_path.exists():
+        return {
+            "status": "BASELINE_NOT_AVAILABLE_AT_FREEZE",
+            "counts_as_predictive_edge": False,
+        }
+    if not policy_path.exists():
+        return {
+            "status": "SIGNAL_POLICY_NOT_AVAILABLE_AT_FREEZE",
+            "counts_as_predictive_edge": False,
+        }
+
+    baseline = json.loads(baseline_path.read_text())
+    policy = json.loads(policy_path.read_text())
+    if baseline.get("schema") != "wfl-hourly-twin-ensemble-structural-baseline-1":
+        raise ValueError("unexpected structural baseline schema")
+    if policy.get("schema") != "wfl-hourly-twin-ensemble-signal-policy-1":
+        raise ValueError("unexpected structural signal policy schema")
+
+    values = _structural_metrics(consensus)
+
+    def evaluate_block(name: str) -> dict:
+        block = policy[name]
+        rows = []
+        for cond in block["conditions"]:
+            metric = cond["metric"]
+            q = cond["threshold_quantile"]
+            threshold = float(baseline["metrics"][metric][q])
+            value = float(values[metric])
+            passed = value >= threshold
+            rows.append({
+                "metric": metric,
+                "value": value,
+                "threshold_quantile": q,
+                "threshold_value": threshold,
+                "operator": ">=",
+                "passed": bool(passed),
+            })
+        passed = all(row["passed"] for row in rows)
+        return {
+            "rule": block["rule"],
+            "passed": bool(passed),
+            "conditions": rows,
+        }
+
+    main_eval = evaluate_block("main_partition_convergence")
+    num_eval = evaluate_block("numerone_convergence")
+    return {
+        "status": "STRUCTURAL_POLICY_EVALUATED_PRE_DRAW",
+        "baseline_path": str(baseline_path),
+        "baseline_sha256": baseline.get("baseline_sha256"),
+        "policy_path": str(policy_path),
+        "policy_sha256": _canonical_hash(policy),
+        "metric_values": values,
+        "main_partition_convergence": main_eval,
+        "numerone_convergence": num_eval,
+        "labels": {
+            "main": (
+                policy["interpretation"]["label_when_main_passes"]
+                if main_eval["passed"] else None
+            ),
+            "numerone": (
+                policy["interpretation"]["label_when_numerone_passes"]
+                if num_eval["passed"] else None
+            ),
+        },
+        "counts_as_predictive_edge": False,
+        "guardrails": {
+            "baseline_uses_train_output_structure_only": True,
+            "official_result_used_for_signal": False,
+            "post_result_retuning_allowed": False,
+            "multiplicity_corrected_predictive_claim": False,
+        },
+    }
+
+
 def freeze_ensemble(
     *,
     now: datetime,
@@ -213,6 +321,7 @@ def freeze_ensemble(
         },
         "members": members,
         "consensus": consensus,
+        "structural_convergence": _evaluate_structural_policy(consensus),
         "guardrails": {
             "generated_before_target": True,
             "future_result_used_for_generation": False,
