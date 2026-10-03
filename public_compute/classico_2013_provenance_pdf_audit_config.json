@@ -1,0 +1,51 @@
+{
+  "schema": "wfl-classico-2013-provenance-pdf-audit-config-1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "documents": [
+    {
+      "id": "2012_3925",
+      "protocol": "2012/3925/Giochi/Ena",
+      "url": "https://www.adm.gov.it/portale/documents/20182/1099657/Prot.n.2012-3925-GiochiEna-WFL-ultima-versione-firmata-20feb12.pdf/505faa22-6333-4f9c-a064-87fb247917a7?t=1456164490439"
+    },
+    {
+      "id": "2013_505",
+      "protocol": "2013/505/Giochi/Ena",
+      "url": "https://www.adm.gov.it/portale/documents/20182/1099657/regolamento+di+gioco+Win+for+Life.pdf/392e03df-56e3-4bb1-a236-42bdbe62126c?t=1456164489097"
+    },
+    {
+      "id": "2013_1523",
+      "protocol": "2013/1523/Giochi/Ena",
+      "url": "https://www.adm.gov.it/portale/documents/20182/1099657/Win-for-Life-2013-14-01-13.pdf/61da8c01-6822-4ed9-8a23-6235f2cf3709?t=1456164488822"
+    },
+    {
+      "id": "2013_2381",
+      "protocol": "2013/2381/Giochi/Ena",
+      "url": "https://www.adm.gov.it/portale/documents/20182/1099657/Primo-concorso-Win-for-Life-2013-16-01-13.pdf/767cf800-23b4-4c76-93c5-6fbbd4676b4e?t=1456164488587"
+    }
+  ],
+  "keywords": [
+    "ADAMSS",
+    "Università degli Studi di Milano",
+    "certific",
+    "dispositivo",
+    "generazione dei numeri",
+    "sistema estrazionale",
+    "generatore",
+    "algoritmo",
+    "collaudo",
+    "software",
+    "hardware",
+    "2011",
+    "2012/3925",
+    "4 dicembre",
+    "15 dicembre",
+    "adeguatezza"
+  ],
+  "context_chars": 700,
+  "guardrails": {
+    "public_documents_only": true,
+    "no_secret_or_operational_material": true,
+    "no_seed_search": true,
+    "p43_p48_unchanged": true
+  }
+}
