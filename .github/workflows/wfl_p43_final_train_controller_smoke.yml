@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "public_compute/queue/final_train_controller_smoke.json"
+      - "public_compute/final_train_controller.py"
+      - ".github/workflows/wfl_p43_final_train_controller_smoke.yml"
 
 permissions:
   contents: read
@@ -43,5 +45,32 @@ jobs:
           assert cal["scientific_settings"]["alpha_final"] == 0.05
           assert cal["scientific_settings"]["validation_accessed"] is False
           assert cal["scientific_settings"]["holdout_accessed"] is False
+
+          import json
+          import tempfile
+          from pathlib import Path
+          import final_train_controller as ctl
+
+          with tempfile.TemporaryDirectory() as td:
+              root=Path(td)
+              ctl.PLAN_PATH=root/"final_train_plan.json"
+              ctl.QUEUE_PATH=root/"active_batch.json"
+              ctl.STATE_PATH=root/"state.json"
+              ctl.RESULT_ROOT=root/"results"
+              ctl.PLAN_PATH.write_text(json.dumps({
+                  "schema":"wfl-public-p43-final-train-plan-1",
+                  "status":"FINAL_TRAIN_PLAN_FROZEN",
+                  "final_train":{"candidate_indices":[0,1,2,3]},
+              }))
+              (ctl.RESULT_ROOT/"calibration").mkdir(parents=True)
+              (ctl.RESULT_ROOT/"calibration"/"candidate_0.json").write_text("{}")
+              (ctl.RESULT_ROOT/"calibration"/"candidate_2.json").write_text("{}")
+              ctl.bootstrap()
+              q=json.loads(ctl.QUEUE_PATH.read_text())
+              state=json.loads(ctl.STATE_PATH.read_text())
+              assert q["phase"] == "null"
+              assert q["candidate_indices"] == [0,2]
+              assert state["resumed_from_existing_calibration"] is True
+
           print("FINAL_TRAIN_CONTROLLER_SMOKE_OK")
           PY
