@@ -1,0 +1,5 @@
+{
+  "schema": "wfl-classico-2013-provenance-ocr-audit-trigger",
+  "requested": true,
+  "reason": "2013 official PDFs are image scans with no usable text layer"
+}
