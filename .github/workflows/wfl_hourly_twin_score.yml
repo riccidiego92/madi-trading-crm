@@ -44,8 +44,10 @@ jobs:
 
             python public_compute/score_hourly_twin.py
             python public_compute/summarize_hourly_twin.py
+            python public_compute/score_hourly_twin_ensemble.py
+            python public_compute/summarize_hourly_twin_ensemble.py
 
-            git add public_compute/prospective/hourly_scores                     public_compute/prospective/hourly_evidence.json
+            git add public_compute/prospective/hourly_scores                     public_compute/prospective/hourly_evidence.json                     public_compute/prospective/hourly_ensemble_scores                     public_compute/prospective/hourly_ensemble_evidence.json
 
             if git diff --cached --quiet; then
               echo "No new official scores or ledger changes"
