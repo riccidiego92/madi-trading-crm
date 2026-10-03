@@ -1,0 +1,104 @@
+{
+  "baseline_sha256": "08ecf1151b54725fca3fff82b582f1aaac49b862acea8106ace0ee0724dc7696",
+  "candidate_indices": [
+    16,
+    64,
+    112,
+    160,
+    208,
+    256,
+    304,
+    352
+  ],
+  "evidence_grade": "TRAIN_OUTPUT_STRUCTURE_ONLY_NO_OFFICIAL_OUTCOME_USED",
+  "guardrails": {
+    "holdout_accessed": false,
+    "official_main_results_used_for_scoring": false,
+    "official_numerone_used_for_scoring": false,
+    "prospective_scores_used_for_thresholds": false,
+    "purpose": "pre-draw structural convergence calibration only",
+    "structural_convergence_does_not_imply_predictive_edge": true,
+    "validation_accessed": false
+  },
+  "manifest_sha256": "318bafd5f57942aa1c008c9df872ae7cb236ffe651121f36818ce55d4a5f0e7f",
+  "metrics": {
+    "exact_partition_member_count": {
+      "max": 1,
+      "mean": 0.014253969974527126,
+      "min": 0,
+      "q50": 0.0,
+      "q90": 0.0,
+      "q95": 0.0,
+      "q99": 1.0
+    },
+    "max_number_support": {
+      "max": 8,
+      "mean": 7.133922280635196,
+      "min": 5,
+      "q50": 7.0,
+      "q90": 8.0,
+      "q95": 8.0,
+      "q99": 8.0
+    },
+    "numerone_mode_support": {
+      "max": 6,
+      "mean": 1.9271313207956209,
+      "min": 1,
+      "q50": 2.0,
+      "q90": 3.0,
+      "q95": 3.0,
+      "q99": 3.0
+    },
+    "pairwise_symmetric_overlap_max": {
+      "max": 10.0,
+      "mean": 7.511923472982494,
+      "min": 6.0,
+      "q50": 7.0,
+      "q90": 8.0,
+      "q95": 8.0,
+      "q99": 9.0
+    },
+    "pairwise_symmetric_overlap_mean": {
+      "max": 6.535714285714286,
+      "mean": 5.858894601144344,
+      "min": 5.357142857142857,
+      "q50": 5.857142857142857,
+      "q90": 6.035714285714286,
+      "q95": 6.107142857142857,
+      "q99": 6.214285714285714
+    },
+    "pairwise_symmetric_overlap_min": {
+      "max": 6.0,
+      "mean": 5.000027098802233,
+      "min": 5.0,
+      "q50": 5.0,
+      "q90": 5.0,
+      "q95": 5.0,
+      "q99": 5.0
+    },
+    "support_margin": {
+      "max": 2,
+      "mean": 0.15925966072299605,
+      "min": 0,
+      "q50": 0.0,
+      "q90": 1.0,
+      "q95": 1.0,
+      "q99": 1.0
+    },
+    "tenth_number_support": {
+      "max": 5,
+      "mean": 4.077746463606308,
+      "min": 3,
+      "q50": 4.0,
+      "q90": 4.0,
+      "q95": 5.0,
+      "q99": 5.0
+    }
+  },
+  "schema": "wfl-hourly-twin-ensemble-structural-baseline-1",
+  "train_period": {
+    "contest_count": 36902,
+    "end": "2018-12-31",
+    "start": "2013-01-21"
+  }
+}
