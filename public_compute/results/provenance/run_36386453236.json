@@ -1,62 +1,8 @@
 {
-  "artifact_count": 38,
-  "candidate_count": 75,
+  "artifact_count": 35,
+  "candidate_count": 69,
   "conflicted_candidate_indices": [],
   "files": [
-    {
-      "artifact_id": 11160146593,
-      "artifact_name": "p43-rescue-pair-065",
-      "candidate_id": "P42_PHASED:480c049e9ef384cb",
-      "candidate_index": 291,
-      "destination": "public_compute/results/member_confirmation/candidate_291.json",
-      "quarantined_conflict": false,
-      "sha256": "1868fe528491ef727c904121f477050f805cf171f43ee8b012bc6af348d4b988"
-    },
-    {
-      "artifact_id": 11160146593,
-      "artifact_name": "p43-rescue-pair-065",
-      "candidate_id": "P42_PHASED:776e667a829ab93a",
-      "candidate_index": 292,
-      "destination": "public_compute/results/member_confirmation/candidate_292.json",
-      "quarantined_conflict": false,
-      "sha256": "62ee1cb2be9da91d0a026233aa421864a77feb301f8a2ab69608e7bbf684899e"
-    },
-    {
-      "artifact_id": 11161634817,
-      "artifact_name": "p43-rescue-pair-067",
-      "candidate_id": "P42_PHASED:d924afae8c7b2126",
-      "candidate_index": 295,
-      "destination": "public_compute/results/member_confirmation/candidate_295.json",
-      "quarantined_conflict": false,
-      "sha256": "3532e19a0a9eb992dc3e143907044542e2593c6d51d4ef08d50e6750122e3dcd"
-    },
-    {
-      "artifact_id": 11161634817,
-      "artifact_name": "p43-rescue-pair-067",
-      "candidate_id": "P42_PHASED:c6f36f7b31dcb657",
-      "candidate_index": 296,
-      "destination": "public_compute/results/member_confirmation/candidate_296.json",
-      "quarantined_conflict": false,
-      "sha256": "a6575396f93f9eaca08c9fba5588b09ed2e97d94226a27abeff139f3e2ae8223"
-    },
-    {
-      "artifact_id": 11169606399,
-      "artifact_name": "p43-rescue-pair-068",
-      "candidate_id": "P42_PHASED:3fca30f552ed511a",
-      "candidate_index": 297,
-      "destination": "public_compute/results/member_confirmation/candidate_297.json",
-      "quarantined_conflict": false,
-      "sha256": "6ca4cef340d329d69f4cd24f9da15514a3c8e31dd83dc50c78b5ec2bafc190f6"
-    },
-    {
-      "artifact_id": 11169606399,
-      "artifact_name": "p43-rescue-pair-068",
-      "candidate_id": "P42_PHASED:a0f9b48386cdc9cc",
-      "candidate_index": 298,
-      "destination": "public_compute/results/member_confirmation/candidate_298.json",
-      "quarantined_conflict": false,
-      "sha256": "7b2ae9e20a35615db2fe7b566b9aaaea5b5c792f6216821088aa4e563c401333"
-    },
     {
       "artifact_id": 11171598843,
       "artifact_name": "p43-rescue-pair-069",
