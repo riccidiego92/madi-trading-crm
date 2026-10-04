@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "ed1299cb65532302bd42a9d305f9e39e65c978b121609be03b22db527a3f7b40",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 4709,
+    "date": "2026-10-04",
+    "main": [
+      1,
+      3,
+      5,
+      6,
+      9,
+      11,
+      12,
+      14,
+      19,
+      20
+    ],
+    "numerone": 7,
+    "source_sha256": "b9e2b06af88bba079b55e8a58cf98bad8f61a811a37223a54e875ed1b14baaa5",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-4709/4-ottobre-2026",
+    "time": "23:00"
+  },
+  "prediction": {
+    "complement": [
+      2,
+      5,
+      6,
+      8,
+      10,
+      12,
+      13,
+      14,
+      16,
+      17
+    ],
+    "main": [
+      1,
+      3,
+      4,
+      7,
+      9,
+      11,
+      15,
+      18,
+      19,
+      20
+    ],
+    "numerone": 7,
+    "prediction_sha256": "5599fcd9113e787e086680207819877eee78ab6dac6742710766aa56ddeaca14"
+  },
+  "prize_category": {
+    "complement_overlap": 4,
+    "direct_overlap": 6,
+    "numerone_exact": true,
+    "prize_code": "NO_PRIZE",
+    "prize_label": "Nessun premio",
+    "prize_rank": 0,
+    "symmetric_overlap": 6,
+    "winning_category": false
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 6,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": true,
+    "symmetric_main_overlap": 6
+  },
+  "score_sha256": "e58d76f9a5e1219b84ec4e2a58c7247f7020e38dba94249d0a3b9164804c4c33",
+  "scored_at": "2026-10-05T01:16:32.420475+02:00",
+  "target": {
+    "datetime": "2026-10-04T23:00:00+02:00",
+    "public_ordinal": 85079,
+    "timezone": "Europe/Rome"
+  }
+}
