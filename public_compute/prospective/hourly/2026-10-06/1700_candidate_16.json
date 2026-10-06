@@ -1,0 +1,78 @@
+{
+  "evidence_grade": "DEVELOPMENT_UNVALIDATED_NOT_FOR_LIVE_INFERENCE",
+  "freeze_sha256": "9f49c4e39dfec5918bffa2ff55a383a25f6ab96930b207fbb7425953636665e9",
+  "frozen_at": "2026-10-06T12:39:30.093603+02:00",
+  "guardrails": {
+    "counts_as_validated_prediction": false,
+    "failures_retained": true,
+    "future_result_used_for_generation": false,
+    "generated_before_target": true,
+    "immutable_once_written": true,
+    "operational_seed_or_state_search": false,
+    "post_result_retuning_allowed": false
+  },
+  "lead_seconds": 15629,
+  "machine": {
+    "calendar_alignment_offset": 0,
+    "candidate_id": "P42_PHASED:1ae8bdf827360633",
+    "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+    "candidate_signature_sha256": "a3e813232163f8040a6bb2277c681b17aaa48a6ded282a4e4a896ce0bba74498",
+    "config": {
+      "background_cycles_main": 0,
+      "background_cycles_numerone": 0,
+      "contests_per_day": 17,
+      "experiment_seed": 2026092642,
+      "mapper": "fisher_yates",
+      "reseed_mode": "per_contest",
+      "stream_mode": "single"
+    },
+    "machine_ordinal": 85107,
+    "member_confirmation": {
+      "final_train_complete": false,
+      "p_max_stat": 0.1958041958041958,
+      "rejected_at_triage_alpha_0_01": false,
+      "simulation_reps": 2000
+    },
+    "research_phase_offset": 0
+  },
+  "prediction": {
+    "complement": [
+      1,
+      2,
+      6,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "main": [
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      20
+    ],
+    "numerone": 17,
+    "prediction_sha256": "f45e33d0616800733f6ad6da9bc198b6a17b736495cd97caa8c8277a7da94cc2"
+  },
+  "schema": "wfl-hourly-twin-development-freeze-1",
+  "selection": {
+    "candidate_index": 16,
+    "generated_numbers_used_for_selection": false,
+    "rule": "FIXED_DEVELOPMENT_CANDIDATE_INDEX",
+    "selection_frozen_before_output": true
+  },
+  "target": {
+    "datetime": "2026-10-06T17:00:00+02:00",
+    "public_ordinal": 85107,
+    "timezone": "Europe/Rome"
+  }
+}
