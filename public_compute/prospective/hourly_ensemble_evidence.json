@@ -14,104 +14,104 @@
       "candidate_id": "P42_PHASED:bbbfb410e771083b",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.972222222222222,
+      "mean_symmetric_overlap": 5.947368421052632,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.25,
+      "scored": 38,
+      "winning_rate": 0.23684210526315788,
       "wins": 9
     },
     "16": {
       "candidate_id": "P42_PHASED:1ae8bdf827360633",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.888888888888889,
+      "mean_symmetric_overlap": 5.868421052631579,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.16666666666666666,
+      "scored": 38,
+      "winning_rate": 0.15789473684210525,
       "wins": 6
     },
     "160": {
       "candidate_id": "P42_PHASED:3d52499d50ec52f2",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 6.027777777777778,
+      "mean_symmetric_overlap": 6.052631578947368,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.25,
-      "wins": 9
+      "scored": 38,
+      "winning_rate": 0.2631578947368421,
+      "wins": 10
     },
     "208": {
       "candidate_id": "P42_PHASED:ffb67c283fba029e",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.861111111111111,
+      "mean_symmetric_overlap": 5.894736842105263,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.19444444444444445,
-      "wins": 7
+      "scored": 38,
+      "winning_rate": 0.21052631578947367,
+      "wins": 8
     },
     "256": {
       "candidate_id": "P42_PHASED:7a0e73eff05b1968",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 6.027777777777778,
+      "mean_symmetric_overlap": 5.973684210526316,
       "numerone_hits": 0,
-      "scored": 36,
-      "winning_rate": 0.3333333333333333,
+      "scored": 38,
+      "winning_rate": 0.3157894736842105,
       "wins": 12
     },
     "304": {
       "candidate_id": "P42_PHASED:3529eef19dcfc5d3",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.722222222222222,
+      "mean_symmetric_overlap": 5.7105263157894735,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.1111111111111111,
+      "scored": 38,
+      "winning_rate": 0.10526315789473684,
       "wins": 4
     },
     "352": {
       "candidate_id": "P42_PHASED:9c5e870689e3743b",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.944444444444445,
+      "mean_symmetric_overlap": 5.947368421052632,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.25,
+      "scored": 38,
+      "winning_rate": 0.23684210526315788,
       "wins": 9
     },
     "64": {
       "candidate_id": "P42_PHASED:d3e2dacc3d569bef",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.861111111111111,
+      "mean_symmetric_overlap": 5.815789473684211,
       "numerone_hits": 2,
-      "scored": 36,
-      "winning_rate": 0.16666666666666666,
+      "scored": 38,
+      "winning_rate": 0.15789473684210525,
       "wins": 6
     }
   },
   "observed": {
     "category_counts": {
       "CAT_7": 8,
-      "NO_PRIZE": 28
+      "NO_PRIZE": 30
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.722222222222222,
-    "mean_member_pairwise_symmetric_overlap": 5.847222222222222,
-    "mean_symmetric_overlap": 6.055555555555555,
+    "mean_direct_overlap": 4.7368421052631575,
+    "mean_member_pairwise_symmetric_overlap": 5.839285714285714,
+    "mean_symmetric_overlap": 6.0,
     "numerone_hits": 0,
     "symmetric_overlap_histogram": {
       "10": 0,
-      "5": 6,
+      "5": 8,
       "6": 22,
       "7": 8,
       "8": 0,
       "9": 0
     },
     "winning_prediction_count": 8,
-    "winning_prediction_rate": 0.2222222222222222
+    "winning_prediction_rate": 0.21052631578947367
   },
   "random_reference": {
     "any_prize_probability": 0.17889540799757517,
@@ -126,17 +126,17 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.0003702180172768408,
-      "CAT_2": 0.0019485158804044254,
-      "CAT_3": 0.03702180172768408,
-      "CAT_4": 0.039457446578189614,
-      "CAT_5": 0.28058628677823727,
-      "CAT_6": 0.7496914849856027,
-      "CAT_7": 5.331139448786508,
-      "WFL_RENDITA": 1.9485158804044256e-05
+      "CAT_1": 0.0003907856849033319,
+      "CAT_2": 0.0020567667626491155,
+      "CAT_3": 0.0390785684903332,
+      "CAT_4": 0.04164952694364459,
+      "CAT_5": 0.29617441382147264,
+      "CAT_6": 0.7913410119292472,
+      "CAT_7": 5.62731386260798,
+      "WFL_RENDITA": 2.0567667626491158e-05
     },
-    "expected_numerone_hits": 1.8,
-    "expected_winning_predictions": 6.440234687912706,
+    "expected_numerone_hits": 1.9000000000000001,
+    "expected_winning_predictions": 6.798025503907857,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -148,6 +148,6 @@
     }
   },
   "schema": "wfl-hourly-twin-ensemble-development-evidence-1",
-  "scored_prediction_count": 36,
+  "scored_prediction_count": 38,
   "status": "PROSPECTIVE_ENSEMBLE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }
