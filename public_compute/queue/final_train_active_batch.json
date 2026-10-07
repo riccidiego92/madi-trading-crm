@@ -7,8 +7,8 @@
     20,
     21
   ],
-  "generation": 11,
-  "phase": "calibration",
+  "generation": 12,
+  "phase": "null",
   "schema": "wfl-p43-final-train-active-batch-1",
   "scientific_settings": {
     "alpha_final": 0.05,
@@ -24,627 +24,627 @@
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 0
+      "rep_start": 50000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 2000
+      "rep_start": 52000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 4000
+      "rep_start": 54000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 6000
+      "rep_start": 56000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 8000
+      "rep_start": 58000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 10000
+      "rep_start": 60000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 12000
+      "rep_start": 62000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 14000
+      "rep_start": 64000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 16000
+      "rep_start": 66000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 68000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 20000
+      "rep_start": 70000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 22000
+      "rep_start": 72000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 24000
+      "rep_start": 74000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 26000
+      "rep_start": 76000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 28000
+      "rep_start": 78000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 30000
+      "rep_start": 80000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 32000
+      "rep_start": 82000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 34000
+      "rep_start": 84000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 36000
+      "rep_start": 86000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 38000
+      "rep_start": 88000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 40000
+      "rep_start": 90000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 42000
+      "rep_start": 92000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 44000
+      "rep_start": 94000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 46000
+      "rep_start": 96000
     },
     {
       "candidate_index": 17,
       "rep_count": 2000,
-      "rep_start": 48000
+      "rep_start": 98000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 0
+      "rep_start": 50000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 2000
+      "rep_start": 52000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 4000
+      "rep_start": 54000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 6000
+      "rep_start": 56000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 8000
+      "rep_start": 58000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 10000
+      "rep_start": 60000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 12000
+      "rep_start": 62000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 14000
+      "rep_start": 64000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 16000
+      "rep_start": 66000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 68000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 20000
+      "rep_start": 70000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 22000
+      "rep_start": 72000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 24000
+      "rep_start": 74000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 26000
+      "rep_start": 76000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 28000
+      "rep_start": 78000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 30000
+      "rep_start": 80000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 32000
+      "rep_start": 82000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 34000
+      "rep_start": 84000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 36000
+      "rep_start": 86000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 38000
+      "rep_start": 88000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 40000
+      "rep_start": 90000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 42000
+      "rep_start": 92000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 44000
+      "rep_start": 94000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 46000
+      "rep_start": 96000
     },
     {
       "candidate_index": 18,
       "rep_count": 2000,
-      "rep_start": 48000
+      "rep_start": 98000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 0
+      "rep_start": 50000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 2000
+      "rep_start": 52000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 4000
+      "rep_start": 54000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 6000
+      "rep_start": 56000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 8000
+      "rep_start": 58000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 10000
+      "rep_start": 60000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 12000
+      "rep_start": 62000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 14000
+      "rep_start": 64000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 16000
+      "rep_start": 66000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 68000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 20000
+      "rep_start": 70000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 22000
+      "rep_start": 72000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 24000
+      "rep_start": 74000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 26000
+      "rep_start": 76000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 28000
+      "rep_start": 78000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 30000
+      "rep_start": 80000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 32000
+      "rep_start": 82000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 34000
+      "rep_start": 84000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 36000
+      "rep_start": 86000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 38000
+      "rep_start": 88000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 40000
+      "rep_start": 90000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 42000
+      "rep_start": 92000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 44000
+      "rep_start": 94000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 46000
+      "rep_start": 96000
     },
     {
       "candidate_index": 19,
       "rep_count": 2000,
-      "rep_start": 48000
+      "rep_start": 98000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 0
+      "rep_start": 50000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 2000
+      "rep_start": 52000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 4000
+      "rep_start": 54000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 6000
+      "rep_start": 56000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 8000
+      "rep_start": 58000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 10000
+      "rep_start": 60000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 12000
+      "rep_start": 62000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 14000
+      "rep_start": 64000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 16000
+      "rep_start": 66000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 68000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 20000
+      "rep_start": 70000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 22000
+      "rep_start": 72000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 24000
+      "rep_start": 74000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 26000
+      "rep_start": 76000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 28000
+      "rep_start": 78000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 30000
+      "rep_start": 80000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 32000
+      "rep_start": 82000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 34000
+      "rep_start": 84000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 36000
+      "rep_start": 86000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 38000
+      "rep_start": 88000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 40000
+      "rep_start": 90000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 42000
+      "rep_start": 92000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 44000
+      "rep_start": 94000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 46000
+      "rep_start": 96000
     },
     {
       "candidate_index": 20,
       "rep_count": 2000,
-      "rep_start": 48000
+      "rep_start": 98000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 0
+      "rep_start": 50000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 2000
+      "rep_start": 52000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 4000
+      "rep_start": 54000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 6000
+      "rep_start": 56000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 8000
+      "rep_start": 58000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 10000
+      "rep_start": 60000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 12000
+      "rep_start": 62000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 14000
+      "rep_start": 64000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 16000
+      "rep_start": 66000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 68000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 20000
+      "rep_start": 70000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 22000
+      "rep_start": 72000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 24000
+      "rep_start": 74000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 26000
+      "rep_start": 76000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 28000
+      "rep_start": 78000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 30000
+      "rep_start": 80000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 32000
+      "rep_start": 82000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 34000
+      "rep_start": 84000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 36000
+      "rep_start": 86000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 38000
+      "rep_start": 88000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 40000
+      "rep_start": 90000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 42000
+      "rep_start": 92000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 44000
+      "rep_start": 94000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 46000
+      "rep_start": 96000
     },
     {
       "candidate_index": 21,
       "rep_count": 2000,
-      "rep_start": 48000
+      "rep_start": 98000
     }
   ]
 }
