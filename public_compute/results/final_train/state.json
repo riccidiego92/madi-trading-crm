@@ -1,15 +1,14 @@
 {
   "candidate_indices": [
-    17,
-    18,
-    19,
-    20,
-    21
+    22,
+    23,
+    24,
+    25,
+    26
   ],
-  "completed_final_count": 17,
-  "generation": 12,
+  "completed_final_count": 22,
+  "generation": 13,
   "planned_final_count": 384,
-  "resumed_from_existing_calibration": true,
   "schema": "wfl-p43-final-train-state-1",
-  "status": "NULL_BATCH_QUEUED"
+  "status": "CALIBRATION_BATCH_QUEUED"
 }
