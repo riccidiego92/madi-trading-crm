@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "7602dac27b22eca4e3b97d7749c038eb185e41d6e41a95f7ee7a4e811a64ff4b",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 4790,
+    "date": "2026-10-09",
+    "main": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      16,
+      17,
+      19
+    ],
+    "numerone": 10,
+    "source_sha256": "c9912f5e9b137efaff9c9ca5a7b554d572939d3f7950da5759a285d3665162d1",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-4790/9-ottobre-2026",
+    "time": "19:00"
+  },
+  "prediction": {
+    "complement": [
+      3,
+      5,
+      8,
+      9,
+      12,
+      13,
+      15,
+      16,
+      18,
+      20
+    ],
+    "main": [
+      1,
+      2,
+      4,
+      6,
+      7,
+      10,
+      11,
+      14,
+      17,
+      19
+    ],
+    "numerone": 15,
+    "prediction_sha256": "e0fff40f8e498d72244ef0e5d37fcbb598315f7fca5439b5a3049dc304495bba"
+  },
+  "prize_category": {
+    "complement_overlap": 4,
+    "direct_overlap": 6,
+    "numerone_exact": false,
+    "prize_code": "NO_PRIZE",
+    "prize_label": "Nessun premio",
+    "prize_rank": 0,
+    "symmetric_overlap": 6,
+    "winning_category": false
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 6,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 6
+  },
+  "score_sha256": "d5393e8dc041e1fa41ffedae28b824c78df81d13c4b3d4ae8b78cb6583221f04",
+  "scored_at": "2026-10-09T20:23:42.510478+02:00",
+  "target": {
+    "datetime": "2026-10-09T19:00:00+02:00",
+    "public_ordinal": 85160,
+    "timezone": "Europe/Rome"
+  }
+}
