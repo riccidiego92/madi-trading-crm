@@ -32,23 +32,23 @@
       "CAT_3": 1,
       "CAT_6": 2,
       "CAT_7": 19,
-      "NO_PRIZE": 101
+      "NO_PRIZE": 102
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 5.008130081300813,
-    "mean_symmetric_overlap": 5.91869918699187,
+    "mean_direct_overlap": 5.0,
+    "mean_symmetric_overlap": 5.919354838709677,
     "numerone_hits": 7,
     "symmetric_overlap_histogram": {
       "10": 0,
       "5": 36,
-      "6": 65,
+      "6": 66,
       "7": 19,
       "8": 2,
       "9": 1
     },
     "winning_prediction_count": 22,
-    "winning_prediction_rate": 0.17886178861788618
+    "winning_prediction_rate": 0.1774193548387097
   },
   "prize_classification_rows": [
     {
@@ -2018,6 +2018,22 @@
       },
       "score_file": "public_compute/prospective/hourly_scores/2026-10-10/2200_candidate_16.json",
       "target": "2026-10-10T22:00:00+02:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "2f047335fd73f6432ab6fec9e75ebed92a2aa509d95a12dfc01fe83b9315e348",
+      "prize": {
+        "complement_overlap": 6,
+        "direct_overlap": 4,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-10/2300_candidate_16.json",
+      "target": "2026-10-10T23:00:00+02:00"
     }
   ],
   "random_reference": {
@@ -2033,16 +2049,16 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.001264911559029206,
-      "CAT_2": 0.0066574292580484536,
-      "CAT_3": 0.1264911559029206,
-      "CAT_4": 0.1348129424754812,
-      "CAT_5": 0.9586698131589773,
-      "CAT_6": 2.5614459070341424,
-      "CAT_7": 18.214726450020567,
-      "WFL_RENDITA": 6.657429258048454e-05
+      "CAT_1": 0.0012751953928424515,
+      "CAT_2": 0.006711554699170798,
+      "CAT_3": 0.12751953928424517,
+      "CAT_4": 0.13590898265820867,
+      "CAT_5": 0.966463876680595,
+      "CAT_6": 2.582270670505965,
+      "CAT_7": 18.362813656931305,
+      "WFL_RENDITA": 6.711554699170799e-05
     },
-    "expected_winning_predictions": 22.004135183701745,
+    "expected_winning_predictions": 22.18303059169932,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -2054,6 +2070,6 @@
     }
   },
   "schema": "wfl-hourly-twin-development-evidence-2",
-  "scored_prediction_count": 123,
+  "scored_prediction_count": 124,
   "status": "PROSPECTIVE_PRIZE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }
