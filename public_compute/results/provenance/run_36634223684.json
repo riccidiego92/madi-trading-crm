@@ -1,6 +1,6 @@
 {
-  "artifact_count": 112,
-  "candidate_count": 224,
+  "artifact_count": 110,
+  "candidate_count": 220,
   "conflicted_candidate_indices": [],
   "files": [
     {
@@ -38,24 +38,6 @@
       "destination": "public_compute/results/member_confirmation/candidate_7.json",
       "quarantined_conflict": false,
       "sha256": "72a39a720b61388c320e8d6bd708ec2fcee7499dd63c2f077c26891804565f66"
-    },
-    {
-      "artifact_id": 11079444094,
-      "artifact_name": "p43-rescue-pair-bulk4-003",
-      "candidate_id": "P42_PHASED:f193f867cd0e452c",
-      "candidate_index": 8,
-      "destination": "public_compute/results/member_confirmation/candidate_8.json",
-      "quarantined_conflict": false,
-      "sha256": "8e79660421ff59227db03128fa7037f7d23d49119bc039f6390ae9944063e4a0"
-    },
-    {
-      "artifact_id": 11079444094,
-      "artifact_name": "p43-rescue-pair-bulk4-003",
-      "candidate_id": "P42_PHASED:4d4ac84b44f86784",
-      "candidate_index": 9,
-      "destination": "public_compute/results/member_confirmation/candidate_9.json",
-      "quarantined_conflict": false,
-      "sha256": "d5948e79cc69dbf4802df937f3e108a32404fe8e421aa6dcc2aa1c33c0b05e67"
     },
     {
       "artifact_id": 11087640144,
@@ -164,24 +146,6 @@
       "destination": "public_compute/results/member_confirmation/candidate_31.json",
       "quarantined_conflict": false,
       "sha256": "8c826addb61a43e27b0f2d0996176632b705e004832c4ca3e64ea6dcb280c59f"
-    },
-    {
-      "artifact_id": 11080448282,
-      "artifact_name": "p43-rescue-pair-bulk4-011",
-      "candidate_id": "P42_PHASED:bc148fb8b163feb7",
-      "candidate_index": 32,
-      "destination": "public_compute/results/member_confirmation/candidate_32.json",
-      "quarantined_conflict": false,
-      "sha256": "c0bec6da2d69143d1b74af471cad976c5caa31b168bcfd7541301e8b8fb28926"
-    },
-    {
-      "artifact_id": 11080448282,
-      "artifact_name": "p43-rescue-pair-bulk4-011",
-      "candidate_id": "P42_PHASED:fcde96ad7f05c8a1",
-      "candidate_index": 33,
-      "destination": "public_compute/results/member_confirmation/candidate_33.json",
-      "quarantined_conflict": false,
-      "sha256": "46ebdb152fa880ce66ed2fa4e8d7dd224f0d4109b26493e4a0e73db28bf34ddd"
     },
     {
       "artifact_id": 11093461559,
