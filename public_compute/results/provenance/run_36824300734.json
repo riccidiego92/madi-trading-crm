@@ -1,71 +1,8 @@
 {
-  "artifact_count": 24,
-  "candidate_count": 24,
+  "artifact_count": 15,
+  "candidate_count": 15,
   "conflicted_candidate_indices": [],
   "files": [
-    {
-      "artifact_id": 11184070064,
-      "artifact_name": "p43-rescue-single-183",
-      "candidate_id": "P42_PHASED:02c3ed71389f6491",
-      "candidate_index": 183,
-      "destination": "public_compute/results/member_confirmation/candidate_183.json",
-      "quarantined_conflict": false,
-      "sha256": "de3d73f563c86e3b9bcc5edd4b4698827c8a9077046a1d5365aa04fd757a5e2a"
-    },
-    {
-      "artifact_id": 11187085455,
-      "artifact_name": "p43-rescue-single-186",
-      "candidate_id": "P42_PHASED:ffcc0700052c6d34",
-      "candidate_index": 186,
-      "destination": "public_compute/results/member_confirmation/candidate_186.json",
-      "quarantined_conflict": false,
-      "sha256": "55225419193facb5459e5fdae9f492ef3a7a6c8e120f8a7038386c2faa48952e"
-    },
-    {
-      "artifact_id": 11183716534,
-      "artifact_name": "p43-rescue-single-191",
-      "candidate_id": "P42_PHASED:f624061ab1e80b46",
-      "candidate_index": 191,
-      "destination": "public_compute/results/member_confirmation/candidate_191.json",
-      "quarantined_conflict": false,
-      "sha256": "42d460a574cbbb86008522885762185b88bfcbf3f1abf8e0ab498541758a7e85"
-    },
-    {
-      "artifact_id": 11186027290,
-      "artifact_name": "p43-rescue-single-217",
-      "candidate_id": "P42_PHASED:dc81baf8598e959c",
-      "candidate_index": 217,
-      "destination": "public_compute/results/member_confirmation/candidate_217.json",
-      "quarantined_conflict": false,
-      "sha256": "82a85de8e814369ebf01fadaef2cf9244395cdf53db3f30e63b107c1041439db"
-    },
-    {
-      "artifact_id": 11185504369,
-      "artifact_name": "p43-rescue-single-240",
-      "candidate_id": "P42_PHASED:9efcad1ddd8abf6b",
-      "candidate_index": 240,
-      "destination": "public_compute/results/member_confirmation/candidate_240.json",
-      "quarantined_conflict": false,
-      "sha256": "7fc01cf4ed8edd5b6a738366eb1d04575a8cf7cd765c266a4a60d15757d3c17b"
-    },
-    {
-      "artifact_id": 11187302038,
-      "artifact_name": "p43-rescue-single-241",
-      "candidate_id": "P42_PHASED:e9070fa66566bb93",
-      "candidate_index": 241,
-      "destination": "public_compute/results/member_confirmation/candidate_241.json",
-      "quarantined_conflict": false,
-      "sha256": "a11a7f14d17971fdd64df2af1384d4c2b284e0af331e73afc497d678adefbd3b"
-    },
-    {
-      "artifact_id": 11191581788,
-      "artifact_name": "p43-rescue-single-265",
-      "candidate_id": "P42_PHASED:c2767ca8f8402c4b",
-      "candidate_index": 265,
-      "destination": "public_compute/results/member_confirmation/candidate_265.json",
-      "quarantined_conflict": false,
-      "sha256": "4c0f361cc76b63abc283ef19afb4b1a7be057b89b0295bcac432560212475188"
-    },
     {
       "artifact_id": 11193172878,
       "artifact_name": "p43-rescue-single-277",
@@ -83,24 +20,6 @@
       "destination": "public_compute/results/member_confirmation/candidate_278.json",
       "quarantined_conflict": false,
       "sha256": "e067eace08f278656f4b061dda03f068fef94a832f88bdff702478a793536477"
-    },
-    {
-      "artifact_id": 11192334278,
-      "artifact_name": "p43-rescue-single-288",
-      "candidate_id": "P42_PHASED:bf3db3216218a735",
-      "candidate_index": 288,
-      "destination": "public_compute/results/member_confirmation/candidate_288.json",
-      "quarantined_conflict": false,
-      "sha256": "fa6eed34eb185df5eaa93a2d1ebffd95ca54353f69559c4b90497a1977a0e10e"
-    },
-    {
-      "artifact_id": 11192248376,
-      "artifact_name": "p43-rescue-single-289",
-      "candidate_id": "P42_PHASED:595d0716ba3d0ccc",
-      "candidate_index": 289,
-      "destination": "public_compute/results/member_confirmation/candidate_289.json",
-      "quarantined_conflict": false,
-      "sha256": "5b865d3b5c66da7a63d6ca21db3cbf19e6d0029bc38a3e2970a6aed078aee19f"
     },
     {
       "artifact_id": 11197346005,
