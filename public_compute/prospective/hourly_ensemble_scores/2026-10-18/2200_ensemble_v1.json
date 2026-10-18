@@ -1,0 +1,336 @@
+{
+  "consensus_agreement": {
+    "exact_partition_member_count": 0,
+    "member_count": 8,
+    "numerone_mode_support": 2,
+    "pairwise_symmetric_overlap_max": 7,
+    "pairwise_symmetric_overlap_mean": 5.785714285714286,
+    "pairwise_symmetric_overlap_min": 5
+  },
+  "consensus_prediction": {
+    "complement": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "main": [
+      1,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10,
+      11,
+      13,
+      14
+    ],
+    "numerone": 1,
+    "prediction_sha256": "90a72412d40abd864ff5066f90c48e1e03679bd7451f2dcf440a8482e36442b3"
+  },
+  "consensus_score": {
+    "direct_main_overlap": 4,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "prize_category": {
+      "complement_overlap": 6,
+      "direct_overlap": 4,
+      "numerone_exact": false,
+      "prize_code": "NO_PRIZE",
+      "prize_label": "Nessun premio",
+      "prize_rank": 0,
+      "symmetric_overlap": 6,
+      "winning_category": false
+    },
+    "symmetric_main_overlap": 6
+  },
+  "ensemble": {
+    "candidate_indices": [
+      16,
+      64,
+      112,
+      160,
+      208,
+      256,
+      304,
+      352
+    ],
+    "manifest_path": "public_compute/prospective/hourly_ensemble_manifest.json",
+    "manifest_sha256": "318bafd5f57942aa1c008c9df872ae7cb236ffe651121f36818ce55d4a5f0e7f",
+    "member_count": 8,
+    "selection_policy": {
+      "axes": {
+        "background_cycles_main": 0,
+        "background_cycles_numerone": 0,
+        "mapper": [
+          "fisher_yates",
+          "rank_unrank",
+          "rejection",
+          "sequential"
+        ],
+        "reseed_mode": "per_contest",
+        "stream_mode": [
+          "single",
+          "split_main_numerone"
+        ]
+      },
+      "generated_numbers_used_for_selection": false,
+      "member_rule": "fixed bgm0/bgn0 representative from each mapper x stream_mode per_contest family",
+      "prospective_scores_used_for_selection": false,
+      "purpose": "architecture-diverse digital-twin ensemble for prospective falsification",
+      "train_only": true
+    }
+  },
+  "evidence_grade": "DEVELOPMENT_ENSEMBLE_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "d3226fbe048b5a36418e1bb1a3df8dbdc05d2db27c99c569e3d8c00a7a048d7d",
+  "guardrails": {
+    "development_only": true,
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "member_selection_changed_after_result": false,
+    "no_edge_claim": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "member_scores": [
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+      "candidate_index": 16,
+      "partition_sha256": "2982363eeeb6b9ddc12a2d1c5f1367f09a4ba3317e52cc5d3f72353ba1c174bd",
+      "score": {
+        "direct_main_overlap": 4,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": true,
+        "prize_category": {
+          "complement_overlap": 6,
+          "direct_overlap": 4,
+          "numerone_exact": true,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 6,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 6
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:d3e2dacc3d569bef",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 64,
+      "partition_sha256": "c27e7f904d53ad75fb3476f76383c97cb3c6baebe80538b623da7daffb426523",
+      "score": {
+        "direct_main_overlap": 5,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 5,
+          "direct_overlap": 5,
+          "numerone_exact": false,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 5,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 5
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:bbbfb410e771083b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|per_contest|bgm0|bgn0",
+      "candidate_index": 112,
+      "partition_sha256": "5de23309f222515c80e76f1b877d3d7e12d8af92c10ccc184c8296cf9c88f7e9",
+      "score": {
+        "direct_main_overlap": 2,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 8,
+          "direct_overlap": 2,
+          "numerone_exact": false,
+          "prize_code": "CAT_6",
+          "prize_label": "6a categoria",
+          "prize_rank": 2,
+          "symmetric_overlap": 8,
+          "winning_category": true
+        },
+        "symmetric_main_overlap": 8
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:3d52499d50ec52f2",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 160,
+      "partition_sha256": "ff08e4b8e3e6c5e09a26c0551591c058484856ec3355762888d55a0680b47fca",
+      "score": {
+        "direct_main_overlap": 4,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 6,
+          "direct_overlap": 4,
+          "numerone_exact": false,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 6,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 6
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:ffb67c283fba029e",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|single|per_contest|bgm0|bgn0",
+      "candidate_index": 208,
+      "partition_sha256": "65082671ae6be8949b3bddadf5ca9eeeab526363ce85a3e835d28f474614b12a",
+      "score": {
+        "direct_main_overlap": 7,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 3,
+          "direct_overlap": 7,
+          "numerone_exact": false,
+          "prize_code": "CAT_7",
+          "prize_label": "7a categoria",
+          "prize_rank": 1,
+          "symmetric_overlap": 7,
+          "winning_category": true
+        },
+        "symmetric_main_overlap": 7
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:7a0e73eff05b1968",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 256,
+      "partition_sha256": "9a033c33fceae5e73b5e9d46b0e1e4acc7662575074a7baa7eddd067f40c73c7",
+      "score": {
+        "direct_main_overlap": 5,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 5,
+          "direct_overlap": 5,
+          "numerone_exact": false,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 5,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 5
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:3529eef19dcfc5d3",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|single|per_contest|bgm0|bgn0",
+      "candidate_index": 304,
+      "partition_sha256": "48f69730bb7d12dca6184b41f516f2713b364d65de14be555d62b79bec24e089",
+      "score": {
+        "direct_main_overlap": 5,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 5,
+          "direct_overlap": 5,
+          "numerone_exact": false,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 5,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 5
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:9c5e870689e3743b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 352,
+      "partition_sha256": "0790ca314d0e504d0f02c4cb695982838c5cf2278b3e3e6ff99e70543b506d41",
+      "score": {
+        "direct_main_overlap": 5,
+        "exact_complement": false,
+        "exact_complement_plus_numerone": false,
+        "exact_main": false,
+        "exact_main_plus_numerone": false,
+        "numerone_exact": false,
+        "prize_category": {
+          "complement_overlap": 5,
+          "direct_overlap": 5,
+          "numerone_exact": false,
+          "prize_code": "NO_PRIZE",
+          "prize_label": "Nessun premio",
+          "prize_rank": 0,
+          "symmetric_overlap": 5,
+          "winning_category": false
+        },
+        "symmetric_main_overlap": 5
+      }
+    }
+  ],
+  "official": {
+    "contest": 4946,
+    "date": "2026-10-18",
+    "main": [
+      2,
+      5,
+      7,
+      10,
+      11,
+      12,
+      14,
+      15,
+      18,
+      19
+    ],
+    "numerone": 8,
+    "source_sha256": "1a16c1b366f0d95f51460e918e36bc5442968e3c180091f330540bea7b0037ee",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-4946/18-ottobre-2026",
+    "time": "22:00"
+  },
+  "schema": "wfl-hourly-twin-ensemble-development-score-1",
+  "score_sha256": "6090de61393c6af954f7dde5fec53cb62e012258a3415e73d760e7c0a3bdaca2",
+  "scored_at": "2026-10-18T22:49:29.448926+02:00",
+  "target": {
+    "datetime": "2026-10-18T22:00:00+02:00",
+    "public_ordinal": 85316,
+    "timezone": "Europe/Rome"
+  }
+}
