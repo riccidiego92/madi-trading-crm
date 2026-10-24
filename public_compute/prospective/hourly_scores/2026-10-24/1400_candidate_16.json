@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "81e44a8617978a7244bc9b853688b50f3b16815ca3b1c0924679d28f0a6f366d",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 5040,
+    "date": "2026-10-24",
+    "main": [
+      1,
+      2,
+      6,
+      7,
+      9,
+      13,
+      16,
+      17,
+      18,
+      20
+    ],
+    "numerone": 9,
+    "source_sha256": "4d11a17ada4121acb3db4ea14eb71bfddf52ef392f9ca4f86c11b08338482f11",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-5040/24-ottobre-2026",
+    "time": "14:00"
+  },
+  "prediction": {
+    "complement": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      11,
+      13,
+      14,
+      18,
+      19
+    ],
+    "main": [
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      15,
+      16,
+      17,
+      20
+    ],
+    "numerone": 18,
+    "prediction_sha256": "a5f6c0b3fc2cc3c28bf24ae5b0f28372dcd4b8ffd0b83c08f571742604acdec3"
+  },
+  "prize_category": {
+    "complement_overlap": 5,
+    "direct_overlap": 5,
+    "numerone_exact": false,
+    "prize_code": "NO_PRIZE",
+    "prize_label": "Nessun premio",
+    "prize_rank": 0,
+    "symmetric_overlap": 5,
+    "winning_category": false
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 5,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 5
+  },
+  "score_sha256": "8fe24794c3f5c8e34422cb90f620169d2a282b700892ae469639bf7e94a4d0d9",
+  "scored_at": "2026-10-24T16:06:04.076564+02:00",
+  "target": {
+    "datetime": "2026-10-24T14:00:00+02:00",
+    "public_ordinal": 85410,
+    "timezone": "Europe/Rome"
+  }
+}
