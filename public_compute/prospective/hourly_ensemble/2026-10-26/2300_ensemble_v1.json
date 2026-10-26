@@ -1,0 +1,649 @@
+{
+  "consensus": {
+    "agreement": {
+      "exact_partition_member_count": 0,
+      "member_count": 8,
+      "numerone_mode_support": 2,
+      "pairwise_symmetric_overlap_max": 8,
+      "pairwise_symmetric_overlap_mean": 6.071428571428571,
+      "pairwise_symmetric_overlap_min": 5
+    },
+    "alignment_anchor_candidate_index": 16,
+    "consensus_boundary": {
+      "eleventh_number_support": 4,
+      "support_margin": 0,
+      "tenth_number_support": 4
+    },
+    "number_support": {
+      "1": 6,
+      "10": 1,
+      "11": 1,
+      "12": 3,
+      "13": 2,
+      "14": 5,
+      "15": 4,
+      "16": 3,
+      "17": 3,
+      "18": 5,
+      "19": 4,
+      "2": 4,
+      "20": 6,
+      "3": 5,
+      "4": 7,
+      "5": 6,
+      "6": 1,
+      "7": 2,
+      "8": 5,
+      "9": 7
+    },
+    "numerone_support": {
+      "1": 1,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 2,
+      "17": 0,
+      "18": 1,
+      "19": 2,
+      "2": 0,
+      "20": 0,
+      "3": 0,
+      "4": 2,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "oriented_member_sides": [
+      [
+        1,
+        3,
+        4,
+        5,
+        8,
+        9,
+        14,
+        16,
+        18,
+        20
+      ],
+      [
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        14,
+        17,
+        18,
+        20
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        9,
+        11,
+        12,
+        13,
+        15
+      ],
+      [
+        2,
+        3,
+        4,
+        9,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        14,
+        15,
+        20
+      ],
+      [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        12,
+        17,
+        19,
+        20
+      ],
+      [
+        1,
+        2,
+        4,
+        5,
+        9,
+        10,
+        15,
+        17,
+        18,
+        19
+      ],
+      [
+        1,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ]
+    ],
+    "prediction": {
+      "complement": [
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        19
+      ],
+      "main": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        14,
+        18,
+        20
+      ],
+      "numerone": 4,
+      "prediction_sha256": "bff786e16dd39b22f5b82daedca33ba104a407d4c328426c0484dbf45644436b"
+    }
+  },
+  "ensemble": {
+    "candidate_indices": [
+      16,
+      64,
+      112,
+      160,
+      208,
+      256,
+      304,
+      352
+    ],
+    "manifest_path": "public_compute/prospective/hourly_ensemble_manifest.json",
+    "manifest_sha256": "318bafd5f57942aa1c008c9df872ae7cb236ffe651121f36818ce55d4a5f0e7f",
+    "member_count": 8,
+    "selection_policy": {
+      "axes": {
+        "background_cycles_main": 0,
+        "background_cycles_numerone": 0,
+        "mapper": [
+          "fisher_yates",
+          "rank_unrank",
+          "rejection",
+          "sequential"
+        ],
+        "reseed_mode": "per_contest",
+        "stream_mode": [
+          "single",
+          "split_main_numerone"
+        ]
+      },
+      "generated_numbers_used_for_selection": false,
+      "member_rule": "fixed bgm0/bgn0 representative from each mapper x stream_mode per_contest family",
+      "prospective_scores_used_for_selection": false,
+      "purpose": "architecture-diverse digital-twin ensemble for prospective falsification",
+      "train_only": true
+    }
+  },
+  "evidence_grade": "DEVELOPMENT_ENSEMBLE_UNVALIDATED_NOT_FOR_LIVE_INFERENCE",
+  "freeze_sha256": "d1a37cc76d74ca764fa3aa1a1d590902ca36a1eb410ab11ae4c8edd5ea8470a3",
+  "frozen_at": "2026-10-26T10:16:24.017374+01:00",
+  "guardrails": {
+    "counts_as_p48_validated_prediction": false,
+    "development_only": true,
+    "failures_retained": true,
+    "future_result_used_for_generation": false,
+    "generated_before_target": true,
+    "immutable_once_written": true,
+    "operational_seed_or_state_search": false,
+    "post_result_retuning_allowed": false,
+    "prospective_score_used_for_member_selection": false,
+    "selection_frozen_before_output": true
+  },
+  "lead_seconds": 45815,
+  "members": [
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
+      "candidate_index": 16,
+      "candidate_signature_sha256": "a3e813232163f8040a6bb2277c681b17aaa48a6ded282a4e4a896ce0bba74498",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.1958041958041958,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "00b1183b71871d466176c06ba9e323de2c3c7dadca89d5fe33f466c22bf3f3cc",
+      "prediction": {
+        "complement": [
+          2,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          15,
+          17,
+          19
+        ],
+        "main": [
+          1,
+          3,
+          4,
+          5,
+          8,
+          9,
+          14,
+          16,
+          18,
+          20
+        ],
+        "numerone": 16,
+        "prediction_sha256": "4e988d5887692da421c58c0b226c3fafc610bb92b62d3cc451950c9fce59ea74"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:d3e2dacc3d569bef",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 64,
+      "candidate_signature_sha256": "0896786a082ed21f2a9e6dd34ab00264ea94d4e661f74fec2e1878f3cc7cae89",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.14985014985014986,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "34f3139c31315dfb477f65619f133d0ce016eabbbd8ec5dfdb1394c21e4abff1",
+      "prediction": {
+        "complement": [
+          2,
+          3,
+          6,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          19
+        ],
+        "main": [
+          1,
+          4,
+          5,
+          7,
+          8,
+          9,
+          14,
+          17,
+          18,
+          20
+        ],
+        "numerone": 4,
+        "prediction_sha256": "e88421c469c47de672edb397674cd5d66c901897c53b1f8107b9b1decc53c3e3"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:bbbfb410e771083b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|per_contest|bgm0|bgn0",
+      "candidate_index": 112,
+      "candidate_signature_sha256": "89c8ebf5d877f53ec6f381a975f99d8b228e4a4ce5c36d863726b9fa2076c9ad",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.16783216783216784,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "f1f8e9f1bfb9caf4837daf58672be89d0ecb71d467409bc641efc7b8c95a5c9c",
+      "prediction": {
+        "complement": [
+          2,
+          7,
+          8,
+          10,
+          14,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "main": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          9,
+          11,
+          12,
+          13,
+          15
+        ],
+        "numerone": 16,
+        "prediction_sha256": "c69849a23b0840ad82456ed6ec6f42006fc0b1879d0896ada2a2b80e969fba81"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:3d52499d50ec52f2",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 160,
+      "candidate_signature_sha256": "7703d160f2e16b99b0b1ccd7e63c0f9634f3def433499f74ac33adcd94869824",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.0899100899100899,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "9bb62245b6ab2fcb2f42ead3b5f4089da1b8fa97ca2c8b67faff9a095a4e0b78",
+      "prediction": {
+        "complement": [
+          2,
+          3,
+          4,
+          9,
+          12,
+          14,
+          16,
+          18,
+          19,
+          20
+        ],
+        "main": [
+          1,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          13,
+          15,
+          17
+        ],
+        "numerone": 19,
+        "prediction_sha256": "ae02b6d00e3e5672564225126f4e75e81503eb44e4c70f5f6bdb91fa5a7e621d"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:ffb67c283fba029e",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|single|per_contest|bgm0|bgn0",
+      "candidate_index": 208,
+      "candidate_signature_sha256": "6b46a5b69fc5e215c7787ad54f34ea8a985237fa39dbcdeb91de3c3145af2a12",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.16583416583416583,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "ef0d058a03ac2e79022c78bff3dc1eb89e72a9d137e1d4cdc9d20a355f1e4faa",
+      "prediction": {
+        "complement": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          14,
+          15,
+          20
+        ],
+        "main": [
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          16,
+          17,
+          18,
+          19
+        ],
+        "numerone": 4,
+        "prediction_sha256": "2897689e9fae23d9a30603c279527347efaf029d1219fa7a9b0319fc9afce635"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:7a0e73eff05b1968",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 256,
+      "candidate_signature_sha256": "64a30cca45a2c2af059be5d35b32d753700576a0b32509f9efa0b237ae1bba65",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.14285714285714285,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "c288765891f38747537983845ffff8d728aa406779638c050a40e71d60565aff",
+      "prediction": {
+        "complement": [
+          1,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          18
+        ],
+        "main": [
+          2,
+          3,
+          4,
+          5,
+          8,
+          9,
+          12,
+          17,
+          19,
+          20
+        ],
+        "numerone": 18,
+        "prediction_sha256": "205f4e53009436106707e67dc14afe8211976afd4d9bb3cce6531987bc6e1a90"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:3529eef19dcfc5d3",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|single|per_contest|bgm0|bgn0",
+      "candidate_index": 304,
+      "candidate_signature_sha256": "2b9db300cd6e1d98d14238fdc3cfa502559e6909a5ab39003920c7afaf6ce3c5",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.08091908091908091,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "58a4096e2d37b6e84d910c5723a325466c1afa81e52ac5c44a77295fe124b96d",
+      "prediction": {
+        "complement": [
+          1,
+          2,
+          4,
+          5,
+          9,
+          10,
+          15,
+          17,
+          18,
+          19
+        ],
+        "main": [
+          3,
+          6,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          16,
+          20
+        ],
+        "numerone": 19,
+        "prediction_sha256": "b1bec01b0212bea64458b245b610471d870d3fad649b85c1b5754978ee7c895a"
+      }
+    },
+    {
+      "candidate_id": "P42_PHASED:9c5e870689e3743b",
+      "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|split_main_numerone|per_contest|bgm0|bgn0",
+      "candidate_index": 352,
+      "candidate_signature_sha256": "c51c93647b4bc431124e3b044edc35e03d585fe998efa481c915d36c5990576d",
+      "machine_ordinal": 85453,
+      "member_confirmation": {
+        "p_max_stat": 0.21878121878121878,
+        "rejected_at_triage_alpha_0_01": false,
+        "simulation_reps": 2000
+      },
+      "partition_sha256": "687a66b3146f825c10b375f4a9dc15fe30591ece5a06bea40a414b8aa15cf5d4",
+      "prediction": {
+        "complement": [
+          1,
+          7,
+          8,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19,
+          20
+        ],
+        "main": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          9,
+          10,
+          11,
+          12,
+          17
+        ],
+        "numerone": 1,
+        "prediction_sha256": "6c85a137dd8f30e5aa8dfbe90426e9b70c0bde25da7b5f6733f17b20ece9c387"
+      }
+    }
+  ],
+  "schema": "wfl-hourly-twin-ensemble-development-freeze-1",
+  "structural_convergence": {
+    "baseline_path": "public_compute/results/hourly_twin_ensemble_structural_baseline.json",
+    "baseline_sha256": "08ecf1151b54725fca3fff82b582f1aaac49b862acea8106ace0ee0724dc7696",
+    "counts_as_predictive_edge": false,
+    "guardrails": {
+      "baseline_uses_train_output_structure_only": true,
+      "multiplicity_corrected_predictive_claim": false,
+      "official_result_used_for_signal": false,
+      "post_result_retuning_allowed": false
+    },
+    "labels": {
+      "main": null,
+      "numerone": null
+    },
+    "main_partition_convergence": {
+      "conditions": [
+        {
+          "metric": "pairwise_symmetric_overlap_mean",
+          "operator": ">=",
+          "passed": false,
+          "threshold_quantile": "q99",
+          "threshold_value": 6.214285714285714,
+          "value": 6.071428571428571
+        },
+        {
+          "metric": "support_margin",
+          "operator": ">=",
+          "passed": false,
+          "threshold_quantile": "q95",
+          "threshold_value": 1.0,
+          "value": 0.0
+        },
+        {
+          "metric": "tenth_number_support",
+          "operator": ">=",
+          "passed": true,
+          "threshold_quantile": "q90",
+          "threshold_value": 4.0,
+          "value": 4.0
+        }
+      ],
+      "passed": false,
+      "rule": "ALL"
+    },
+    "metric_values": {
+      "exact_partition_member_count": 0.0,
+      "max_number_support": 7.0,
+      "numerone_mode_support": 2.0,
+      "pairwise_symmetric_overlap_max": 8.0,
+      "pairwise_symmetric_overlap_mean": 6.071428571428571,
+      "pairwise_symmetric_overlap_min": 5.0,
+      "support_margin": 0.0,
+      "tenth_number_support": 4.0
+    },
+    "numerone_convergence": {
+      "conditions": [
+        {
+          "metric": "numerone_mode_support",
+          "operator": ">=",
+          "passed": false,
+          "threshold_quantile": "q99",
+          "threshold_value": 3.0,
+          "value": 2.0
+        }
+      ],
+      "passed": false,
+      "rule": "ALL"
+    },
+    "policy_path": "public_compute/prospective/hourly_ensemble_signal_policy.json",
+    "policy_sha256": "edd988dffc4c6e74e225cfcf7c21d5bc32f789225ac3f35ffa31e3a55b581c13",
+    "status": "STRUCTURAL_POLICY_EVALUATED_PRE_DRAW"
+  },
+  "target": {
+    "datetime": "2026-10-26T23:00:00+01:00",
+    "public_ordinal": 85453,
+    "timezone": "Europe/Rome"
+  }
+}
