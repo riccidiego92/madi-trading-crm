@@ -1,0 +1,130 @@
+{
+  "candidate_id": "P42_PHASED:1602ee67da057be0",
+  "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|continuous|bgm16|bgn0",
+  "candidate_signature_sha256": "d91c396c84a43d24097e35d1049fb99e031da6daeccffec6d64eea0285c7f448",
+  "config": {
+    "background_cycles_main": 16,
+    "background_cycles_numerone": 0,
+    "contests_per_day": 17,
+    "experiment_seed": 2026092642,
+    "mapper": "rank_unrank",
+    "reseed_mode": "continuous",
+    "stream_mode": "single"
+  },
+  "core_family_key": "rank_unrank|single|continuous",
+  "evidence_grade": "FINAL_TRAIN_ELIGIBLE_REPLICATE_COUNT",
+  "execution": {
+    "calibration_freeze_sha256": "6e52a6eea6332f16ef4ee9ec0b2eaa03bd3098bec2abc31908aa5e894e1d439f",
+    "mode": "deterministic_sharded_sufficient_statistics",
+    "null_shard_count": 25
+  },
+  "guardrails": {
+    "holdout_accessed": false,
+    "internal_synthetic_state_compared_to_real": false,
+    "no_post_result_retuning": true,
+    "non_rejection_is_compatibility_only": true,
+    "operational_seed_search": false,
+    "sharded_execution_only": true,
+    "validation_accessed": false
+  },
+  "n_real_contests": 36902,
+  "schema": "wfl-p43-p42-train-candidate-evaluation-1",
+  "simulation_reps": 100000,
+  "stage": "train",
+  "test": {
+    "alpha_final": 0.05,
+    "excluded_zero_sd_features": 0,
+    "normalization_reps": 50000,
+    "null_evaluation_reps": 50000,
+    "observed_max_abs_z": 4.086090989074138,
+    "p_max_stat": 0.11369772604547909,
+    "rejected_at_final_alpha": false,
+    "rejected_at_triage_alpha": false,
+    "retained_features": 936,
+    "simulated_max_abs_z_q95": 4.413353205056364,
+    "simulated_max_abs_z_q99": 5.948277336887936,
+    "simulation_reps_total": 100000,
+    "top_observed_standardized_residuals": [
+      {
+        "feature": "transition.lag17.partition_equal_rate",
+        "z": 4.086090989074138
+      },
+      {
+        "feature": "transition.lag17.exact_equal_rate",
+        "z": 4.037456639903896
+      },
+      {
+        "feature": "rank_residue.MOD_127.residual.69",
+        "z": -3.141415292807664
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.56",
+        "z": 3.0830716355377894
+      },
+      {
+        "feature": "transition.lag1.exact_rank_correlation",
+        "z": 3.046316807341838
+      },
+      {
+        "feature": "numerone.rate.17",
+        "z": 2.9831268463261473
+      },
+      {
+        "feature": "rank_residue.MOD_64.residual.34",
+        "z": 2.8969857552490983
+      },
+      {
+        "feature": "numerone_serial.lag24.cramers_v",
+        "z": 2.831138679627458
+      },
+      {
+        "feature": "main_to_numerone.lag17.omnibus",
+        "z": -2.7378377113621117
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.36",
+        "z": -2.686797979380847
+      },
+      {
+        "feature": "rank_residue.MOD_256.residual.134",
+        "z": -2.6173621456689102
+      },
+      {
+        "feature": "rank_residue.MOD_256.residual.9",
+        "z": 2.5578226647654216
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.221",
+        "z": 2.5492214143814724
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.23",
+        "z": 2.495149615454773
+      },
+      {
+        "feature": "rank_residue.MOD_64.residual.9",
+        "z": 2.3458668648093393
+      },
+      {
+        "feature": "rank_residue.MOD_127.residual.112",
+        "z": 2.338271157748055
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.87",
+        "z": -2.3313167717552217
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.4",
+        "z": 2.328181261793553
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.171",
+        "z": 2.3227991317135497
+      },
+      {
+        "feature": "rank_residue.BIN256.residual.233",
+        "z": 2.3104699297199387
+      }
+    ]
+  }
+}
