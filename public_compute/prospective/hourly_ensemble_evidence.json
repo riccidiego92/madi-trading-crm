@@ -14,106 +14,106 @@
       "candidate_id": "P42_PHASED:bbbfb410e771083b",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.939102564102564,
+      "mean_symmetric_overlap": 5.93730407523511,
       "numerone_hits": 15,
-      "scored": 312,
-      "winning_rate": 0.22756410256410256,
-      "wins": 71
+      "scored": 319,
+      "winning_rate": 0.22570532915360503,
+      "wins": 72
     },
     "16": {
       "candidate_id": "P42_PHASED:1ae8bdf827360633",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.839743589743589,
-      "numerone_hits": 11,
-      "scored": 312,
-      "winning_rate": 0.16987179487179488,
-      "wins": 53
+      "mean_symmetric_overlap": 5.83385579937304,
+      "numerone_hits": 12,
+      "scored": 319,
+      "winning_rate": 0.16927899686520376,
+      "wins": 54
     },
     "160": {
       "candidate_id": "P42_PHASED:3d52499d50ec52f2",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rank_unrank|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.9326923076923075,
+      "mean_symmetric_overlap": 5.93730407523511,
       "numerone_hits": 17,
-      "scored": 312,
-      "winning_rate": 0.22435897435897437,
-      "wins": 70
+      "scored": 319,
+      "winning_rate": 0.22884012539184953,
+      "wins": 73
     },
     "208": {
       "candidate_id": "P42_PHASED:ffb67c283fba029e",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.826923076923077,
+      "mean_symmetric_overlap": 5.836990595611285,
       "numerone_hits": 14,
-      "scored": 312,
-      "winning_rate": 0.16666666666666666,
-      "wins": 52
+      "scored": 319,
+      "winning_rate": 0.16927899686520376,
+      "wins": 54
     },
     "256": {
       "candidate_id": "P42_PHASED:7a0e73eff05b1968",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|rejection|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.887820512820513,
+      "mean_symmetric_overlap": 5.893416927899686,
       "numerone_hits": 19,
-      "scored": 312,
-      "winning_rate": 0.19230769230769232,
-      "wins": 60
+      "scored": 319,
+      "winning_rate": 0.19435736677115986,
+      "wins": 62
     },
     "304": {
       "candidate_id": "P42_PHASED:3529eef19dcfc5d3",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|single|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.839743589743589,
+      "mean_symmetric_overlap": 5.827586206896552,
       "numerone_hits": 13,
-      "scored": 312,
-      "winning_rate": 0.16987179487179488,
+      "scored": 319,
+      "winning_rate": 0.16614420062695925,
       "wins": 53
     },
     "352": {
       "candidate_id": "P42_PHASED:9c5e870689e3743b",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|sequential|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.980769230769231,
-      "numerone_hits": 24,
-      "scored": 312,
-      "winning_rate": 0.2403846153846154,
-      "wins": 75
+      "mean_symmetric_overlap": 5.984326018808777,
+      "numerone_hits": 26,
+      "scored": 319,
+      "winning_rate": 0.2413793103448276,
+      "wins": 77
     },
     "64": {
       "candidate_id": "P42_PHASED:d3e2dacc3d569bef",
       "candidate_identity": "P42_HMAC_DRBG_SHA256|fisher_yates|split_main_numerone|per_contest|bgm0|bgn0",
       "exact_main_or_complement_hits": 0,
-      "mean_symmetric_overlap": 5.9006410256410255,
+      "mean_symmetric_overlap": 5.90282131661442,
       "numerone_hits": 16,
-      "scored": 312,
-      "winning_rate": 0.1987179487179487,
-      "wins": 62
+      "scored": 319,
+      "winning_rate": 0.1974921630094044,
+      "wins": 63
     }
   },
   "observed": {
     "category_counts": {
       "CAT_5": 2,
       "CAT_6": 3,
-      "CAT_7": 56,
-      "NO_PRIZE": 251
+      "CAT_7": 57,
+      "NO_PRIZE": 257
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.948717948717949,
-    "mean_member_pairwise_symmetric_overlap": 5.84478021978022,
-    "mean_symmetric_overlap": 5.891025641025641,
+    "mean_direct_overlap": 4.946708463949843,
+    "mean_member_pairwise_symmetric_overlap": 5.843036274070757,
+    "mean_symmetric_overlap": 5.8808777429467085,
     "numerone_hits": 13,
     "symmetric_overlap_histogram": {
       "10": 0,
-      "5": 98,
-      "6": 153,
-      "7": 58,
+      "5": 103,
+      "6": 154,
+      "7": 59,
       "8": 3,
       "9": 0
     },
-    "winning_prediction_count": 61,
-    "winning_prediction_rate": 0.1955128205128205
+    "winning_prediction_count": 62,
+    "winning_prediction_rate": 0.19435736677115986
   },
   "random_reference": {
     "any_prize_probability": 0.17889540799757517,
@@ -128,17 +128,17 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.00320855614973262,
-      "CAT_2": 0.016887137630171686,
-      "CAT_3": 0.32085561497326204,
-      "CAT_4": 0.3419645370109767,
-      "CAT_5": 2.431747818744723,
-      "CAT_6": 6.497326203208557,
-      "CAT_7": 46.20320855614973,
-      "WFL_RENDITA": 0.00016887137630171688
+      "CAT_1": 0.003280542986425339,
+      "CAT_2": 0.0172660157180281,
+      "CAT_3": 0.32805429864253394,
+      "CAT_4": 0.3496368182900691,
+      "CAT_5": 2.4863062633960467,
+      "CAT_6": 6.643099547511312,
+      "CAT_7": 47.23981900452488,
+      "WFL_RENDITA": 0.00017266015718028104
     },
-    "expected_numerone_hits": 15.600000000000001,
-    "expected_winning_predictions": 55.815367295243455,
+    "expected_numerone_hits": 15.950000000000001,
+    "expected_winning_predictions": 57.067635151226476,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -150,6 +150,6 @@
     }
   },
   "schema": "wfl-hourly-twin-ensemble-development-evidence-1",
-  "scored_prediction_count": 312,
+  "scored_prediction_count": 319,
   "status": "PROSPECTIVE_ENSEMBLE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }

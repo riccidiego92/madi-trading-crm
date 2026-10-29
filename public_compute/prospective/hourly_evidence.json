@@ -30,26 +30,26 @@
   "observed": {
     "category_counts": {
       "CAT_3": 1,
-      "CAT_5": 2,
+      "CAT_5": 3,
       "CAT_6": 8,
       "CAT_7": 52,
-      "NO_PRIZE": 302
+      "NO_PRIZE": 308
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.986301369863014,
-    "mean_symmetric_overlap": 5.857534246575343,
-    "numerone_hits": 12,
+    "mean_direct_overlap": 4.991935483870968,
+    "mean_symmetric_overlap": 5.852150537634409,
+    "numerone_hits": 13,
     "symmetric_overlap_histogram": {
       "10": 0,
-      "5": 125,
-      "6": 177,
-      "7": 54,
+      "5": 129,
+      "6": 179,
+      "7": 55,
       "8": 8,
       "9": 1
     },
-    "winning_prediction_count": 63,
-    "winning_prediction_rate": 0.1726027397260274
+    "winning_prediction_count": 64,
+    "winning_prediction_rate": 0.17204301075268819
   },
   "prize_classification_rows": [
     {
@@ -5891,6 +5891,118 @@
       },
       "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1200_candidate_16.json",
       "target": "2026-10-29T12:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "2ff42c532c0862a850a06944c1f2ad19c0462fce7081166fd7a7048948f46b08",
+      "prize": {
+        "complement_overlap": 5,
+        "direct_overlap": 5,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 5,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1300_candidate_16.json",
+      "target": "2026-10-29T13:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "66e4372662334e00341aa82b5e813d1ceecd33bf90a09f75c60371828b8f6e4a",
+      "prize": {
+        "complement_overlap": 3,
+        "direct_overlap": 7,
+        "numerone_exact": true,
+        "prize_code": "CAT_5",
+        "prize_label": "5a categoria",
+        "prize_rank": 3,
+        "symmetric_overlap": 7,
+        "winning_category": true
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1400_candidate_16.json",
+      "target": "2026-10-29T14:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "064efd24ff5726d15f4fe15e80a0a4b22e1dae70f212000001851233d13b95a5",
+      "prize": {
+        "complement_overlap": 5,
+        "direct_overlap": 5,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 5,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1500_candidate_16.json",
+      "target": "2026-10-29T15:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "75f0c649d41be71cc34211e93db8d56cae4ec4794c5f9ee518f7e01e4c30b5f5",
+      "prize": {
+        "complement_overlap": 5,
+        "direct_overlap": 5,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 5,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1600_candidate_16.json",
+      "target": "2026-10-29T16:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "f4ae18dd24ef6fdd04064c43cad012d8ec67d1e4137b3037cd4a724177cde6e8",
+      "prize": {
+        "complement_overlap": 4,
+        "direct_overlap": 6,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1700_candidate_16.json",
+      "target": "2026-10-29T17:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "18add099a4c91e2f3fd4553bcfc4c2ccb5ad31a22dbd6df821391a5640f19610",
+      "prize": {
+        "complement_overlap": 5,
+        "direct_overlap": 5,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 5,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1800_candidate_16.json",
+      "target": "2026-10-29T18:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "3c864916dd4dbaa36b11c609ab18eb41883369f1f117f94ac3d9feb25281b498",
+      "prize": {
+        "complement_overlap": 6,
+        "direct_overlap": 4,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-10-29/1900_candidate_16.json",
+      "target": "2026-10-29T19:00:00+01:00"
     }
   ],
   "random_reference": {
@@ -5906,16 +6018,16 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.0037535993418346355,
-      "CAT_2": 0.01975578600965598,
-      "CAT_3": 0.3753599341834636,
-      "CAT_4": 0.40005466669553363,
-      "CAT_5": 2.844833185390461,
-      "CAT_6": 7.601038667215138,
-      "CAT_7": 54.051830522418754,
-      "WFL_RENDITA": 0.00019755786009655982
+      "CAT_1": 0.0038255861785273545,
+      "CAT_2": 0.020134664097512394,
+      "CAT_3": 0.3825586178527355,
+      "CAT_4": 0.40772694797462605,
+      "CAT_5": 2.899391630041785,
+      "CAT_6": 7.7468120115178944,
+      "CAT_7": 55.08844097079391,
+      "WFL_RENDITA": 0.00020134664097512398
     },
-    "expected_winning_predictions": 65.29682391911494,
+    "expected_winning_predictions": 66.54909177509796,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -5927,6 +6039,6 @@
     }
   },
   "schema": "wfl-hourly-twin-development-evidence-2",
-  "scored_prediction_count": 365,
+  "scored_prediction_count": 372,
   "status": "PROSPECTIVE_PRIZE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }
