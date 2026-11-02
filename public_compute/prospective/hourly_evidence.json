@@ -31,25 +31,25 @@
     "category_counts": {
       "CAT_3": 1,
       "CAT_5": 3,
-      "CAT_6": 8,
-      "CAT_7": 59,
-      "NO_PRIZE": 344
+      "CAT_6": 9,
+      "CAT_7": 60,
+      "NO_PRIZE": 345
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.990361445783132,
-    "mean_symmetric_overlap": 5.843373493975903,
+    "mean_direct_overlap": 4.976076555023924,
+    "mean_symmetric_overlap": 5.851674641148326,
     "numerone_hits": 17,
     "symmetric_overlap_histogram": {
       "10": 0,
       "5": 146,
-      "6": 198,
-      "7": 62,
-      "8": 8,
+      "6": 199,
+      "7": 63,
+      "8": 9,
       "9": 1
     },
-    "winning_prediction_count": 71,
-    "winning_prediction_rate": 0.1710843373493976
+    "winning_prediction_count": 73,
+    "winning_prediction_rate": 0.17464114832535885
   },
   "prize_classification_rows": [
     {
@@ -6691,6 +6691,54 @@
       },
       "score_file": "public_compute/prospective/hourly_scores/2026-11-01/2300_candidate_16.json",
       "target": "2026-11-01T23:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "3d4bea9929b9dd4a2a0b5c855f5fed75ccfbd4459020ad18592987bba3b9d240",
+      "prize": {
+        "complement_overlap": 6,
+        "direct_overlap": 4,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-02/0700_candidate_16.json",
+      "target": "2026-11-02T07:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "54db377e5cc95771f607b7fc3111b3621a72add4bde9bb374bb4e1f0c7dbf551",
+      "prize": {
+        "complement_overlap": 7,
+        "direct_overlap": 3,
+        "numerone_exact": false,
+        "prize_code": "CAT_7",
+        "prize_label": "7a categoria",
+        "prize_rank": 1,
+        "symmetric_overlap": 7,
+        "winning_category": true
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-02/1300_candidate_16.json",
+      "target": "2026-11-02T13:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "1cebb13f5e75a6cadef871f1d04673f48027ca4789092f51eb709fa9e8e71a52",
+      "prize": {
+        "complement_overlap": 8,
+        "direct_overlap": 2,
+        "numerone_exact": false,
+        "prize_code": "CAT_6",
+        "prize_label": "6a categoria",
+        "prize_rank": 2,
+        "symmetric_overlap": 8,
+        "winning_category": true
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-02/1400_candidate_16.json",
+      "target": "2026-11-02T14:00:00+01:00"
     }
   ],
   "random_reference": {
@@ -6706,16 +6754,16 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.004267791032496915,
-      "CAT_2": 0.022462058065773238,
-      "CAT_3": 0.4267791032496915,
-      "CAT_4": 0.4548566758319081,
-      "CAT_5": 3.234536361471346,
-      "CAT_6": 8.642276840806252,
-      "CAT_7": 61.45619086795557,
-      "WFL_RENDITA": 0.0002246205806577324
+      "CAT_1": 0.004298642533936651,
+      "CAT_2": 0.02262443438914027,
+      "CAT_3": 0.42986425339366513,
+      "CAT_4": 0.45814479638009054,
+      "CAT_5": 3.2579185520361995,
+      "CAT_6": 8.70475113122172,
+      "CAT_7": 61.90045248868778,
+      "WFL_RENDITA": 0.00022624434389140275
     },
-    "expected_winning_predictions": 74.24159431899369,
+    "expected_winning_predictions": 74.77828054298642,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -6727,6 +6775,6 @@
     }
   },
   "schema": "wfl-hourly-twin-development-evidence-2",
-  "scored_prediction_count": 415,
+  "scored_prediction_count": 418,
   "status": "PROSPECTIVE_PRIZE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }

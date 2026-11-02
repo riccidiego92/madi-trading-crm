@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "54db377e5cc95771f607b7fc3111b3621a72add4bde9bb374bb4e1f0c7dbf551",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 5192,
+    "date": "2026-11-02",
+    "main": [
+      1,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      11,
+      14,
+      15
+    ],
+    "numerone": 13,
+    "source_sha256": "342e42f071dc2f68f973c1edb980aebc7fbbb360971e34a8ef8e24b3a7ab3143",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-5192/2-novembre-2026",
+    "time": "13:00"
+  },
+  "prediction": {
+    "complement": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      18,
+      19
+    ],
+    "main": [
+      1,
+      2,
+      5,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20
+    ],
+    "numerone": 3,
+    "prediction_sha256": "2a808919af66d4cb883322a31950f2526c89047b3afdf59b6362281357618e13"
+  },
+  "prize_category": {
+    "complement_overlap": 7,
+    "direct_overlap": 3,
+    "numerone_exact": false,
+    "prize_code": "CAT_7",
+    "prize_label": "7a categoria",
+    "prize_rank": 1,
+    "symmetric_overlap": 7,
+    "winning_category": true
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 3,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 7
+  },
+  "score_sha256": "34dae2a33c35376cf74cc4026f3d616e8d7884ac0f194fd69ba3b027483d855a",
+  "scored_at": "2026-11-02T15:05:56.887485+01:00",
+  "target": {
+    "datetime": "2026-11-02T13:00:00+01:00",
+    "public_ordinal": 85562,
+    "timezone": "Europe/Rome"
+  }
+}
