@@ -1,16 +1,14 @@
 {
   "candidate_indices": [
-    147,
-    148,
-    149,
-    150,
-    151
+    152,
+    153,
+    154,
+    155,
+    156
   ],
-  "generation": 67,
-  "incomplete_candidates": [
-    150
-  ],
-  "missing_shard_count": 17,
+  "completed_final_count": 152,
+  "generation": 68,
+  "planned_final_count": 384,
   "schema": "wfl-p43-final-train-state-1",
-  "status": "NULL_RETRY_QUEUED"
+  "status": "CALIBRATION_BATCH_QUEUED"
 }
