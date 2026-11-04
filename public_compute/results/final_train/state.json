@@ -6,11 +6,10 @@
     160,
     161
   ],
-  "generation": 71,
-  "incomplete_candidates": [
-    158
-  ],
-  "missing_shard_count": 1,
+  "completed_final_count": 157,
+  "generation": 72,
+  "planned_final_count": 384,
+  "resumed_from_existing_calibration": true,
   "schema": "wfl-p43-final-train-state-1",
-  "status": "CALIBRATION_RETRY_QUEUED"
+  "status": "NULL_BATCH_QUEUED"
 }
