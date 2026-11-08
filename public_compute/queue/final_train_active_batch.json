@@ -1,11 +1,14 @@
 {
-  "candidate_count": 1,
+  "candidate_count": 5,
   "candidate_indices": [
-    183
+    182,
+    183,
+    184,
+    185,
+    186
   ],
-  "generation": 82,
-  "phase": "calibration",
-  "retry_only_missing_shards": true,
+  "generation": 83,
+  "phase": "null",
   "schema": "wfl-p43-final-train-active-batch-1",
   "scientific_settings": {
     "alpha_final": 0.05,
@@ -19,9 +22,629 @@
   "shard_reps": 2000,
   "tasks": [
     {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 50000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 52000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 54000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 56000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 58000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 60000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 62000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 64000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 66000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 68000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 70000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 72000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 74000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 76000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 78000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 80000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 82000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 84000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 86000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 88000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 90000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 92000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 94000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 96000
+    },
+    {
+      "candidate_index": 182,
+      "rep_count": 2000,
+      "rep_start": 98000
+    },
+    {
       "candidate_index": 183,
       "rep_count": 2000,
-      "rep_start": 18000
+      "rep_start": 50000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 52000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 54000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 56000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 58000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 60000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 62000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 64000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 66000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 68000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 70000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 72000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 74000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 76000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 78000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 80000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 82000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 84000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 86000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 88000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 90000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 92000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 94000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 96000
+    },
+    {
+      "candidate_index": 183,
+      "rep_count": 2000,
+      "rep_start": 98000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 50000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 52000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 54000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 56000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 58000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 60000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 62000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 64000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 66000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 68000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 70000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 72000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 74000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 76000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 78000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 80000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 82000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 84000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 86000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 88000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 90000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 92000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 94000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 96000
+    },
+    {
+      "candidate_index": 184,
+      "rep_count": 2000,
+      "rep_start": 98000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 50000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 52000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 54000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 56000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 58000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 60000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 62000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 64000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 66000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 68000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 70000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 72000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 74000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 76000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 78000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 80000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 82000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 84000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 86000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 88000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 90000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 92000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 94000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 96000
+    },
+    {
+      "candidate_index": 185,
+      "rep_count": 2000,
+      "rep_start": 98000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 50000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 52000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 54000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 56000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 58000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 60000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 62000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 64000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 66000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 68000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 70000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 72000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 74000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 76000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 78000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 80000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 82000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 84000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 86000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 88000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 90000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 92000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 94000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 96000
+    },
+    {
+      "candidate_index": 186,
+      "rep_count": 2000,
+      "rep_start": 98000
     }
   ]
 }
