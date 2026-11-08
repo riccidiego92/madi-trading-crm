@@ -7,8 +7,9 @@
     191
   ],
   "completed_final_count": 187,
-  "generation": 84,
+  "generation": 85,
   "planned_final_count": 384,
+  "resumed_from_existing_calibration": true,
   "schema": "wfl-p43-final-train-state-1",
-  "status": "CALIBRATION_BATCH_QUEUED"
+  "status": "NULL_BATCH_QUEUED"
 }
