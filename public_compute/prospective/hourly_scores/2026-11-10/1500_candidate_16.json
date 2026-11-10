@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "6345a54c21536dadefeddc9e8764ab75f114cd27301e5ab93d466645367d2c08",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 5330,
+    "date": "2026-11-10",
+    "main": [
+      3,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      16,
+      19,
+      20
+    ],
+    "numerone": 16,
+    "source_sha256": "8f41a6ea1b53ee08d28d85dd2d5dfb7c29b437943d9db5368e16c7f9135978c0",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-5330/10-novembre-2026",
+    "time": "15:00"
+  },
+  "prediction": {
+    "complement": [
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      16,
+      18
+    ],
+    "main": [
+      1,
+      4,
+      5,
+      11,
+      13,
+      14,
+      15,
+      17,
+      19,
+      20
+    ],
+    "numerone": 20,
+    "prediction_sha256": "8234631bebff5375c28ac0ba51a272ad42982f290f7cb41354d7e4a456bd62a2"
+  },
+  "prize_category": {
+    "complement_overlap": 7,
+    "direct_overlap": 3,
+    "numerone_exact": false,
+    "prize_code": "CAT_7",
+    "prize_label": "7a categoria",
+    "prize_rank": 1,
+    "symmetric_overlap": 7,
+    "winning_category": true
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 3,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 7
+  },
+  "score_sha256": "36d12b7ad77e748b988fe067207b2396288e49eb2b19a1e0ccef12d7ea4bbfec",
+  "scored_at": "2026-11-10T21:57:33.063448+01:00",
+  "target": {
+    "datetime": "2026-11-10T15:00:00+01:00",
+    "public_ordinal": 85700,
+    "timezone": "Europe/Rome"
+  }
+}

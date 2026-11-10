@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "4e1307221372b5e5401cfd4d92e2437f396c8eb6da05fd77dd024e9012ffd6b6",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 5336,
+    "date": "2026-11-10",
+    "main": [
+      2,
+      3,
+      4,
+      8,
+      11,
+      13,
+      14,
+      16,
+      17,
+      18
+    ],
+    "numerone": 14,
+    "source_sha256": "0ab70bdd6b8eaf6be94e31909ea4dbb3765c5620d114d459cda807e483b37cca",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-5336/10-novembre-2026",
+    "time": "21:00"
+  },
+  "prediction": {
+    "complement": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      13,
+      15,
+      16,
+      19
+    ],
+    "main": [
+      2,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      17,
+      18,
+      20
+    ],
+    "numerone": 19,
+    "prediction_sha256": "ed85c75f9258dfbfd83aeb61c835f9278bdcbb79ee38b05ca1b5c06e515a63d1"
+  },
+  "prize_category": {
+    "complement_overlap": 4,
+    "direct_overlap": 6,
+    "numerone_exact": false,
+    "prize_code": "NO_PRIZE",
+    "prize_label": "Nessun premio",
+    "prize_rank": 0,
+    "symmetric_overlap": 6,
+    "winning_category": false
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 6,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 6
+  },
+  "score_sha256": "8df61b8a6cf2eb7613303bbfdf682401434794883bb659ef2688bbba08598605",
+  "scored_at": "2026-11-10T21:57:33.063448+01:00",
+  "target": {
+    "datetime": "2026-11-10T21:00:00+01:00",
+    "public_ordinal": 85706,
+    "timezone": "Europe/Rome"
+  }
+}
