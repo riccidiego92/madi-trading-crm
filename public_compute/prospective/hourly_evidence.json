@@ -31,25 +31,25 @@
     "category_counts": {
       "CAT_3": 1,
       "CAT_5": 5,
-      "CAT_6": 9,
+      "CAT_6": 10,
       "CAT_7": 83,
-      "NO_PRIZE": 449
+      "NO_PRIZE": 451
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.96526508226691,
-    "mean_symmetric_overlap": 5.842778793418647,
-    "numerone_hits": 24,
+    "mean_direct_overlap": 4.972727272727273,
+    "mean_symmetric_overlap": 5.845454545454546,
+    "numerone_hits": 25,
     "symmetric_overlap_histogram": {
       "10": 0,
-      "5": 195,
-      "6": 254,
+      "5": 196,
+      "6": 255,
       "7": 88,
-      "8": 9,
+      "8": 10,
       "9": 1
     },
-    "winning_prediction_count": 98,
-    "winning_prediction_rate": 0.17915904936014626
+    "winning_prediction_count": 99,
+    "winning_prediction_rate": 0.18
   },
   "prize_classification_rows": [
     {
@@ -8803,6 +8803,54 @@
       },
       "score_file": "public_compute/prospective/hourly_scores/2026-11-12/2300_candidate_16.json",
       "target": "2026-11-12T23:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "9e9071d9755679829151901b6c303931ad5fd4fd9e0a684e149b67611ce11dad",
+      "prize": {
+        "complement_overlap": 4,
+        "direct_overlap": 6,
+        "numerone_exact": true,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-13/0700_candidate_16.json",
+      "target": "2026-11-13T07:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "a557f736ff81be94f436d999a4b317e36801b0babc25f5a61233200510b2e81e",
+      "prize": {
+        "complement_overlap": 5,
+        "direct_overlap": 5,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 5,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-13/1300_candidate_16.json",
+      "target": "2026-11-13T13:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "66c4b26926b6f13928f0aaf9d5ba35f971a9dd0b898b802602eaee208ac4e319",
+      "prize": {
+        "complement_overlap": 2,
+        "direct_overlap": 8,
+        "numerone_exact": false,
+        "prize_code": "CAT_6",
+        "prize_label": "6a categoria",
+        "prize_rank": 2,
+        "symmetric_overlap": 8,
+        "winning_category": true
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-13/1400_candidate_16.json",
+      "target": "2026-11-13T14:00:00+01:00"
     }
   ],
   "random_reference": {
@@ -8818,16 +8866,16 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.005625257095845331,
-      "CAT_2": 0.029606616293922795,
-      "CAT_3": 0.5625257095845331,
-      "CAT_4": 0.5995339799519367,
-      "CAT_5": 4.263352746324883,
-      "CAT_6": 11.391145619086796,
-      "CAT_7": 81.00370218017277,
-      "WFL_RENDITA": 0.000296066162939228
+      "CAT_1": 0.005656108597285068,
+      "CAT_2": 0.02976899261728983,
+      "CAT_3": 0.5656108597285068,
+      "CAT_4": 0.6028221005001191,
+      "CAT_5": 4.286734936889736,
+      "CAT_6": 11.453619909502263,
+      "CAT_7": 81.44796380090497,
+      "WFL_RENDITA": 0.00029768992617289837
     },
-    "expected_winning_predictions": 97.85578817467362,
+    "expected_winning_predictions": 98.39247439866634,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -8839,6 +8887,6 @@
     }
   },
   "schema": "wfl-hourly-twin-development-evidence-2",
-  "scored_prediction_count": 547,
+  "scored_prediction_count": 550,
   "status": "PROSPECTIVE_PRIZE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }
