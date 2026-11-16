@@ -30,26 +30,26 @@
   "observed": {
     "category_counts": {
       "CAT_3": 1,
-      "CAT_5": 6,
+      "CAT_5": 7,
       "CAT_6": 11,
       "CAT_7": 87,
-      "NO_PRIZE": 476
+      "NO_PRIZE": 478
     },
     "exact_main_or_complement_hits": 0,
     "exact_pair_plus_numerone_hits": 0,
-    "mean_direct_overlap": 4.977624784853701,
-    "mean_symmetric_overlap": 5.845094664371773,
-    "numerone_hits": 27,
+    "mean_direct_overlap": 4.9811643835616435,
+    "mean_symmetric_overlap": 5.847602739726027,
+    "numerone_hits": 28,
     "symmetric_overlap_histogram": {
       "10": 0,
       "5": 208,
-      "6": 268,
-      "7": 93,
+      "6": 270,
+      "7": 94,
       "8": 11,
       "9": 1
     },
-    "winning_prediction_count": 105,
-    "winning_prediction_rate": 0.18072289156626506
+    "winning_prediction_count": 106,
+    "winning_prediction_rate": 0.1815068493150685
   },
   "prize_classification_rows": [
     {
@@ -9347,6 +9347,54 @@
       },
       "score_file": "public_compute/prospective/hourly_scores/2026-11-15/2000_candidate_16.json",
       "target": "2026-11-15T20:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "368618579c5d7e7b547a07bfc23a7abe231afd6f1a4fe7158543c901d60926de",
+      "prize": {
+        "complement_overlap": 6,
+        "direct_overlap": 4,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-15/2100_candidate_16.json",
+      "target": "2026-11-15T21:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "21c5f86aa4de3d432e71fd565c5433a8a6a1ae9233a0b00d4bec7e0c29b906f8",
+      "prize": {
+        "complement_overlap": 3,
+        "direct_overlap": 7,
+        "numerone_exact": true,
+        "prize_code": "CAT_5",
+        "prize_label": "5a categoria",
+        "prize_rank": 3,
+        "symmetric_overlap": 7,
+        "winning_category": true
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-15/2200_candidate_16.json",
+      "target": "2026-11-15T22:00:00+01:00"
+    },
+    {
+      "candidate_id": "P42_PHASED:1ae8bdf827360633",
+      "freeze_sha256": "f58415b2270f349a0cc0f3b7f99b9c642bcf0177dc79ac3e90689fb17acb69fb",
+      "prize": {
+        "complement_overlap": 4,
+        "direct_overlap": 6,
+        "numerone_exact": false,
+        "prize_code": "NO_PRIZE",
+        "prize_label": "Nessun premio",
+        "prize_rank": 0,
+        "symmetric_overlap": 6,
+        "winning_category": false
+      },
+      "score_file": "public_compute/prospective/hourly_scores/2026-11-15/2300_candidate_16.json",
+      "target": "2026-11-15T23:00:00+01:00"
     }
   ],
   "random_reference": {
@@ -9362,16 +9410,16 @@
       "WFL_RENDITA": 5.412544112234515e-07
     },
     "expected_category_counts": {
-      "CAT_1": 0.00597490744549568,
-      "CAT_2": 0.03144688129208253,
-      "CAT_3": 0.5974907445495681,
-      "CAT_4": 0.6367993461646713,
-      "CAT_5": 4.5283509060598846,
-      "CAT_6": 12.099187577128754,
-      "CAT_7": 86.0386672151378,
-      "WFL_RENDITA": 0.00031446881292082537
+      "CAT_1": 0.006005758946935417,
+      "CAT_2": 0.03160925761544957,
+      "CAT_3": 0.6005758946935418,
+      "CAT_4": 0.6400874667128538,
+      "CAT_5": 4.551733096624738,
+      "CAT_6": 12.16166186754422,
+      "CAT_7": 86.48292883587001,
+      "WFL_RENDITA": 0.0003160925761544957
     },
-    "expected_winning_predictions": 103.93823204659117,
+    "expected_winning_predictions": 104.4749182705839,
     "numerone_probability": 0.05,
     "symmetric_overlap_probability": {
       "10": 1.082508822446903e-05,
@@ -9383,6 +9431,6 @@
     }
   },
   "schema": "wfl-hourly-twin-development-evidence-2",
-  "scored_prediction_count": 581,
+  "scored_prediction_count": 584,
   "status": "PROSPECTIVE_PRIZE_EVIDENCE_ACCUMULATING_NO_EDGE_CLAIM"
 }
