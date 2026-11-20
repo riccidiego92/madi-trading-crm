@@ -1,0 +1,87 @@
+{
+  "candidate_id": "P42_PHASED:1ae8bdf827360633",
+  "evidence_grade": "DEVELOPMENT_PROSPECTIVE_SCORE_NO_EDGE_CLAIM",
+  "freeze_sha256": "238de7c1c4e502b1d356c59f9d0b28f533ede49863d0be74c3c0f81b7e7dde36",
+  "guardrails": {
+    "failures_retained": true,
+    "freeze_hash_verified": true,
+    "freeze_precedes_target": true,
+    "official_source_retained": true,
+    "post_result_retuning": false
+  },
+  "official": {
+    "contest": 5500,
+    "date": "2026-11-20",
+    "main": [
+      2,
+      4,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      17,
+      20
+    ],
+    "numerone": 1,
+    "source_sha256": "0f99c66c5a4e203741076a2476a9b239b3e6491e7b2ea7cce4f97834f2568eef",
+    "source_url": "https://www.winforlife.it/archivio-estrazioni-classico/concorso-5500/20-novembre-2026",
+    "time": "15:00"
+  },
+  "prediction": {
+    "complement": [
+      2,
+      4,
+      7,
+      8,
+      11,
+      12,
+      13,
+      15,
+      16,
+      19
+    ],
+    "main": [
+      1,
+      3,
+      5,
+      6,
+      9,
+      10,
+      14,
+      17,
+      18,
+      20
+    ],
+    "numerone": 9,
+    "prediction_sha256": "4298444d5e84161d54b2cb8a1390c00427c2faf44961a2dbec1a21d7fe4447ac"
+  },
+  "prize_category": {
+    "complement_overlap": 6,
+    "direct_overlap": 4,
+    "numerone_exact": false,
+    "prize_code": "NO_PRIZE",
+    "prize_label": "Nessun premio",
+    "prize_rank": 0,
+    "symmetric_overlap": 6,
+    "winning_category": false
+  },
+  "schema": "wfl-hourly-twin-development-score-1",
+  "score": {
+    "direct_main_overlap": 4,
+    "exact_complement": false,
+    "exact_complement_plus_numerone": false,
+    "exact_main": false,
+    "exact_main_plus_numerone": false,
+    "numerone_exact": false,
+    "symmetric_main_overlap": 6
+  },
+  "score_sha256": "ace8127a5a022385827f3a4dfdd72cc340834a93348969bef92e5e9a5bf4d600",
+  "scored_at": "2026-11-20T22:55:33.753358+01:00",
+  "target": {
+    "datetime": "2026-11-20T15:00:00+01:00",
+    "public_ordinal": 85870,
+    "timezone": "Europe/Rome"
+  }
+}
